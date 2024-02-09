@@ -1,0 +1,256 @@
+/*-----------------------------------------PROGRAMA ESPECIAL Alumnos------------------------------------------*/
+/*SI se USAN: */
+/*Fondo de imagen: siempre iran en el contenedor padre o body, Cubrir todo el fondo con 'size center-top'*/
+/*Fondo de imagenes sobre elementos, se jugara con la position y el z index de los elementos*/
+/*Las medidas 'vw' toma en cuenta el ancho del viewport (dispositivo)  y 'vh' toma en cuenta el alto del viewport  VIEWPORT toma en cuenta el ancho o alto total de la pantalla, NO/NADA de contenedores,rows,cols, etc*/
+/*Letras: se debe utiliza rem para asignar tamaño responsive*/
+/*Display-Flex: /*Hace que todos los elementos se queden en una sola fila*/
+/*Flex- no wrap: /*Hace que cuando es espacio se reduzca no salte a mas filas los elementos*/
+/*White-espace no wrap: /*Espacio en blanco no enter, se usa solo para dejarlo en una linea y no dividir el texto por espacio en */
+
+/*CLASES GENERALES personales*/
+/*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
+haciendo mas reciclabe el codigo*/
+/*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
+.centrar {
+  display: flex; /*alinea los componenetes*/
+  align-items: center; /*Alinea horizontalmente en medio*/
+  justify-content: center; /*Alinea verticalmenete en medio*/
+}
+
+/*(En caso de ser necesario y no centre vertical normalmente cols y rows) Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos Vertical*/
+.centrar-vertical {
+  margin-top: 35vh; /*vh calcula*/
+}
+
+/*Alinea el texto en medio/ Justificado enmedio*/
+.centrar-texto {
+  text-align: center;
+}
+
+/*Deja un espacio en vertical*/
+.espacio-vertical-g {
+  margin-top: 5vh;
+}
+
+/*Deja un espacio en vertical*/
+.espacio-vertical-m {
+  margin-top: 20px;
+}
+
+/*Clase que deja un espacio en vertical pequeño*/
+.espacio-vertical-c {
+  margin-top: 10px;
+}
+
+/*Hace a los botones redondos*/
+.btn-circular {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*titulos (h1,h2,etc)*/
+.titulo-g {
+  font-size: 6rem;
+}
+/*titulos (h1,h2,etc)*/
+.titulo-m {
+  font-size: 5rem;
+}
+/*titulos (h1,h2,etc)*/
+.titulo-c {
+  font-size: 3rem;
+}
+
+/*Texto comun/descripciones (a,p,span,etc)*/
+.text-g {
+  font-size: 3rem;
+}
+/*Texto comun/descripciones (a,p,span,etc)*/
+.text-m {
+  font-size: 2rem;
+}
+/*Texto comun/descripciones (a,p,span,etc)*/
+.text-c {
+  font-size: 1.5rem;
+}
+
+/*Clase que pone letras en muy negritas*/
+.negritas {
+  font-weight: bolder;
+}
+
+/*Clase que pone letras en nergita normal*/
+.negrita {
+  font-weight: bold;
+}
+
+/*colores predeterminados de las interfaces*/
+.txt-blanco {
+  color: aliceblue;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-g {
+  width: 400px;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-m {
+  width: 250px;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-c {
+  width: 200px;
+}
+
+/*Clase que hace que cualquier img logo se sobreponga arriba a la izq*/
+.logotopleft {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+  width: 7%; /* El logotipo no superará el ancho del contenedor */
+  height: auto;
+  z-index: 5; /*Para que este logo aparezca arriba de todas las interfaz*/
+}
+
+/*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
+.cuadro-blanco-v {
+  background-color: aliceblue;
+  height: 800px;
+  width: 550px;
+}
+
+
+/*----------------------------------------------------------------------------------------------Pantalla de ESPERA---------------------------------*/
+/*Agregar un background al body logra que este aparezca de tras del contenido, como una pintura y no un elemento
+Asi logras evadir lo de position y z index en los elementos*/
+/*No repeat es indispensable solo para que aparezca 1*/
+/*Background size logra que este cubra todo el body*/
+#contenedor-espera {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*Asigna un tamaño predeterminado para hacer el circulo y no ovalo ademas los botones para mantener el mismo tamaño en todas las relaciones*/
+/*Aqui ambos botones son afectados con estops estilos*/
+.btn-espera {
+  height: 210px;
+  width: 210px;
+  margin-top: 3vw;
+}
+
+/*Controla el btntutoriaespera redondo y separacion de los 2 btn de etutoria y btniniciar*/
+#btntutoriaespera {
+  background-color: rgba(240, 248, 255, 0);
+  border: 3px solid aliceblue;
+  margin-right: 7vw; /*Se utiliza para separar a los botones uno de otro horizontal*/
+  transition: 0.3s ease;
+}
+
+/*Controla estilos del btntutoriaespera*/
+#btninicioespera {
+  background-color: rgba(0, 136, 255, 0.675);
+  border: 3px solid aliceblue;
+  transition: 0.3s ease;
+}
+
+/*La animacion hover (sobre poner el mouse encima)*/
+/*Controla animacion cuando se hace grande el btn al sobreponer el mouse*/
+#btntutoriaespera:hover {
+  transform: scale(1.1);
+  background-image: url("../imagenes/iconos/bmoia.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left -95px;
+  border: 5px solid aliceblue;
+}
+
+/*Dezaparece la letra del boton iaespera*/
+#btntutoriaespera:hover span {
+  opacity: 0;
+}
+
+/*Dezaparece la letra del boton iaespera*/
+#btntutoriaespera:hover img {
+  opacity: 0;
+}
+
+/*Controla estilos del btntutoriaespera*/
+#btninicioespera:hover {
+  background-color: rgb(10, 132, 255);
+  transform: scale(1.1);
+  font-weight: 400;
+  border: 5px solid aliceblue;
+}
+
+/*Dezaparece la letra del boton si es que se quiere poner un img como en de btnesperaia (esconde las letras dentro del span que esten en el btn al hacer hover)
+#btninicioespera:hover span {
+  opacity: 1;
+}*/
+
+/*Se deja aqui por si depues se quiere poner una imagen al btn(esconde las imagenes que esten en el btn al hacer hover)/
+#btninicioespera:hover img {
+  opacity: 0;
+}*/
+
+/*---------------------------------------------------------------------------Tiposesiom------------------------------------------------------------*/
+#contenedor-tiposesion {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
+}
+
+.opciontiposesion {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  height: calc(
+    50vh + 150px
+  ); /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
+  width: 40vw;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.257);
+  border-radius: 20px;
+  margin-left: 2px; /*Separa a las 2 cards de tipo de sesion una de otra*/
+  transition: 0.3s ease;
+  text-decoration: none; /*Elimina las lineas del texto tipo link*/
+  color: aliceblue; /*Pone el color de texto tipo link (a) color blanco*/
+}
+
+/*Hace que cuando el mouse se sobrepone el cuadro contenedor de cada opcion de tipo de sesion sea mas visible, aparte de ponerle una sombra de color verde */
+.opciontiposesion:hover {
+  opacity: 1;
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+  z-index: 1;
+  cursor: pointer; /*Cambia el cursor a una mano para decir que se puede seleccionar*/
+}
+
+/*Hace que el texto este abajo de cada card de tipo de inicio de sesion*/
+.filatextotiposesion {
+  margin-top: 40vh;
+}
+
+/*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
+.contenedor-inicionormal {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#olvidastesesion {
+  justify-content: flex-end;
+}
+
+#botoniniciarsesion{
+  width: 200px;
+  height: 60px;
+}
