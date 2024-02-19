@@ -12,36 +12,40 @@
     <!-- Enlace al archivo CSS separado que importa los estilos -->
     <link href="css/estilos.css" rel="stylesheet">
 
-    <title>Inicio sesion</title>
+    <title>Inicia sesion</title>
 </head>
 
 <body> <!--Se utiliza el contenedor para darle un fondo de imagen-->
     <div class="container-fluid contenedor-inicionormal centrar">
-        <section class="cuadro-blanco-v centrar centrar-texto" id="">
+        <section class="cuadro-blanco-v centrar">
             <div class="row">
                 <div class="col">
-                    <img src="imagenes/logos/logoaliadosvertical.gif" class="logo-m">
-                    <div class="row espacio-vertical-g">
+                    <div class="row espacio-v-m alinear-center">
                         <div class="col">
-                            <h2>Bienvenido, inicia sesion</h2>
+                            <img src="imagenes/logos/logoaliadosvertical.gif" class="logo-m">
+                            <h1 class="text-m espacio-v-m">Bienvenid@, inicia sesion</h1>
+                        </div>
+                    </div>
+                    <div class="row espacio-v-c">
+                        <div class="col">
                             <!--El form mandara los datos hacia donde dicta action "autenticar sesion" (recuerda que debes de recibirlos en ese file con el metodo que se envia) "Post"-->
-                            <form action="../Servidor/autenticarsesion.php" method="POST"> <!--Manda a el back 2 parametros 1(correo o id) 2(contraseña)-->
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" name="usuario" placeholder="name@example.com">
+                            <form action="../Servidor/autenticar.php" method="POST"> <!--Manda a el back 2 parametros 1(correo o id) 2(contraseña)-->
+                                <div class="form-floating mb-4 input-g">
+                                    <input type="text" class="form-control text-c" id="floatingInput" name="usuario" placeholder="name@example.com">
                                     <label for="floatingInput">Correo/ID</label> <!--Se manda a el back con el name del input-->
                                 </div>
-                                <div class="form-floating">
-                                    <input type="password" class="form-control" id="floatingPassword" name="contraseña" placeholder="Password">
+                                <div class="form-floating mb-3 input-g">
+                                    <input type="password" class="form-control text-c" id="floatingPassword" name="contraseña" placeholder="Password">
                                     <label for="floatingPassword">Contraseña</label> <!--Se manda a el back con el name del input-->
                                 </div>
-                                <div class="row espacio-vertical-c">
+                                <div class="row alinear-left">
                                     <div class="col"> <!--Este col hace que el tamaño del boton no sea el de toda la row y se pueda centrar-->
-                                        <a href="Recuperarpass.php" id="olvidastesesion">¿Olvidaste tu contraseña?</a> <!--Hace que el form se ejecute y manda a la direccion del action del form-->
+                                        <a href="Recuperarpass.php" class="text-c hover-link decoracion-no" id="olvidasteinicionormal">¿Olvidaste tu contraseña?</a> <!--Hace que el form se ejecute y manda a la direccion del action del form-->
                                     </div>
                                 </div>
-                                <div class="row espacio-vertical-m">
+                                <div class="row espacio-v-c alinear-center">
                                     <div class="col"> <!--Este col hace que el tamaño del boton no sea el de toda la row y se pueda centrar-->
-                                        <a href=""><button type="submit" id="botoniniciarsesion">Comenzar</button></a>
+                                        <a href=""><button type="submit" class="btn-g btn-azul borde-r-m text-c txt-blanco negrita hover-btn">Comenzar</button></a>
                                     </div>
                                 </div>
                             </form>

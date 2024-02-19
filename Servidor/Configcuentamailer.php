@@ -5,17 +5,17 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/SMTP.php';
-require 'PHPMailer-master/src/PHPMailer.php';
+require 'lib/PHPMailer-master/src/Exception.php';
+require 'lib/PHPMailer-master/src/SMTP.php';
+require 'lib/PHPMailer-master/src/PHPMailer.php';
 
 $alert = "";
 
 if (!empty($_POST)) {
-    if (!empty($_POST['inputrecuperarcontraseña'])) {
-        include_once("../Servidor/Conexion.php");
+    if (!empty($_POST['usuario'])) {
+        include_once("Conexion.php");
 
-        $credencial = $_POST['inputrecuperarcontraseña'];
+        $credencial = $_POST['usuario'];
         $query = "SELECT * FROM usuarios WHERE id_usuario = '$credencial' OR correo = '$credencial'";
         $consulta = mysqli_query($conexion, $query);
         $resultado = mysqli_fetch_array($consulta);
@@ -49,7 +49,7 @@ if (!empty($_POST)) {
                 $mail->send(); //Mandar el mensaje
                 echo 'Message has been sent'; //Mensaje ha sido enviado Crack SIUUU
 
-                header("Location: ../Cliente/recuperarcontraseña.php?resultado=exito");
+                header("Location: ../Cliente/recuperarpass.php?resultado=exito");
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; //Te fallo bro, nouuuuuu
 

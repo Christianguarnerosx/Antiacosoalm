@@ -28,7 +28,7 @@ if (!empty($_SESSION['active'])) { //Si es diferente de vacia
                 $resultado2 = mysqli_fetch_array($consulta2);
 
                 if ($resultado2['avatar'] > 0) {
-                    header("Location: ../Cliente/Principal.php");
+                    header("Location: ../Cliente/Principalalm.php");
                 } else {
                     header("Location: ../Cliente/Elegiravatar.php");
                 }

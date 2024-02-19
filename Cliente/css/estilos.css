@@ -11,36 +11,74 @@
 /*CLASES GENERALES personales*/
 /*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
 haciendo mas reciclabe el codigo*/
-/*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
-.centrar {
-  display: flex; /*alinea los componenetes*/
-  align-items: center; /*Alinea horizontalmente en medio*/
-  justify-content: center; /*Alinea verticalmenete en medio*/
+
+/*Asigna al elemento que tenga esta clase un display especifico para poder tomar herramientas de display sin tener que escribir display en cada unoa de ellas*/
+.display-f {
+  display: flex;
 }
 
-/*(En caso de ser necesario y no centre vertical normalmente cols y rows) Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos Vertical*/
-.centrar-vertical {
-  margin-top: 35vh; /*vh calcula*/
+.display-l {
+  display: inline;
+}
+
+/*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
+.centrar {
+  display: flex;
+  /*alinea los componenetes*/
+  align-items: center;
+  /*Alinea horizontalmente en medio*/
+  justify-content: center;
+  /*Alinea verticalmenete en medio*/
+}
+
+/* Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos Vertical*/
+.centrar-v {
+  align-items: center;
+}
+
+/*Centra horizontlmente a los elmentos hijos que tenga ese contenedoor/seccion*/
+.centrar-h {
+  justify-content: center;
 }
 
 /*Alinea el texto en medio/ Justificado enmedio*/
-.centrar-texto {
+.alinear-center {
   text-align: center;
 }
 
-/*Deja un espacio en vertical*/
-.espacio-vertical-g {
-  margin-top: 5vh;
+/*Alinear texto a la izq*/
+.alinear-left {
+  text-align: left;
 }
 
 /*Deja un espacio en vertical*/
-.espacio-vertical-m {
-  margin-top: 20px;
+.espacio-v-g {
+  margin-top: 8vh;
+}
+
+/*Deja un espacio en vertical*/
+.espacio-v-m {
+  margin-top: 60px;
 }
 
 /*Clase que deja un espacio en vertical pequeño*/
-.espacio-vertical-c {
-  margin-top: 10px;
+.espacio-v-c {
+  margin-top: 30px;
+}
+
+/*Deja un espacio en h*/
+.espacio-h-g {
+  padding-left: 8vh;
+}
+
+/*Deja un espacio en h*/
+.espacio-h-m {
+  padding-left: 20px;
+}
+
+/*Clase que deja un espacio en h pequeño*/
+.espacio-h-c {
+  padding-left: 10px;
 }
 
 /*Hace a los botones redondos*/
@@ -49,14 +87,59 @@ haciendo mas reciclabe el codigo*/
   overflow: hidden;
 }
 
+/*Hace el tamano de un boton grande*/
+.btn-g {
+  width: 300px;
+  height: 60px;
+}
+
+/*Hace el tamano de un boton mediano*/
+.btn-m {
+  width: 200px;
+  height: 65px;
+}
+
+/*Asigna a un elemento de boton/imagen fondo transparente y sin bordes*/
+.transparente {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+}
+
+/*Asigna el fondo y forma de boton*/
+.btn-azul {
+  background-color: rgb(15, 134, 253);
+}
+
+/*Asigna el fondo y forma de boton*/
+.btn-naranja {
+  background-color: rgb(255, 110, 32);
+}
+
+/*Normalmente es asigando a las cards/botones borde c*/
+.borde-r-c {
+  border-radius: 15px;
+}
+
+/*Normalmente es asigando a las cards/botones borde c*/
+.borde-r-m {
+  border-radius: 25px;
+}
+
+/*Normalmente es asigando a las cards/botones borde c*/
+.borde-r-g {
+  border-radius: 30px;
+}
+
 /*titulos (h1,h2,etc)*/
 .titulo-g {
   font-size: 6rem;
 }
+
 /*titulos (h1,h2,etc)*/
 .titulo-m {
   font-size: 5rem;
 }
+
 /*titulos (h1,h2,etc)*/
 .titulo-c {
   font-size: 3rem;
@@ -66,17 +149,19 @@ haciendo mas reciclabe el codigo*/
 .text-g {
   font-size: 3rem;
 }
+
 /*Texto comun/descripciones (a,p,span,etc)*/
 .text-m {
   font-size: 2rem;
 }
+
 /*Texto comun/descripciones (a,p,span,etc)*/
 .text-c {
   font-size: 1.5rem;
 }
 
 /*Clase que pone letras en muy negritas*/
-.negritas {
+.negritam {
   font-weight: bolder;
 }
 
@@ -97,7 +182,24 @@ haciendo mas reciclabe el codigo*/
 
 /*clase que asigna el tamaño de una img.. comumente los logos*/
 .logo-m {
-  width: 250px;
+  width: 310px;
+  margin-top: -30%;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-c {
+  width: 200px;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-g {
+  width: 400px;
+}
+
+/*clase que asigna el tamaño de una img.. comumente los logos*/
+.logo-m {
+  width: 310px;
+  margin-top: -30%;
 }
 
 /*clase que asigna el tamaño de una img.. comumente los logos*/
@@ -110,18 +212,87 @@ haciendo mas reciclabe el codigo*/
   position: fixed;
   top: 0px;
   left: 10px;
-  width: 7%; /* El logotipo no superará el ancho del contenedor */
+  width: 7%;
+  /* El logotipo no superará el ancho del contenedor */
   height: auto;
-  z-index: 5; /*Para que este logo aparezca arriba de todas las interfaz*/
+  z-index: 5;
+  /*Para que este logo aparezca arriba de todas las interfaz*/
+}
+
+/*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
+.icono-g {
+  width: 100px;
+  height: 100px;
+}
+
+/*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
+.icono-m {
+  width: 90px;
+  height: 90px;
+}
+
+/*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
+.avatar-g {
+  width: 200px;
+  height: 200px;
+}
+
+/*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
+.avatar-m {
+  width: 150px;
+  height: 150px;
 }
 
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-blanco-v {
   background-color: aliceblue;
-  height: 800px;
-  width: 550px;
+  height: calc(72vh + 180px);
+  /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
+  width: calc(950px - 17vw);
 }
 
+/*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
+.cuadro-blanco-h {
+  background-color: aliceblue;
+  height: calc(75vh + 180px);
+  /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
+  width: calc(1500px - 15vw);
+}
+
+/*Tamano de los input*/
+/*Input grande*/
+.input-g {
+  transform: scale(1.2);
+}
+
+/*Utilizado para que los links no tengan esa linea subrayada*/
+.decoracion-no {
+  text-decoration: none;
+}
+
+/*++++++++++++++++++++++++++++  Clases hover/sobreponer +++++++++++++++++++++*/
+/*Hover para que todos los botones que la utilizen cambien de tamano como iniciar sesion/recuperarpass, etc*/
+.hover-btn:hover {
+  transform: scale(1.05);
+  background-color: c;
+}
+
+/*Hover para que todos los links que la utilizen cambien color y tamano*/
+.hover-link:hover {
+  transform: scale(1.05);
+  background-color: aliceblue;
+  color: dodgerblue;
+}
+
+/*Clase para poder voltear/rotar en 90 grados*/
+.rotar-90 {
+  transform: rotate(90deg);
+}
+
+/*Clase para poder voltear/rotar en 180 grados*/
+.rotar-180 {
+  transform: rotate(90deg);
+}
 
 /*----------------------------------------------------------------------------------------------Pantalla de ESPERA---------------------------------*/
 /*Agregar un background al body logra que este aparezca de tras del contenido, como una pintura y no un elemento
@@ -148,7 +319,8 @@ Asi logras evadir lo de position y z index en los elementos*/
 #btntutoriaespera {
   background-color: rgba(240, 248, 255, 0);
   border: 3px solid aliceblue;
-  margin-right: 7vw; /*Se utiliza para separar a los botones uno de otro horizontal*/
+  margin-right: 7vw;
+  /*Se utiliza para separar a los botones uno de otro horizontal*/
   transition: 0.3s ease;
 }
 
@@ -199,29 +371,34 @@ Asi logras evadir lo de position y z index en los elementos*/
 }*/
 
 /*---------------------------------------------------------------------------Tiposesiom------------------------------------------------------------*/
+/*Asigan a el contenedor principal de esta interfaz el fondo y demas caracteristicas*/
 #contenedor-tiposesion {
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
+  height: 100vh;
+  /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
 }
 
+/*Tarjetas/cards que tendran el mismo formato*/
 .opciontiposesion {
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   opacity: 0.7;
-  height: calc(
-    50vh + 150px
-  ); /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
+  height: calc(50vh + 150px);
+  /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
   width: 40vw;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.257);
   border-radius: 20px;
-  margin-left: 2px; /*Separa a las 2 cards de tipo de sesion una de otra*/
+  margin-left: 2px;
+  /*Separa a las 2 cards de tipo de sesion una de otra*/
   transition: 0.3s ease;
-  text-decoration: none; /*Elimina las lineas del texto tipo link*/
-  color: aliceblue; /*Pone el color de texto tipo link (a) color blanco*/
+  text-decoration: none;
+  /*Elimina las lineas del texto tipo link*/
+  color: aliceblue;
+  /*Pone el color de texto tipo link (a) color blanco*/
 }
 
 /*Hace que cuando el mouse se sobrepone el cuadro contenedor de cada opcion de tipo de sesion sea mas visible, aparte de ponerle una sombra de color verde */
@@ -230,7 +407,8 @@ Asi logras evadir lo de position y z index en los elementos*/
   transform: scale(1.06);
   box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
   z-index: 1;
-  cursor: pointer; /*Cambia el cursor a una mano para decir que se puede seleccionar*/
+  cursor: pointer;
+  /*Cambia el cursor a una mano para decir que se puede seleccionar*/
 }
 
 /*Hace que el texto este abajo de cada card de tipo de inicio de sesion*/
@@ -239,6 +417,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
+/*Contendor principal de inicio que asigna el fondo*/
 .contenedor-inicionormal {
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
@@ -246,11 +425,85 @@ Asi logras evadir lo de position y z index en los elementos*/
   height: 100vh;
 }
 
-#olvidastesesion {
-  justify-content: flex-end;
+#olvidasteinicionormal {
+  margin-left: -30px;
 }
 
-#botoniniciarsesion{
-  width: 200px;
-  height: 60px;
+/*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
+/*Cierre recuperar pas*/
+
+
+/*-------------------------------------------------------------------------------------------------------------- ELEGIR AVATAR alum --------------------------*/
+/*Utilizado para darle fondo a la interfaz de elegir avatar*/
+.contenedor-elegiravatar {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*Le da formato a todas las opciones de img de avatar*/
+.avatar-elegir {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(0, 255, 81, 0.399);
+  border-radius: 50%;
+  opacity: 0.7;
+  border: 6px solid rgb(70, 255, 165);
+  margin-right: 10px;
+}
+
+/*Hace que cuando se sobreponga el mouse elos avatar se amplien y se les cambie el borde */
+.hover-avatar:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 2;
+  border: 8px solid rgb(76, 247, 165);
+}
+
+/*------------------------------------------------------------------------------------------------------------ PRINCIPAL -------------*/
+/*Contenedor que asigan ek fondo de imagen de la interfas*/
+#contenedor-principal {
+  background-image: url("../imagenes/fondos/gusano.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*Centra a el fondo siempre en medio en cualquier medida que tome*/
+  height: 100vh;
+  transition: 0.3s ease-in;
+}
+
+#colmenuprincipal{
+  width: 300px; /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
+}
+
+#colextrasprincipal{
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(252, 16, 16, 0.955);
+  height: 100vh;
+  width: 100vw;
+  transition: 0.25s ease-in;
+}
+
+/*Boton de menu que esta en la interfaz principal que maneja posicion y duracion de transisioones de el boton*/
+#btn-menu-principal {
+  position: fixed;
+  z-index: 3;
+  left: 25px;
+  top: calc(45vh - 30px);
+  transition: 0.4s ease-out;
+}
+
+/*Boton de extras que esta en la interfaz principal que maneja posicion y duracion de transisioones de el boton*/
+#btn-extras-principal{
+  position: fixed;
+  z-index: 3;
+  right: 25px;
+  top: 25px;
+  width: 130px;
+  height: 130px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  transition: 0.4s;
 }
