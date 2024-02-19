@@ -22,7 +22,12 @@
             <img class="avatar-g" src="imagenes/avatares/avatar-bmoranchero.gif" alt=""> <!--Debe de ponerse la ruta calculada desde donde se manda a traer en este caso es para la de menual pricnipal-->
         </div>
         <div class="row">
-            
+            <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Much longer nav link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </nav>
         </div>
     </div>
 

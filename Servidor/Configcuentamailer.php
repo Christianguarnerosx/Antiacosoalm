@@ -1,4 +1,7 @@
 <?php
+/*Desde aqui se configura toda la cuenta mail, correo desde donde se enviaran
+obvio debes de poner tus credenciales, para iniciar sesion con phpmailer y que este pueda enviarlos desde tu cuenta,
+ahora, bien si es de google hay que habilitar la autenticacion en 2 pasos. Ya que sin esto mandara errores/dira que no sirve etc */
 //Importar las clases del php mailer
 //Estos permitiran hacer uso de las funciones que se necesiten asi como mandarlas a traer de donde se ubican
 use PHPMailer\PHPMailer\PHPMailer;

@@ -21,6 +21,10 @@ haciendo mas reciclabe el codigo*/
   display: inline;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 /*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
 .centrar {
   display: flex;
@@ -473,11 +477,12 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.3s ease-in;
 }
 
-#colmenuprincipal{
-  width: 300px; /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
+#colmenuprincipal {
+  width: 300px;
+  /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
 }
 
-#colextrasprincipal{
+#colextrasprincipal {
   position: fixed;
   z-index: 1;
   background-color: rgba(252, 16, 16, 0.955);
@@ -496,7 +501,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Boton de extras que esta en la interfaz principal que maneja posicion y duracion de transisioones de el boton*/
-#btn-extras-principal{
+#btn-extras-principal {
   position: fixed;
   z-index: 3;
   right: 25px;
