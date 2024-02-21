@@ -16,7 +16,7 @@
 
 <body>
     <div class="container-fluid contenedor-elegiravatar display-f centrar">
-        <section class="cuadro-blanco-h centrar">
+        <section class="cuadro-h blanco-transparente centrar">
             <div class="row espacio-v-m alinear-center">
                 <h1>Bien, escoge un avatar <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span></h1>
             </div>

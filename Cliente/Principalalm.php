@@ -23,20 +23,21 @@
                 include("include/Menualm.php");
                 ?>
             </div>
-            <div class="col" id="contenedor-principal">
+            <div class="col centrar" id="contenedor-principal">
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
-                <button type="button" id="btn-menu-principal" class="transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipal" aria-expanded="false" aria-controls="colmenuprincipal">
+                <button type="button" id="btn-menu-principal" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipal" aria-expanded="false" aria-controls="colmenuprincipal">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-m rotar-90" alt="">
                 </button>
-                <button type="button" id="btn-extras-principal" class="transparente" data-bs-toggle="collapse" data-bs-target="#colextrasprincipal" aria-expanded="false" aria-controls="colextrasprincipal">
+                <button type="button" id="btn-extras-principal" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigprincipal" aria-expanded="false" aria-controls="colconfigprincipal">
                     <img src="imagenes/avatares/avatar-bmo.gif" class="icono-g" alt="">
                 </button>
-                <!--comienza el contenido-->
-                <main>
 
-                </main>
+                <section class="cuadro-f blanco-transparente">
+
+                </section>
             </div>
-            <div class="col collapse" id="colextrasprincipal"> <!--Barra menu de la izq-->
+            <div class="col collapse" id="colconfigprincipal"> <!--Barra menu de la izq-->
+
             </div>
         </div>
     </div>

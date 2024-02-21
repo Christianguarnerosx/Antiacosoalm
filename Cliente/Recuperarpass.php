@@ -17,7 +17,7 @@
 
 <body> <!--Se utiliza el contenedor para darle un fondo de imagen-->
     <div class="container-fluid contenedor-inicionormal centrar">
-        <section class="cuadro-blanco-v centrar alinear-center">
+        <section class="cuadro-v blanco-transparente centrar alinear-center">
             <div class="row">
                 <div class="col">
                     <div class="row espacio-v-c">

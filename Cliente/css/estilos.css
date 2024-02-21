@@ -104,7 +104,7 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*Asigna a un elemento de boton/imagen fondo transparente y sin bordes*/
-.transparente {
+.btn-transparente {
   background-color: rgba(240, 248, 255, 0);
   border: none;
 }
@@ -256,11 +256,18 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
-.cuadro-blanco-h {
-  background-color: aliceblue;
+.cuadro-h {
   height: calc(75vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: calc(1500px - 15vw);
+}
+
+/*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
+.cuadro-f {
+  background-color: aliceblue;
+  height: 98%;
+  /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
+  width: 100%;
 }
 
 /*Tamano de los input*/
@@ -296,6 +303,14 @@ haciendo mas reciclabe el codigo*/
 /*Clase para poder voltear/rotar en 180 grados*/
 .rotar-180 {
   transform: rotate(90deg);
+}
+
+.blanco-transparente {
+  background-color: rgba(240, 248, 255, 0.836);
+}
+
+.blanco-solido {
+  background-color: rgba(240, 248, 255, 0.836);
 }
 
 /*----------------------------------------------------------------------------------------------Pantalla de ESPERA---------------------------------*/
@@ -482,7 +497,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
 }
 
-#colextrasprincipal {
+#colconfigprincipal {
   position: fixed;
   z-index: 1;
   background-color: rgba(252, 16, 16, 0.955);
@@ -512,3 +527,5 @@ Asi logras evadir lo de position y z index en los elementos*/
   border-radius: 50%;
   transition: 0.4s;
 }
+
+#Menudealm {}

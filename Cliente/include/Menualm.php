@@ -22,11 +22,29 @@
             <img class="avatar-g" src="imagenes/avatares/avatar-bmoranchero.gif" alt=""> <!--Debe de ponerse la ruta calculada desde donde se manda a traer en este caso es para la de menual pricnipal-->
         </div>
         <div class="row">
-            <nav class="nav flex-column">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-                <a class="nav-link" href="#">Much longer nav link</a>
-                <a class="nav-link" href="#">Link</a>
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <nav class="nav nav-pills flex-column text-m" id="Menudealm"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link" href="#">TutorIA</a>
+                <a class="nav-link" href="#">Aliado</a>
+                <a class="nav-link" href="#">Academico</a>
+                <a class="nav-link" href="#">Track</a>
+                <a class="nav-link" href="#">Extras</a>
+                <!-- boton dezplegable de... -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary text-m">Action</button> <!--Aqui tambien se debe de cambiar el tamano del texto por que al ponerselo al nav solo agarra a los nav-link-->
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split text-m" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu text-m">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>

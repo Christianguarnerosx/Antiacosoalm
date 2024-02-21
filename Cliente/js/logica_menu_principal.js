@@ -18,8 +18,9 @@ document.getElementById("colmenuprincipal").addEventListener("hide.bs.collapse",
 
 /*Logica para que funcione el boton extras/opciones*/
 /*Hace que ela columna que esta en collapse aparezca al agregarle el action de bootstrap shown.bs.collapse (Asi aparecera la columa del menu)*/
-document.getElementById("colextrasprincipal").addEventListener("show.bs.collapse", function () {
-    document.getElementById("colextrasprincipal").style.zIndex = "1";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
+document.getElementById("colconfigprincipal").addEventListener("show.bs.collapse", function () {
+    document.getElementById("colconfigprincipal").style.zIndex = "1";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
+    document.getElementById("btn-menu-principal").style.zIndex = "0";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principal").style.scale = "3"; /*Hara que el boton se haga mas pequeno*/
     document.getElementById("btn-extras-principal").style.right = "45%";/*Posicion que tomara a la derecha cuando el menu este dezplegado*/
     document.getElementById("btn-extras-principal").style.top = "200px";/*Posicion que tomara a lo alto cuando el menu este dezplegado*/
@@ -27,7 +28,7 @@ document.getElementById("colextrasprincipal").addEventListener("show.bs.collapse
 });
 
 /*De la misma manera se aplica el event de hidden a la col que se quiera ocultar al agregarle el hide.bs,collapse*/
-document.getElementById("colextrasprincipal").addEventListener("hide.bs.collapse", function () {
+document.getElementById("colconfigprincipal").addEventListener("hide.bs.collapse", function () {
     document.getElementById("btn-extras-principal").style.scale = "1"; /*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principal").style.right = "25px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
     document.getElementById("btn-extras-principal").style.top = "25px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
