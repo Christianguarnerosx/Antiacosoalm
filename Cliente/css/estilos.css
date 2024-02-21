@@ -12,19 +12,23 @@
 /*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
 haciendo mas reciclabe el codigo*/
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Displays +++++++++++++++++++++*/
 /*Asigna al elemento que tenga esta clase un display especifico para poder tomar herramientas de display sin tener que escribir display en cada unoa de ellas*/
 .display-f {
   display: flex;
 }
 
+/*Utilzado para poder acomodar todos los elementos y se vayan recorriendo para abajo si es que se excede del contenedor*/
 .display-l {
   display: inline;
 }
 
+/*Have que un nav o cualquier otra cosa horizontal se haga vertical*/
 .flex-column {
   flex-direction: column;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Tipos de centrado +++++++++++++++++++++*/
 /*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
 .centrar {
   display: flex;
@@ -45,6 +49,7 @@ haciendo mas reciclabe el codigo*/
   justify-content: center;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Texto Alinear +++++++++++++++++++++*/
 /*Alinea el texto en medio/ Justificado enmedio*/
 .alinear-center {
   text-align: center;
@@ -55,6 +60,7 @@ haciendo mas reciclabe el codigo*/
   text-align: left;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Espacios verticales +++++++++++++++++++++*/
 /*Deja un espacio en vertical*/
 .espacio-v-g {
   margin-top: 8vh;
@@ -70,6 +76,7 @@ haciendo mas reciclabe el codigo*/
   margin-top: 30px;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Espacios horizontales +++++++++++++++++++++*/
 /*Deja un espacio en h*/
 .espacio-h-g {
   padding-left: 8vh;
@@ -85,6 +92,7 @@ haciendo mas reciclabe el codigo*/
   padding-left: 10px;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Botones/btn +++++++++++++++++++++*/
 /*Hace a los botones redondos*/
 .btn-circular {
   border-radius: 50%;
@@ -119,6 +127,8 @@ haciendo mas reciclabe el codigo*/
   background-color: rgb(255, 110, 32);
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Bordes +++++++++++++++++++++*/
 /*Normalmente es asigando a las cards/botones borde c*/
 .borde-r-c {
   border-radius: 15px;
@@ -134,6 +144,7 @@ haciendo mas reciclabe el codigo*/
   border-radius: 30px;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Texto/Titulos +++++++++++++++++++++*/
 /*titulos (h1,h2,etc)*/
 .titulo-g {
   font-size: 6rem;
@@ -179,22 +190,8 @@ haciendo mas reciclabe el codigo*/
   color: aliceblue;
 }
 
-/*clase que asigna el tamaño de una img.. comumente los logos*/
-.logo-g {
-  width: 400px;
-}
 
-/*clase que asigna el tamaño de una img.. comumente los logos*/
-.logo-m {
-  width: 310px;
-  margin-top: -30%;
-}
-
-/*clase que asigna el tamaño de una img.. comumente los logos*/
-.logo-c {
-  width: 200px;
-}
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Logos +++++++++++++++++++++*/
 /*clase que asigna el tamaño de una img.. comumente los logos*/
 .logo-g {
   width: 400px;
@@ -223,6 +220,8 @@ haciendo mas reciclabe el codigo*/
   /*Para que este logo aparezca arriba de todas las interfaz*/
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Iconos +++++++++++++++++++++*/
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
 .icono-g {
   width: 100px;
@@ -235,6 +234,8 @@ haciendo mas reciclabe el codigo*/
   height: 90px;
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Avatares +++++++++++++++++++++*/
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
 .avatar-g {
   width: 200px;
@@ -247,9 +248,10 @@ haciendo mas reciclabe el codigo*/
   height: 150px;
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Clases Colores Fondos +++++++++++++++++++++*/
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
-.cuadro-blanco-v {
-  background-color: aliceblue;
+.cuadro-v {
   height: calc(72vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: calc(950px - 17vw);
@@ -264,13 +266,12 @@ haciendo mas reciclabe el codigo*/
 
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-f {
-  background-color: aliceblue;
   height: 98%;
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: 100%;
 }
 
-/*Tamano de los input*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
 /*Input grande*/
 .input-g {
   transform: scale(1.2);
@@ -281,7 +282,27 @@ haciendo mas reciclabe el codigo*/
   text-decoration: none;
 }
 
-/*++++++++++++++++++++++++++++  Clases hover/sobreponer +++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Colores Fondos +++++++++++++++++++++*/
+.blanco-transparente {
+  background-color: rgba(240, 248, 255, 0.836);
+}
+
+.blanco-solido {
+  background-color: rgba(240, 248, 255, 0.836);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Animaciones/rotar +++++++++++++++++++++*/
+/*Clase para poder voltear/rotar en 90 grados*/
+.rotar-90 {
+  transform: rotate(90deg);
+}
+
+/*Clase para poder voltear/rotar en 180 grados*/
+.rotar-180 {
+  transform: rotate(90deg);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Hover/sobreponer +++++++++++++++++++++*/
 /*Hover para que todos los botones que la utilizen cambien de tamano como iniciar sesion/recuperarpass, etc*/
 .hover-btn:hover {
   transform: scale(1.05);
@@ -293,24 +314,6 @@ haciendo mas reciclabe el codigo*/
   transform: scale(1.05);
   background-color: aliceblue;
   color: dodgerblue;
-}
-
-/*Clase para poder voltear/rotar en 90 grados*/
-.rotar-90 {
-  transform: rotate(90deg);
-}
-
-/*Clase para poder voltear/rotar en 180 grados*/
-.rotar-180 {
-  transform: rotate(90deg);
-}
-
-.blanco-transparente {
-  background-color: rgba(240, 248, 255, 0.836);
-}
-
-.blanco-solido {
-  background-color: rgba(240, 248, 255, 0.836);
 }
 
 /*----------------------------------------------------------------------------------------------Pantalla de ESPERA---------------------------------*/
