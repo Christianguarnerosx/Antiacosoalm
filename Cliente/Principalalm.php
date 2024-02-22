@@ -14,6 +14,12 @@
     <title>Bienvenido</title>
 </head>
 
+<!--Hay una regla que dice que la variable session debe de iniciar antes de entradas de html-->
+<!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada   -->
+<?php
+session_start();
+?>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -32,8 +38,34 @@
                     <img src="imagenes/avatares/avatar-bmo.gif" class="icono-g" alt="">
                 </button>
 
+                <!--1 contenedor principal ya el contenido de opciones/tutoria-->
                 <section class="cuadro-f blanco-transparente">
+                    <div class="row"> <!--fila de encabezado/logo-->
+                        <div class="col">
+                            <img id="principal-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
+                        </div>
+                    </div>
+                    <!--Fila contenido-->
+                    <div class="row">
+                        <div class="col">
+                            <h1> Hola
+                                <?php
+                                include("../Servidor/Conexion.php");
+                                $id = $_SESSION['usuario'];
+                                $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = 1";
+                                $resultado = mysqli_query($conexion, $query);
 
+                                if (mysqli_num_rows($resultado) > 0) {
+                                    $row = mysqli_fetch_array($resultado);
+                                ?>
+                                    <h1>Hola <?Php echo "" . $row["nombre"] . $row["apellidop"] ?></h1>
+                                <?Php
+                                }
+                                mysqli_close($conexion);
+                                ?>
+                            </h1>
+                        </div>
+                    </div>
                 </section>
             </div>
             <div class="col collapse" id="colconfigprincipal"> <!--Barra menu de la izq-->

@@ -17,18 +17,40 @@
 <body>
     <div class="container-fluid contenedor-elegiravatar display-f centrar">
         <section class="cuadro-h blanco-transparente centrar">
-            <div class="row espacio-v-m alinear-center">
-                <h1>Bien, escoge un avatar <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span></h1>
-            </div>
-            <div class="row centrar-h espacio-v-c">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
-                <img class="avatar-elegir hover-avatar espacio-v-c" src="imagenes/avatares/avatar-princesafuego.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-princesafuego.gif')">
+            <div class="row centrar">
+                <div class="col-4 espacio-left-g">
+                    <h1 class="text-g"> Bien
+                        <?php
+                        session_start();
+                        include("../Servidor/Conexion.php");
+                        $id = $_SESSION['usuario'];
+                        $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = 1";
+                        $resultado = mysqli_query($conexion, $query);
+
+                        if (mysqli_num_rows($resultado) > 0) {
+                            $row = mysqli_fetch_array($resultado);
+                        ?>
+                            <?Php echo "" . $row["nombre"] . "," ?>
+                        <?Php
+                        }
+                        mysqli_close($conexion);
+                        ?>
+                        <span class="text-m">Escoge un vatar</span>
+                        <br> <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span>
+                    </h1>
+                </div>
+                <div class="col">
+                    <div class="row centrar-h espacio-top-c">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-princesafuego.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-princesafuego.gif')">
+                    </div>
+                </div>
             </div>
         </section>
     </div>

@@ -20,13 +20,13 @@
         <section class="cuadro-v blanco-transparente centrar">
             <div class="row">
                 <div class="col">
-                    <div class="row espacio-v-m alinear-center">
+                    <div class="row espacio-top-m alinear-center">
                         <div class="col">
                             <img src="imagenes/logos/logoaliadosvertical.gif" class="logo-m">
-                            <h1 class="text-m espacio-v-m">Bienvenid@, inicia sesion</h1>
+                            <h1 class="text-m espacio-top-m">Bienvenid@, inicia sesion</h1>
                         </div>
                     </div>
-                    <div class="row espacio-v-c">
+                    <div class="row espacio-top-c">
                         <div class="col">
                             <!--El form mandara los datos hacia donde dicta action "autenticar sesion" (recuerda que debes de recibirlos en ese file con el metodo que se envia) "Post"-->
                             <form action="../Servidor/autenticar.php" method="POST"> <!--Manda a el back 2 parametros 1(correo o id) 2(contraseña)-->
@@ -43,7 +43,7 @@
                                         <a href="Recuperarpass.php" class="text-c hover-link decoracion-no" id="olvidasteinicionormal">¿Olvidaste tu contraseña?</a> <!--Hace que el form se ejecute y manda a la direccion del action del form-->
                                     </div>
                                 </div>
-                                <div class="row espacio-v-c alinear-center">
+                                <div class="row espacio-top-c alinear-center">
                                     <div class="col"> <!--Este col hace que el tamaño del boton no sea el de toda la row y se pueda centrar-->
                                         <a href=""><button type="submit" class="btn-g btn-azul borde-r-m text-c txt-blanco negrita hover-btn">Comenzar</button></a>
                                     </div>
