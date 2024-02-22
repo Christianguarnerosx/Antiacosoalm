@@ -14,8 +14,8 @@
     <title>Bienvenido</title>
 </head>
 
-<!--Hay una regla que dice que la variable session debe de iniciar antes de entradas de html-->
-<!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada   -->
+<!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
+<!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
 <?php
 session_start();
 ?>
@@ -29,6 +29,8 @@ session_start();
                 include("include/Menualm.php");
                 ?>
             </div>
+
+            <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
             <div class="col centrar" id="contenedor-principal">
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-principal" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipal" aria-expanded="false" aria-controls="colmenuprincipal">
@@ -38,8 +40,8 @@ session_start();
                     <img src="imagenes/avatares/avatar-bmo.gif" class="icono-g" alt="">
                 </button>
 
-                <!--1 contenedor principal ya el contenido de opciones/tutoria-->
-                <section class="cuadro-f blanco-transparente">
+                <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
+                <main class="cuadro-f blanco-transparente">
                     <div class="row"> <!--fila de encabezado/logo-->
                         <div class="col">
                             <img id="principal-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
@@ -48,26 +50,15 @@ session_start();
                     <!--Fila contenido-->
                     <div class="row">
                         <div class="col">
-                            <h1> Hola
-                                <?php
-                                include("../Servidor/Conexion.php");
-                                $id = $_SESSION['usuario'];
-                                $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = 1";
-                                $resultado = mysqli_query($conexion, $query);
-
-                                if (mysqli_num_rows($resultado) > 0) {
-                                    $row = mysqli_fetch_array($resultado);
-                                ?>
-                                    <h1>Hola <?Php echo "" . $row["nombre"] . $row["apellidop"] ?></h1>
-                                <?Php
-                                }
-                                mysqli_close($conexion);
-                                ?>
+                            <h1><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
+                                <?Php include("../Servidor/funciones_db/session_nombreapa.php")?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                             </h1>
                         </div>
                     </div>
-                </section>
+                </main>
             </div>
+
+            <!--Columna de configuracion se abre dando click al avatar, aqui se manda a traer las opciones posibkes a configuar-->
             <div class="col collapse" id="colconfigprincipal"> <!--Barra menu de la izq-->
 
             </div>

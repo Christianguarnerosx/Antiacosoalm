@@ -14,29 +14,25 @@
     <title>Hello, world!</title>
 </head>
 
+
+<!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
+<!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
+<?php
+session_start();
+?>
+
 <body>
     <div class="container-fluid contenedor-elegiravatar display-f centrar">
         <section class="cuadro-h blanco-transparente centrar">
             <div class="row centrar">
                 <div class="col-4 espacio-left-g">
-                    <h1 class="text-g"> Bien
-                        <?php
-                        session_start();
-                        include("../Servidor/Conexion.php");
-                        $id = $_SESSION['usuario'];
-                        $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = 1";
-                        $resultado = mysqli_query($conexion, $query);
-
-                        if (mysqli_num_rows($resultado) > 0) {
-                            $row = mysqli_fetch_array($resultado);
-                        ?>
-                            <?Php echo "" . $row["nombre"] . "," ?>
-                        <?Php
-                        }
-                        mysqli_close($conexion);
-                        ?>
+                    <h1 class="text-g">Hola
+                        <?Php include("../Servidor/funciones_db/session_nombre.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                        ,
+                        <br>
                         <span class="text-m">Escoge un vatar</span>
-                        <br> <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span>
+                        <br>
+                        <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span>
                     </h1>
                 </div>
                 <div class="col">
