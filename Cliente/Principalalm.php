@@ -51,7 +51,7 @@ session_start();
                     <div class="row">
                         <div class="col">
                             <h1><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
-                                <?Php include("../Servidor/funciones_db/session_nombreapa.php")?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                                <?Php include("../Servidor/funciones_session/session_nombreapa.php")?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                             </h1>
                         </div>
                     </div>
