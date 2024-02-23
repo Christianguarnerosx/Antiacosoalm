@@ -53,17 +53,18 @@ session_start();
                                 </h1>
                             </div>
                         </div>
-                        <div class="row espacio-top-m">
-                            <div class="col display-f centrar-v espacio-left-g">
+                        <div class="row espacio-top-m espacio-left-g">
+                            <a class="card-g blanco-solido centrar espacio-left-c es decoracion-no txt-negro">
+                                <h1 class=" text-m">Hola</h1>
+                            </a>
 
-                                <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
-                                    <h1>Hola</h1>
-                                </a>
+                            <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
+                                <h1>Hola</h1>
+                            </a>
 
-                                <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
-                                    <h1>Hola</h1>
-                                </a>
-                            </div>
+                            <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
+                                <h1>Hola</h1>
+                            </a>
                         </div>
                     </section>
                 </main>
