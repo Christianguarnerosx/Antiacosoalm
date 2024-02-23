@@ -25,9 +25,9 @@ session_start();
     <div class="container-fluid contenedor-elegiravatar display-f centrar">
         <section class="cuadro-h blanco-transparente centrar">
             <div class="row centrar">
-                <div class="col-4 espacio-left-g">
+                <div class="col-4 espacio-left-c">
                     <h1 class="text-g">Hola
-                        <?Php include("../Servidor/funciones_db/session_nombre.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                        <?Php include("../Servidor/funciones_session/session_nombre.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                         ,
                         <br>
                         <span class="text-m">Escoge un vatar</span>

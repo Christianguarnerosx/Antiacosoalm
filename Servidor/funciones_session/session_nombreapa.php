@@ -9,7 +9,7 @@ if (mysqli_num_rows($resultado) > 0) { /*si la consulta devuelve algo*/
     $row = mysqli_fetch_array($resultado); /*guardamos en la variable row todo lo que nos regreso por campos*/
 ?>
     <!--Se utuliza a row por que almaceno lo obtenido de la consulta y se manda a traer el campo ['campo']-->
-    <?Php echo "" . $row["nombre"] . " ". $row["apellidop"] ?><!--Mensaje que se va a mostrar-->
+    <?Php echo "" . $row["nombre"]. " ".$row["apellidop"]?><!--Mensaje que se va a mostrar-->
 <?Php
 }
 mysqli_close($conexion);

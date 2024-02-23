@@ -42,19 +42,30 @@ session_start();
 
                 <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
                 <main class="cuadro-f blanco-transparente">
-                    <div class="row"> <!--fila de encabezado/logo-->
-                        <div class="col">
-                            <img id="principal-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
+                    <img id="principal-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt=""> <!--Logo del contenedor de contenido de enmedio-->
+                    <section class="espacio-top-vh">
+                        <!--Fila contenido-->
+                        <div class="row">
+                            <div class="col espacio-left-g">
+                                <h1 class="titulo-c"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
+                                    Hola<?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                                    <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
+                                </h1>
+                            </div>
                         </div>
-                    </div>
-                    <!--Fila contenido-->
-                    <div class="row">
-                        <div class="col">
-                            <h1><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
-                                <?Php include("../Servidor/funciones_session/session_nombreapa.php")?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
-                            </h1>
+                        <div class="row espacio-top-m">
+                            <div class="col display-f centrar-v espacio-left-g">
+
+                                <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
+                                    <h1>Hola</h1>
+                                </a>
+
+                                <a class="card-g blanco-solido centrar espacio-left-c decoracion-no txt-negro">
+                                    <h1>Hola</h1>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
 

@@ -76,20 +76,42 @@ haciendo mas reciclabe el codigo*/
   margin-top: 30px;
 }
 
+/*Clase que deja un espacio en vertical segun el tamano/resolucion del dispisitivo sera mas o menos*/
+.espacio-top-vh {
+  margin-top: 2vh;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Espacios horizontales +++++++++++++++++++++*/
 /*Deja un espacio en h*/
 .espacio-left-g {
-  padding-left: 50px;
+  margin-left: 125px;
 }
 
 /*Deja un espacio en h*/
 .espacio-left-m {
-  padding-left: 20px;
+  margin-left: 60px;
 }
 
 /*Clase que deja un espacio en h pequeño*/
 .espacio-left-c {
-  padding-left: 10px;
+  margin-left: 25px;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Espacios horizontales +++++++++++++++++++++*/
+/*Deja un espacio en h*/
+.espacio-right-g {
+  padding-right: 125px;
+}
+
+/*Deja un espacio en h*/
+.espacio-right-m {
+  padding-right: 60px;
+}
+
+/*Clase que deja un espacio en h pequeño*/
+.espacio-right-c {
+  padding-right: 30px;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Botones/btn +++++++++++++++++++++*/
@@ -127,7 +149,6 @@ haciendo mas reciclabe el codigo*/
   background-color: rgb(255, 110, 32);
 }
 
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Bordes +++++++++++++++++++++*/
 /*Normalmente es asigando a las cards/botones borde c*/
 .borde-r-c {
@@ -157,7 +178,7 @@ haciendo mas reciclabe el codigo*/
 
 /*titulos (h1,h2,etc)*/
 .titulo-c {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 /*Texto comun/descripciones (a,p,span,etc)*/
@@ -188,6 +209,16 @@ haciendo mas reciclabe el codigo*/
 /*colores predeterminados de las interfaces*/
 .txt-blanco {
   color: aliceblue;
+}
+
+/*colores predeterminados de las interfaces*/
+.txt-azul {
+  color: dodgerblue;
+}
+
+/*colores predeterminados de las interfaces*/
+.txt-negro {
+  color: black;
 }
 
 
@@ -269,6 +300,12 @@ haciendo mas reciclabe el codigo*/
   height: 98%;
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: 100%;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
+.card-g {
+  height: 200px;
+  width: 200px;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
@@ -535,11 +572,10 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Logo aliados top izq*/
 #principal-logo {
   margin-top: -55px;
-  margin-left: 10px;
+  margin-left: 25px;
+  margin-bottom: 0;
 }
 
 
 /******************************************************************************************************* Menualm/include **************/
-#Menudealm {
-  
-}
+#Menudealm {}
