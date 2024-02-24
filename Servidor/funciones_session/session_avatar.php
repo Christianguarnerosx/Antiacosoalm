@@ -1,0 +1,16 @@
+<?Php
+/*Funcion que obtinene la ruta del avatar del usuario*/
+
+include("../Servidor/Conexion.php"); /*Mandamos a traer la conexion al servidor de la db */
+
+$id = $_SESSION['usuario']; /*Obetenemos el id de quien incio la sesion y esta guardada en una vraiable session a la hora de autenticar */
+
+$query = "SELECT avatar from usuarios WHERE id_usuario = 1";/*Obtenemos la info del avatar con el id obtenido */
+$consulta = mysqli_query($conexion, $query); /*Ejecutamos la consulta */
+
+if (mysqli_num_rows($consulta) > 0) { /*Si hay algo en la consulta es que si devolvio informacion cuando se hizo */
+    $row = mysqli_fetch_array($consulta);
+
+    echo "" . $row["avatar"];
+}
+mysqli_close($conexion);

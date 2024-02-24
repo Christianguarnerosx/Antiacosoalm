@@ -255,14 +255,21 @@ haciendo mas reciclabe el codigo*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Iconos +++++++++++++++++++++*/
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
 .icono-g {
-  width: 100px;
-  height: 100px;
+  width: 109px;
+  height: 109px;
 }
 
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
 .icono-m {
   width: 90px;
   height: 90px;
+}
+
+/*Este tipo de icono involucra al vatar y para darle formato circular al avatar le ponemos el border de 100% como el de su contenedor padre*/
+.icono-avatar-m {
+  width: 109px;
+  height: 109px;
+  border-radius: 100%;
 }
 
 /*Icono que lleva una card abajo derecha*/
@@ -273,7 +280,6 @@ haciendo mas reciclabe el codigo*/
   right: 0vw;
   bottom: 14px;
 }
-
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Avatares +++++++++++++++++++++*/
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
@@ -289,7 +295,7 @@ haciendo mas reciclabe el codigo*/
 }
 
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Clases Colores Fondos +++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Cuadros contenedores +++++++++++++++++++++*/
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-v {
   height: calc(72vh + 180px);
@@ -322,7 +328,7 @@ haciendo mas reciclabe el codigo*/
   text-decoration: none;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Colores Fondos +++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Colores Fondos +++++++++++++++++++++++++++++++++++++*/
 /*Asigna un color blanco translucido de fondo a cualquier elemento*/
 .blanco-transparente {
   background-color: rgba(240, 248, 255, 0.836);
@@ -333,6 +339,7 @@ haciendo mas reciclabe el codigo*/
   background-color: rgba(240, 248, 255, 0.836);
 }
 
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Scroll ++++++++++++++++++++++++++++++++++++++++++++++*/
 /*Scroll*/
 .scroll-no {
   margin: 0;
@@ -353,10 +360,22 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*************************************************************************************** Hover/sobreponer ****************************/
+.transition-s{
+  transition: 0.3s ease;
+}
+
+.transition-m{
+  transition: 0.5s ease;
+}
+
+/*************************************************************************************** Hover/sobreponer ****************************/
 /*Hover para que todos los botones que la utilizen cambien de tamano como iniciar sesion/recuperarpass, etc*/
 .hover-btn:hover {
   transform: scale(1.05);
-  background-color: c;
+}
+
+.hover-card{
+  transform: scale(1.1);
 }
 
 /*Hover para que todos los links que la utilizen cambien color y tamano*/
@@ -497,11 +516,13 @@ Asi logras evadir lo de position y z index en los elementos*/
   height: 100vh;
 }
 
+/*Manda a un lugar adecuado (mas a la izq) al label de olvidaste*/
 #olvidasteinicionormal {
   margin-left: -30px;
 }
 
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
+/*Aun no fueron necesarios estilos propios pero si se ocupan aqui ponerlos*/
 /*Cierre recuperar pas*/
 
 
@@ -546,18 +567,20 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.3s ease-in;
 }
 
+/*Asigna el tamano de la columna izq/menualm de forma predeterminada*/
 #colmenuprincipalalm {
   width: 300px;
-  /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
+  /*Este tamano solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
 }
 
+/*Columna de configuraciones de alm*/
 #colconfigprincipalalm {
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(252, 16, 16, 0.955);
-  height: 100vh;
-  width: 100vw;
-  transition: 0.25s ease-in;
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
+  background-color: rgba(252, 16, 16, 0.955); 
+  height: 100vh; /*Asigna todo el tama;o heiht/vertical de toda la panatalla usando el viweport*/
+  width: 100vw; /*Asigna todo el tama;o width/horizontal de toda la panatalla usando el viweport*/
+  transition: 0.25s ease-in; /*Se asigna una transicion para que cuando sufra cambios la animacion sea mas suave*/
 }
 
 /*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin en ubicar a un elemento de esta forma estatico por lo regular)*/
@@ -567,8 +590,8 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Boton de menu que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-menu-principalalm {
-  position: fixed;
-  z-index: 3;
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de todos los componentes la interfaz y siempre este arriba*/
   left: 25px;
   top: calc(45vh - 30px);
   transition: 0.4s ease-out;
@@ -576,8 +599,8 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-extras-principalalm {
-  position: fixed;
-  z-index: 3;
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 3; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
   right: 25px;
   top: 25px;
   width: 130px;
@@ -587,25 +610,24 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.4s;
 }
 
-/*Logo aliados top izq*/
-#principalalm-logo {
+/*Logo aliados top izq principalalm*/
+#principalalm-logo { 
   margin-top: -55px;
-  margin-left: 25px;
-  margin-bottom: 0;
+  margin-left: 15px;
 }
 
 /*Contenedor donde va el contenido de enmedio, cards normalmente */
 #principalalm-main {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 60vh;
+  overflow-y: auto; /*Permite el scroll de arriba a bajo*/
+  overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
+  height: 60vh; /*Para que tenga un tama;o de contenedor adecuado y predeterminado para que siempre tenga ese tama;o y se srolleee entre ese tama;o*/
 }
 
 /*Tarjeta de opciones grande*/
 .card-principalalm {
-  position: relative;
-  height: calc(70px + 20vh);
-  width: 250px;
+  position: relative; /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
+  height: calc(70px + 20vh); /*Asigna un tama;o responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+  width: 250px; /*Asigan el tama;o de la card*/
 }
 
 /*Barra de busqueda/consulta de principalalm alm*/

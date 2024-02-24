@@ -37,7 +37,7 @@ session_start();
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-m rotar-90" alt="">
                 </button>
                 <button type="button" id="btn-extras-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigprincipalalm" aria-expanded="false" aria-controls="colconfigprincipalalm">
-                    <img src="imagenes/avatares/avatar-bmo.gif" class="icono-g" alt="">
+                    <img class="icono-avatar-m" src="<?php include("../Servidor/funciones_session/session_avatar.php");?>" alt="">
                 </button>
 
                 <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
@@ -52,14 +52,14 @@ session_start();
                                 <div class="row">
                                     <h1 class="titulo-c"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
                                         Hola<?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
-                                        <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
                                     </h1>
+                                    <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
                                 </div>
 
                                 <!--fila/seccion de cards de opciones rapidas-->
                                 <div class="row espacio-top-c">
                                     <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                    <a class="card-principalalm blanco-solido espacio-left-c decoracion-no"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
+                                    <a href="" class="card-principalalm blanco-solido espacio-left-c decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
                                         <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                             <h1 class="text-m txt-negro espacio-left-c">Comunidad</h1>
                                             <p class="text-c txt-negro espacio-left-c">Reportes de aliado</p>
@@ -75,7 +75,7 @@ session_start();
                                         <input class="form-control text-m" id="" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
                                     </div>
                                     <div class="col-1">
-                                        <h1>B</h1>
+                                        <img src="imagenes/iconos/enviar.png" alt="">
                                     </div>
                                 </div>
                             </div>
