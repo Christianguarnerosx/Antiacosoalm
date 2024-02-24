@@ -265,8 +265,13 @@ haciendo mas reciclabe el codigo*/
   height: 90px;
 }
 
-.icono-card{
-  width: 70px;
+/*Icono que lleva una card abajo derecha*/
+.icono-card-rb {
+  /*Para que funcione es necesario que el contenedor padre tenga una position relative*/
+  position: absolute;
+  width: 80px;
+  right: 0vw;
+  bottom: 14px;
 }
 
 
@@ -277,7 +282,7 @@ haciendo mas reciclabe el codigo*/
   height: 200px;
 }
 
-/*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
+/*Clase que se utiliza cuando quiere poner el tamano a un icono*/
 .avatar-m {
   width: 150px;
   height: 150px;
@@ -299,17 +304,11 @@ haciendo mas reciclabe el codigo*/
   width: calc(1500px - 15vw);
 }
 
-/*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
-.cuadro-f {
+/*Este hara un cuadro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
+.cuadro-fondo {
   height: 98%;
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: 100%;
-}
-
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Cards ++++++++++++++++++++++++*/
-.card-g {
-  height: 20vh;
-  width: 250px;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
@@ -324,15 +323,25 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Colores Fondos +++++++++++++++++++++*/
+/*Asigna un color blanco translucido de fondo a cualquier elemento*/
 .blanco-transparente {
   background-color: rgba(240, 248, 255, 0.836);
 }
 
+/*Asigna un color blanco solido de fondo a cualquier elemento*/
 .blanco-solido {
   background-color: rgba(240, 248, 255, 0.836);
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Animaciones/rotar +++++++++++++++++++++*/
+/*Scroll*/
+.scroll-no {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/********************************************************************************* Animaciones/rotar *****************************/
 /*Clase para poder voltear/rotar en 90 grados*/
 .rotar-90 {
   transform: rotate(90deg);
@@ -343,7 +352,7 @@ haciendo mas reciclabe el codigo*/
   transform: rotate(90deg);
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Hover/sobreponer +++++++++++++++++++++*/
+/*************************************************************************************** Hover/sobreponer ****************************/
 /*Hover para que todos los botones que la utilizen cambien de tamano como iniciar sesion/recuperarpass, etc*/
 .hover-btn:hover {
   transform: scale(1.05);
@@ -525,9 +534,9 @@ Asi logras evadir lo de position y z index en los elementos*/
   border: 8px solid rgb(76, 247, 165);
 }
 
-/*------------------------------------------------------------------------------------------------------------ PRINCIPAL -------------*/
+/*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
 /*Contenedor que asigan ek fondo de imagen de la interfas*/
-#contenedor-principal {
+#principalalm-contenedor {
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -537,12 +546,12 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.3s ease-in;
 }
 
-#colmenuprincipal {
+#colmenuprincipalalm {
   width: 300px;
   /*Este tama;o solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
 }
 
-#colconfigprincipal {
+#colconfigprincipalalm {
   position: fixed;
   z-index: 1;
   background-color: rgba(252, 16, 16, 0.955);
@@ -551,8 +560,13 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.25s ease-in;
 }
 
-/*Boton de menu que esta en la interfaz principal que maneja posicion y duracion de transisioones de el boton*/
-#btn-menu-principal {
+/*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin en ubicar a un elemento de esta forma estatico por lo regular)*/
+#principalalm-cuadro {
+  position: relative;
+}
+
+/*Boton de menu que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
+#btn-menu-principalalm {
   position: fixed;
   z-index: 3;
   left: 25px;
@@ -560,8 +574,8 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.4s ease-out;
 }
 
-/*Boton de extras que esta en la interfaz principal que maneja posicion y duracion de transisioones de el boton*/
-#btn-extras-principal {
+/*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
+#btn-extras-principalalm {
   position: fixed;
   z-index: 3;
   right: 25px;
@@ -574,12 +588,37 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Logo aliados top izq*/
-#principal-logo {
+#principalalm-logo {
   margin-top: -55px;
   margin-left: 25px;
   margin-bottom: 0;
 }
 
+/*Contenedor donde va el contenido de enmedio, cards normalmente */
+#principalalm-main {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 60vh;
+}
+
+/*Tarjeta de opciones grande*/
+.card-principalalm {
+  position: relative;
+  height: calc(70px + 20vh);
+  width: 250px;
+}
+
+/*Barra de busqueda/consulta de principalalm alm*/
+#principalalm-barra-busqueda {
+  position: absolute;
+  bottom: 3vh;
+  /*Se utilizo vh para que en la resolucion de telefono se suba mas*/
+  width: 85%;
+  background-color: rgba(0, 255, 81, 0.399);
+  height: 120px;
+  margin-left: -2vh;
+  z-index: 1;
+}
 
 /******************************************************************************************************* Menualm/include **************/
 #Menudealm {}
