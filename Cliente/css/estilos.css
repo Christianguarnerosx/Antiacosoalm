@@ -238,7 +238,7 @@ haciendo mas reciclabe el codigo*/
 
 /*clase que asigna el tamaño de una img.. comumente los logos*/
 .logo-c {
-  width: 200px;
+  width: 150px;
 }
 
 /*Clase que hace que cualquier img logo se sobreponga arriba a la izq*/
@@ -308,7 +308,7 @@ haciendo mas reciclabe el codigo*/
 .cuadro-v {
   height: calc(72vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blanco para resolucion de movil/telefono*/
-  width: calc(35vh + 150px);
+  width: calc(35vh + 230px);
   /*Ideal CALC para cuando se hace el cuadro blanco vertical de sesiones/etc para resolucion de movil/telefono*/
 }
 
@@ -646,7 +646,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Logo aliados top izq principalalm*/
 #principalalm-logo {
-  margin-top: -55px;
+  margin-top: -45px;
   margin-left: 15px;
 }
 
@@ -674,10 +674,10 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Barra de busqueda/consulta de principalalm alm*/
 #principalalm-barra-busqueda {
   position: absolute;
-  bottom: 3vh;
+  bottom: 1vh;
   /*Se utilizo vh para que en la resolucion de telefono se suba mas*/
   background-color: rgba(0, 255, 81, 0.399);
-  height: 120px;
+  height: 10vh;
   z-index: 1;
 }
 

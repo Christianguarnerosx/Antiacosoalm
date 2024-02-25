@@ -23,7 +23,7 @@ document.getElementById("colconfigprincipalalm").addEventListener("show.bs.colla
     document.getElementById("colconfigprincipalalm").style.zIndex = "2";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principalalm").style.zIndex = "3";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principalalm").style.scale = "3"; /*Hara que el boton se haga mas pequeno*/
-    document.getElementById("btn-extras-principalalm").style.right = "45%";/*Posicion que tomara a la derecha cuando el menu este dezplegado*/
+    document.getElementById("btn-extras-principalalm").style.right = "calc(47vw - 30px)";/*Posicion que tomara a la derecha cuando el menu este dezplegado*/
     document.getElementById("btn-extras-principalalm").style.top = "200px";/*Posicion que tomara a lo alto cuando el menu este dezplegado*/
     document.getElementById("btn-extras-principalalm").style.rotate = "360deg"; /* Utilizado para dar la a animacionde girar*/
 });

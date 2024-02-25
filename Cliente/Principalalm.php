@@ -48,9 +48,9 @@ session_start();
 
                     <main id="principalalm-main" class="row centrar espacio-top-vh"> <!--Para que pueda funcionar el centrar yu evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col">
-                            <div class="row centrar alinear-center">
+                            <div class="row centrar espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
-                                <div class="row">
+                                <div class="row espacio-left-c">
                                     <h1 class="titulo-m"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
                                         Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                                     </h1>
@@ -71,15 +71,15 @@ session_start();
                                     </a>
                                 </div>
 
-                                <div id="principalalm-barra-busqueda" class="row borde-r-m espacio-left-c centrar  ">
+                                <div id="principalalm-barra-busqueda" class="row borde-r-m centrar">
                                     <div class="col">
-                                        <div class="row ">
+                                        <div class="row">
                                             <div class="col">
                                                 <input class="form-control text-m borde-r-c" id="" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
                                             </div>
                                             <div class="col-2 alinear-left">
                                                 <button class="btn-transparente hover-btn">
-                                                    <img class=" icono-c" src="imagenes/iconos/enviar.png" alt="">
+                                                    <img class="icono-c" src="imagenes/iconos/enviar.png" alt="">
                                                 </button>
                                             </div>
                                         </div>
