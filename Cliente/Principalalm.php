@@ -41,12 +41,12 @@ session_start();
                 </button>
 
                 <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
-                <section id="principalalm-cuadro" class="cuadro-fondo blanco-transparente"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
+                <section id="principalalm-cuadro" class="cuadro-fondo blanco-transparente borde-r-m"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
                     <!--Logo del contenedor de contenido de enmedio-->
                     <img id="principalalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
                     <!--Contenedor principal (central) de todos los componentes de la interfaz-->
 
-                    <main id="principalalm-main" class="row centrar espacio-top-vh"> <!--Para que pueda funcionar el centrar yu evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                    <main id="principalalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar yu evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col">
                             <div class="row centrar espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
@@ -60,24 +60,22 @@ session_start();
                                 <!--fila/seccion de cards de opciones rapidas-->
                                 <div class="row espacio-top-c espacio-left-g">
                                     <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                    <a href="" class="card-principalalm blanco-solido espacio-v-g decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
                                         <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                             <h1 class="text-m txt-negro">Comunidad</h1>
                                             <p class="text-c txt-negro">Reportes de aliado</p>
-                                        </div>
-                                        <div class="row"> <!-- Fila de el icono inferior en la card -->
                                             <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
                                         </div>
                                     </a>
                                 </div>
 
-                                <div id="principalalm-barra-busqueda" class="row borde-r-m centrar">
+                                <div id="principalalm-barra-busqueda" class="row centrar">
                                     <div class="col">
                                         <div class="row">
                                             <div class="col">
                                                 <input class="form-control text-m borde-r-c" id="" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
                                             </div>
-                                            <div class="col-2 alinear-left">
+                                            <div class="col-1 centrar espacio-right-c">
                                                 <button class="btn-transparente hover-btn">
                                                     <img class="icono-c" src="imagenes/iconos/enviar.png" alt="">
                                                 </button>

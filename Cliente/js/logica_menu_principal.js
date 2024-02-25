@@ -13,7 +13,7 @@ document.getElementById("colmenuprincipalalm").addEventListener("show.bs.collaps
 document.getElementById("colmenuprincipalalm").addEventListener("hide.bs.collapse", function () {
     document.getElementById("btn-menu-principalalm").style.top = "calc(45vh - 30px)"; /*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
     document.getElementById("btn-menu-principalalm").style.rotate = "0deg"; /*Utilizado para dar la a animacionde girar*/
-    document.getElementById("btn-menu-principalalm").style.left = "25px"; /*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
+    document.getElementById("btn-menu-principalalm").style.left = "5px"; /*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
     document.getElementById("btn-menu-principalalm").style.scale = "1"; /*Esta es la medida que tiene en el css (Con la que comienza) Regresar al mismo tamano*/
 });
 

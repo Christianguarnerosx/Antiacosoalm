@@ -656,9 +656,10 @@ Asi logras evadir lo de position y z index en los elementos*/
   /*Permite el scroll de arriba a bajo*/
   overflow-x: hidden;
   /*esconde/bloquea el scroll de izq a derecha*/
-  height: 60vh;
+  height: 70vh;
   /*Para que tenga un tama;o de contenedor adecuado y predeterminado para que siempre tenga ese tama;o y se srolleee entre ese tama;o*/
   width: 100%;
+  margin-top: -50px;
 }
 
 /*Tarjeta de opciones grande*/
@@ -669,17 +670,25 @@ Asi logras evadir lo de position y z index en los elementos*/
   /*Asigna un tama;o responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
   width: 250px;
   /*Asigan el tama;o de la card*/
+  margin-top: 15px;
 }
 
 /*Barra de busqueda/consulta de principalalm alm*/
 #principalalm-barra-busqueda {
   position: absolute;
-  bottom: 1vh;
+  bottom: 0vh;
+  z-index: 1;
+  height: 10vh;
   /*Se utilizo vh para que en la resolucion de telefono se suba mas*/
   background-color: rgba(0, 255, 81, 0.399);
-  height: 10vh;
-  z-index: 1;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0px 0px 25px 5px rgba(74, 74, 74, 0.399);
+}
+
+/*Icono que envia el input de la barra de busqueda principal*/
+.principalalm-barra-icono{
+  margin-left: -15px;
 }
 
 /******************************************************************************************************* Menualm/include **************/
-#Menudealm {}
