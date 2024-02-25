@@ -25,18 +25,17 @@ session_start();
     <div class="container-fluid contenedor-elegiravatar display-f centrar">
         <section class="cuadro-h blanco-transparente centrar">
             <div class="row centrar">
-                <div class="col-4 espacio-left-c">
+                <div class="col-4">
                     <h1 class="text-g">Hola
-                        <?Php include("../Servidor/funciones_session/session_nombre.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
-                        ,
+                        <?Php include("../Servidor/funciones_session/session_nombre.php")?>,<!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                         <br>
                         <span class="text-m">Escoge un vatar</span>
                         <br>
                         <span class="text-c">(No te preocupes mas adelante podras cambiarlo)</span>
                     </h1>
                 </div>
-                <div class="col">
-                    <div class="row centrar-h espacio-top-c">
+                <div class="col-7 scroll-y">
+                    <div class="row centrar">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">

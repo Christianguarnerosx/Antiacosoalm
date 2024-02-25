@@ -22,7 +22,7 @@
             <img class="avatar-g" src="imagenes/avatares/avatar-bmoranchero.gif" alt=""> <!--Debe de ponerse la ruta calculada desde donde se manda a traer en este caso es para la de menual pricnipal-->
         </div>
         <div class="row">
-            <nav class="nav nav-pills flex-column text-m" id="Menudealm"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->
+            <nav class="nav nav-pills flex-column text-c" id="Menudealm"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->
                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                 <a class="nav-link" href="#">TutorIA</a>
                 <a class="nav-link" href="#">Aliado</a>
@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#">Extras</a>
                 <!-- boton dezplegable de... -->
                 <div class="btn-group">
-                    <button type="button" class="btn btn-primary text-m">Action</button> <!--Aqui tambien se debe de cambiar el tamano del texto por que al ponerselo al nav solo agarra a los nav-link-->
+                    <button type="button" class="btn btn-primary text-c">Action</button> <!--Aqui tambien se debe de cambiar el tamano del texto por que al ponerselo al nav solo agarra a los nav-link-->
                     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split text-m" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>

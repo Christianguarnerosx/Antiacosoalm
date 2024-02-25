@@ -1,7 +1,7 @@
 /*Logica para que funcione el boton menu*/
 /*Hace que ela columna que esta en collapse aparezca al agregarle el action de bootstrap shown.bs.collapse (Asi aparecera la columa del menu)*/
 document.getElementById("colmenuprincipalalm").addEventListener("show.bs.collapse", function () {
-    document.getElementById("colmenuprincipalalm").style.width = "300px";/*Posicion que se tomara la col mneu a lo ancho cuando este sea dezplegado*/
+    document.getElementById("colmenuprincipalalm").style.width = "250px";/*Posicion que se tomara la col mneu a lo ancho cuando este sea dezplegado*/
     document.getElementById("btn-menu-principalalm").style.top = "-10px"; /*Posicion que tomara a lo alto cuando el menu este dezplegado*/
     document.getElementById("btn-menu-principalalm").style.left = "-13px"; /*Posicion que tomara a la izq cuando el menu este dezplegado*/
     document.getElementById("btn-menu-principalalm").style.rotate = "-90deg"; /* Utilizado para dar la a animacionde girar*/

@@ -38,7 +38,7 @@
                                     <input type="password" class="form-control text-c" id="floatingPassword" name="contraseña" placeholder="Password">
                                     <label for="floatingPassword">Contraseña</label> <!--Se manda a el back con el name del input-->
                                 </div>
-                                <div class="row alinear-left">
+                                <div class="row espacio-left-c">
                                     <div class="col"> <!--Este col hace que el tamaño del boton no sea el de toda la row y se pueda centrar-->
                                         <a href="Recuperarpass.php" class="text-c hover-link decoracion-no" id="olvidasteinicionormal">¿Olvidaste tu contraseña?</a> <!--Hace que el form se ejecute y manda a la direccion del action del form-->
                                     </div>
