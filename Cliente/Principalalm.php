@@ -23,6 +23,8 @@ session_start();
 <body class="scroll-body-no">
     <div class="container-fluid">
         <div class="row">
+
+            <!--Columna de menus se abre dando click al boton menu, aqui se manda a traer las opciones posibles a configuar-->
             <!--La clase collapse propia de bootstrap 5, utilizada para poder ocultar/contraer columnas y hacer el efecto de menu-->
             <div class="col-2 collapse" id="colmenuprincipalalm"> <!--Barra menu de la izq. Principalmente esta colapsada (no se ve)    TAMBIEN se utiliza el tama;o de col por que si no no obtiene el tamano que se le asigan en el css-->
                 <?php
@@ -37,7 +39,7 @@ session_start();
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-m rotar-90" alt="">
                 </button>
                 <button type="button" id="btn-extras-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigprincipalalm" aria-expanded="false" aria-controls="colconfigprincipalalm">
-                    <img class="icono-avatar-m" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt="">
+                    <img class="icono-avatar-m" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Se obtiene el avatar con php -->
                 </button>
 
                 <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
@@ -107,8 +109,8 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito-->
-    <script src="js/logica_menu_principal.js"></script>
-    <script src="js/hover_drops.js"></script>
+    <script src="js/logica_menu_principal.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
+    <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 
 </body>
 

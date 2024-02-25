@@ -698,6 +698,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /******************************************************************************************************* Menualm/include **************/
+/*Maneja lod drops que cuando se abran las opciones esten mas a la derecha y no debajo*/
 .menualmdrop {
   margin-left: 200px;
 }
