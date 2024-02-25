@@ -584,12 +584,18 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Si la interfaz es de telefono*/
 @media (max-width: 500px) {
-  #colmenuprincipalalm { /*Entonces la columna principal se sobre pondra y dejara de ser */
-    position: fixed; /*Se desancla de toda la iterfaz y se vuelve independiente*/
-    z-index: 2; /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
-    width: 300px; /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
-    height: 100vh; /*Le asignamos un valor de alto determinado, ya que no tiene contenedor padre y esta solo*/
-    background-color: aliceblue; /*Al parecer desaparecen las clases asi que debemos ponerle el fondo aqui tambien*/
+  #colmenuprincipalalm {
+    /*Entonces la columna principal se sobre pondra y dejara de ser */
+    position: fixed;
+    /*Se desancla de toda la iterfaz y se vuelve independiente*/
+    z-index: 2;
+    /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
+    width: 300px;
+    /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
+    height: 100vh;
+    /*Le asignamos un valor de alto determinado, ya que no tiene contenedor padre y esta solo*/
+    background-color: aliceblue;
+    /*Al parecer desaparecen las clases asi que debemos ponerle el fondo aqui tambien*/
   }
 }
 
@@ -683,12 +689,15 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-color: rgba(0, 255, 81, 0.399);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  box-shadow: 0px 0px 25px 5px rgba(74, 74, 74, 0.399);
+  box-shadow: 0px 0px 25px 5px rgba(156, 156, 156, 0.399);
 }
 
 /*Icono que envia el input de la barra de busqueda principal*/
-.principalalm-barra-icono{
+.principalalm-barra-icono {
   margin-left: -15px;
 }
 
 /******************************************************************************************************* Menualm/include **************/
+.menualmdrop {
+  margin-left: 200px;
+}

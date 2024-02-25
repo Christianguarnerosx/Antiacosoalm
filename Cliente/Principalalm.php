@@ -46,7 +46,8 @@ session_start();
                     <img id="principalalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
                     <!--Contenedor principal (central) de todos los componentes de la interfaz-->
 
-                    <main id="principalalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar yu evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                    <!-- a este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
+                    <main id="principalalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col">
                             <div class="row centrar espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
@@ -58,7 +59,7 @@ session_start();
                                 </div>
 
                                 <!--fila/seccion de cards de opciones rapidas-->
-                                <div class="row espacio-top-c espacio-left-g">
+                                <div class="row espacio-top-c espacio-left-g"> <!--Seccion de card de opciones principalalm-->
                                     <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
                                     <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
                                         <div class="row espacio-top-m"><!--Fila de texto de la card-->
@@ -69,7 +70,8 @@ session_start();
                                     </a>
                                 </div>
 
-                                <div id="principalalm-barra-busqueda" class="row centrar">
+                                <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
+                                <div id="principalalm-barra-busqueda" class="row centrar"> <!--Centra los elementos tomando como referencia al contenedor/fila padre-->
                                     <div class="col">
                                         <div class="row">
                                             <div class="col">
@@ -106,6 +108,7 @@ session_start();
 
     <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito-->
     <script src="js/logica_menu_principal.js"></script>
+    <script src="js/hover_drops.js"></script>
 
 </body>
 

@@ -32,13 +32,13 @@
                 <!-- boton dezplegable de... -->
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary text-c">Action</button> <!--Aqui tambien se debe de cambiar el tamano del texto por que al ponerselo al nav solo agarra a los nav-link-->
-                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split text-m" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split text-m hoverdrop" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <ul class="dropdown-menu text-m">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu text-m menualmdrop">
+                        <li><a class="dropdown-item" href="#">Mis estadisicas</a></li>
+                        <li><a class="dropdown-item" href="#">Reconocimientos</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
