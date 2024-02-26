@@ -61,9 +61,201 @@ session_start();
                                 </div>
 
                                 <!--fila/seccion de cards de opciones rapidas-->
-                                <div class="row espacio-top-c espacio-left-g"> <!--Seccion de card de opciones principalalm-->
+                                <div class="row espacio-top-c espacio-left-c"> <!--Seccion de card de opciones principalalm-->
                                     <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                            <h1 class="text-m txt-negro">Comunidad</h1>
+                                            <p class="text-c txt-negro">Reportes de aliado</p>
+                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                        </div>
+                                    </a>
+                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                         <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                             <h1 class="text-m txt-negro">Comunidad</h1>
                                             <p class="text-c txt-negro">Reportes de aliado</p>

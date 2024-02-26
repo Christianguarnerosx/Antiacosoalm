@@ -12,6 +12,17 @@
 /*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
 haciendo mas reciclabe el codigo*/
 
+/*Scroll*/
+::-webkit-scrollbar {
+  width: 5px; /* Grosor de la barra */
+  height: 10px; /* Grosor de la barra */
+  background-color: #dfffdb; /* Color de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Color del thumb */
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Displays +++++++++++++++++++++*/
 /*Asigna al elemento que tenga esta clase un display especifico para poder tomar herramientas de display sin tener que escribir display en cada unoa de ellas*/
 .display-f {
@@ -31,12 +42,9 @@ haciendo mas reciclabe el codigo*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Tipos de centrado +++++++++++++++++++++*/
 /*Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos HORIZONTAL*/
 .centrar {
-  display: flex;
-  /*alinea los componenetes*/
-  align-items: center;
-  /*Alinea horizontalmente en medio*/
-  justify-content: center;
-  /*Alinea verticalmenete en medio*/
+  display: flex; /*alinea los componenetes*/
+  align-items: center; /*Alinea horizontalmente en medio*/
+  justify-content: center; /*Alinea verticalmenete en medio*/
 }
 
 /* Centra elemenetos que esten dentro de un contenedor/elemento padre (se pone al contenedor padre inmediato) en medio de ellos Vertical*/
@@ -223,7 +231,6 @@ haciendo mas reciclabe el codigo*/
   color: black;
 }
 
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Logos +++++++++++++++++++++*/
 /*clase que asigna el tamaño de una img.. comumente los logos*/
 .logo-g {
@@ -246,13 +253,10 @@ haciendo mas reciclabe el codigo*/
   position: fixed;
   top: 0px;
   left: 10px;
-  width: 7%;
-  /* El logotipo no superará el ancho del contenedor */
+  width: 7%; /* El logotipo no superará el ancho del contenedor */
   height: auto;
-  z-index: 5;
-  /*Para que este logo aparezca arriba de todas las interfaz*/
+  z-index: 5; /*Para que este logo aparezca arriba de todas las interfaz*/
 }
-
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Iconos +++++++++++++++++++++*/
 /*Clase que se utiliza cuando quiere poner el tama;oa un icono*/
@@ -275,8 +279,7 @@ haciendo mas reciclabe el codigo*/
 
 /*Este tipo de icono involucra al vatar y para darle formato circular al avatar le ponemos el border de 100% como el de su contenedor padre*/
 .icono-avatar-m {
-  width: 100%;
-  /*Obtiene el 100 del tamaño de su contenedor padre que es el boton(El 1005 del tamaño del bopto y asi actura junto con el boton)*/
+  width: 100%; /*Obtiene el 100 del tamaño de su contenedor padre que es el boton(El 1005 del tamaño del bopto y asi actura junto con el boton)*/
   border-radius: 100%;
 }
 
@@ -302,27 +305,26 @@ haciendo mas reciclabe el codigo*/
   height: 150px;
 }
 
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Cuadros contenedores +++++++++++++++++++++*/
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-v {
-  height: calc(72vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blanco para resolucion de movil/telefono*/
-  width: calc(35vh + 230px);
+  height: calc(72vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blanco vertical de sesiones/etc para resolucion de movil/telefono*/
+  width: calc(35vh + 230px);
 }
 
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-h {
-  height: calc(75vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
+  height: calc(75vh + 180px);
+  /*Ideal CALC para cuando se hace el cuadro blanco vertical de sesiones/etc para resolucion de movil/telefono*/
   width: calc(1500px - 15vw);
 }
 
 /*Este hara un cuadro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-fondo {
-  height: 98%;
-  /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
+  height: 98%; /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   width: 100%;
 }
 
@@ -357,11 +359,13 @@ haciendo mas reciclabe el codigo*/
   overflow: hidden;
 }
 
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
   .scroll-y {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 90vh;
+    /*Haces que el contenedor de escroll sea aun mas largo que ne resolucion de pc*/
+    overflow-y: auto; /*Activa el scroll en y arriba abajo*/
+    overflow-x: hidden; /*Bloquea el scroll en x izq der*/
+    height: 90vh; /*Este es el que cambia respecto a pc para ser mas grande*/
   }
 }
 
@@ -414,8 +418,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Controla el btntutoriaespera redondo y separacion de los 2 btn de etutoria y btniniciar*/
 #btntutoriaespera {
   background-color: rgba(240, 248, 255, 0);
-  border: 3px solid aliceblue;
-  /*Se utiliza para separar a los botones uno de otro horizontal*/
+  border: 3px solid aliceblue; /*Se utiliza para separar a los botones uno de otro horizontal*/
   transition: 0.3s ease;
 }
 
@@ -471,8 +474,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
+  height: 100vh; /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
 }
 
 /*Tarjetas/cards que tendran el mismo formato*/
@@ -483,18 +485,17 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-size: cover;
   background-position: center;
   opacity: 0.7;
-  height: calc(25vh + 350px);
-  /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
-  width: calc(20vw + 100px);
-  /*Controla el ancho de las cards/ se utiliza calc para adaptarse a cada tipo de pantalla*/
+  height: calc(
+    25vh + 350px
+  ); /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
+  width: calc(
+    20vw + 100px
+  ); /*Controla el ancho de las cards/ se utiliza calc para adaptarse a cada tipo de pantalla*/
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.257);
   border-radius: 20px;
-  margin-right: 2px;
-  /*Separa a las 2 cards de tipo de sesion una de otra*/
-  transition: 0.3s ease;
-  /*Elimina las lineas del texto tipo link*/
-  color: aliceblue;
-  /*Pone el color de texto tipo link (a) color blanco*/
+  margin-right: 2px; /*Separa a las 2 cards de tipo de sesion una de otra*/
+  transition: 0.3s ease; /*Elimina las lineas del texto tipo link*/
+  color: aliceblue; /*Pone el color de texto tipo link (a) color blanco*/
 }
 
 /*Hace que cuando el mouse se sobrepone el cuadro contenedor de cada opcion de tipo de sesion sea mas visible, aparte de ponerle una sombra de color verde */
@@ -503,8 +504,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   transform: scale(1.06);
   box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
   z-index: 1;
-  cursor: pointer;
-  /*Cambia el cursor a una mano para decir que se puede seleccionar*/
+  cursor: pointer; /*Cambia el cursor a una mano para decir que se puede seleccionar*/
 }
 
 /*Hace que el texto este abajo de cada card de tipo de inicio de sesion*/
@@ -532,7 +532,6 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
 /*Aun no fueron necesarios estilos propios pero si se ocupan aqui ponerlos*/
 /*Cierre recuperar pas*/
-
 
 /*-------------------------------------------------------------------------------------------------------------- ELEGIR AVATAR alum --------------------------*/
 /*Utilizado para darle fondo a la interfaz de elegir avatar*/
@@ -569,80 +568,60 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  /*Centra a el fondo siempre en medio en cualquier medida que tome*/
+  background-position: center; /*Centra a el fondo siempre en medio en cualquier medida que tome*/
   height: 100vh;
   transition: 0.25s ease-in;
 }
 
 /*Asigna el tamano de la columna izq/menualm de forma predeterminada*/
 #colmenuprincipalalm {
-  width: 300px;
-  /*Este tamano solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
+  width: 300px; /*Este tamano solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
   transition: 0.25s ease-in;
 }
 
-/*Si la interfaz es de telefono*/
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
+  /*Entonces la columna principal se sobre pondra y dejara de ser */
   #colmenuprincipalalm {
-    /*Entonces la columna principal se sobre pondra y dejara de ser */
-    position: fixed;
-    /*Se desancla de toda la iterfaz y se vuelve independiente*/
-    z-index: 2;
-    /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
-    width: 300px;
-    /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
-    height: 100vh;
-    /*Le asignamos un valor de alto determinado, ya que no tiene contenedor padre y esta solo*/
-    background-color: aliceblue;
-    /*Al parecer desaparecen las clases asi que debemos ponerle el fondo aqui tambien*/
+    position: fixed; /*Se desancla de toda la iterfaz y se vuelve independiente*/
+    z-index: 2; /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
+    width: 300px; /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
+    height: 100vh; /*Le asignamos un valor de alto determinado, ya que no tiene contenedor padre y esta solo*/
+    background-color: aliceblue; /*Al parecer desaparecen las clases asi que debemos ponerle el fondo aqui tambien*/
   }
 }
 
-
 /*Columna de configuraciones de alm*/
 #colconfigprincipalalm {
-  position: fixed;
-  /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
-  z-index: 1;
-  /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
   background-color: rgba(252, 16, 16, 0.955);
-  height: 100vh;
-  /*Asigna todo el tama;o heiht/vertical de toda la panatalla usando el viweport*/
-  width: 100vw;
-  /*Asigna todo el tama;o width/horizontal de toda la panatalla usando el viweport*/
-  transition: 0.25s ease-in;
-  /*Se asigna una transicion para que cuando sufra cambios la animacion sea mas suave*/
+  height: 100vh; /*Asigna todo el tama;o heiht/vertical de toda la panatalla usando el viweport*/
+  width: 100vw; /*Asigna todo el tama;o width/horizontal de toda la panatalla usando el viweport*/
+  transition: 0.25s ease-in; /*Se asigna una transicion para que cuando sufra cambios la animacion sea mas suave*/
 }
 
-/*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin en ubicar a un elemento de esta forma estatico por lo regular)*/
+/*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin de ubicar a un elemento de esta forma estatico por lo regular)*/
 #principalalm-cuadro {
   position: relative;
 }
 
 /*Boton de menu que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-menu-principalalm {
-  position: fixed;
-  /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
-  z-index: 2;
-  /*Se asigna un index 1 para poner encima/enfrente de todos los componentes la interfaz y siempre este arriba*/
-  left: 5px;
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 2; /*Se asigna un index 1 para poner encima/enfrente de todos los componentes la interfaz y siempre este arriba*/
+  left: 5px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   top: calc(45vh - 30px);
-  /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   transition: 0.4s ease-out;
 }
 
 /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-extras-principalalm {
-  position: fixed;
-  /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
-  z-index: 3;
-  /*Se asigna un index 3 para poner encima/enfrente de toda la interfaz y de la columna extras quer tiene un z index 2*/
-  right: 25px;
-  /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
-  top: 25px;
-  /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
+  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  z-index: 3; /*Se asigna un index 3 para poner encima/enfrente de toda la interfaz y de la columna extras quer tiene un z index 2*/
+  right: 25px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
+  top: 25px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   width: 80px;
   height: 80px;
   background-color: aliceblue;
@@ -658,25 +637,28 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Contenedor donde va el contenido de enmedio, cards normalmente */
 #principalalm-main {
-  overflow-y: auto;
-  /*Permite el scroll de arriba a bajo*/
-  overflow-x: hidden;
-  /*esconde/bloquea el scroll de izq a derecha*/
-  height: 70vh;
-  /*Para que tenga un tama;o de contenedor adecuado y predeterminado para que siempre tenga ese tama;o y se srolleee entre ese tama;o*/
+  overflow-y: auto; /*Permite el scroll de arriba a bajo*/
+  overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
+  height: 75vh; /*Para que tenga un tama;o de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
   width: 100%;
-  margin-top: -50px;
 }
 
 /*Tarjeta de opciones grande*/
 .card-principalalm {
-  position: relative;
-  /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
+  position: relative; /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
+  /*Asigna un tama;o responsivo a que tipo de resolucion de pantalla tenga, para que entre mas resolucion o sea mas alto*/
   height: calc(90px + 20vh);
-  /*Asigna un tama;o responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
-  width: 250px;
-  /*Asigan el tama;o de la card*/
+  width: 300px; /*Asigan el tama;o de la card*/
   margin-top: 15px;
+  margin-left: 2.5vh;
+}
+
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  .card-principalalm {
+    width: 130px;
+    height: 200px;
+  }
 }
 
 /*Barra de busqueda/consulta de principalalm alm*/
@@ -684,8 +666,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   position: absolute;
   bottom: 0vh;
   z-index: 1;
-  height: 10vh;
-  /*Se utilizo vh para que en la resolucion de telefono se suba mas*/
+  height: 10vh; /*Se utilizo vh para que en la resolucion de telefono se suba mas*/
   background-color: rgba(0, 255, 81, 0.399);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
