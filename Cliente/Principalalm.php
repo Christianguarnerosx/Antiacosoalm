@@ -72,17 +72,21 @@ session_start();
                                     </a>
                                 </div>
 
-                                <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
-                                <div id="principalalm-barra-busqueda" class="row centrar"> <!--Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
-                                    <div class="col">
-                                        <input class="form-control text-m borde-r-c" id="principalalm-input-busqueda" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
+                                <!--Barra de busqueda-->
+                                <!--Form para mandar info por el action-->
+                                <form action="" method="post"> <!-- Hacer la connexion para mandar donde diga el action -->
+                                    <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
+                                    <div id="principalalm-barra-busqueda" class="row centrar"> <!--Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
+                                        <div class="col">
+                                            <input class="form-control text-m borde-r-c" id="principalalm-input-busqueda" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
+                                        </div>
+                                        <div class="col-1 centrar espacio-right-c">
+                                            <button class="btn-transparente hover-btn" type="submit">
+                                                <img class="icono-c" id="principalalm-icono-busqueda" src="imagenes/iconos/enviar.png" alt=""> <!--Se agrega un id para poder utilizar mediaquerys par el uso del icono enotras resoluciones de manera independiente-->
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="col-1 centrar espacio-right-c">
-                                        <button class="btn-transparente hover-btn">
-                                            <img class="icono-c" id="principalalm-icono-busqueda" src="imagenes/iconos/enviar.png" alt=""> <!--Se agrega un id para poder utilizar mediaquerys par el uso del icono enotras resoluciones de manera independiente-->
-                                        </button>
-                                    </div>
-                                </div>
+                                </form>
 
                             </div>
                         </div>

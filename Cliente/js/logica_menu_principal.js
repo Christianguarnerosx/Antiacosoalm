@@ -2,8 +2,8 @@
 /*Hace que ela columna que esta en collapse aparezca al agregarle el action de bootstrap shown.bs.collapse (Asi aparecera la columa del menu)*/
 document.getElementById("colmenuprincipalalm").addEventListener("show.bs.collapse", function () {
     document.getElementById("colmenuprincipalalm").style.width = "250px";/*Posicion que se tomara la col mneu a lo ancho cuando este sea dezplegado*/
-    document.getElementById("btn-menu-principalalm").style.top = "-10px"; /*Posicion que tomara a lo alto cuando el menu este dezplegado*/
-    document.getElementById("btn-menu-principalalm").style.left = "-13px"; /*Posicion que tomara a la izq cuando el menu este dezplegado*/
+    document.getElementById("btn-menu-principalalm").style.top = "-5px"; /*Posicion que tomara a lo alto cuando el menu este dezplegado*/
+    document.getElementById("btn-menu-principalalm").style.left = "-8px"; /*Posicion que tomara a la izq cuando el menu este dezplegado*/
     document.getElementById("btn-menu-principalalm").style.rotate = "-90deg"; /* Utilizado para dar la a animacionde girar*/
     document.getElementById("btn-menu-principalalm").style.scale = "0.7"; /*Hara que el boton se haga mas pequeno*/
     document.getElementById("btn-menu-principalalm").style.scale = "0.7"; /*Hara que el boton se haga mas pequeno*/
@@ -23,9 +23,16 @@ document.getElementById("colconfigprincipalalm").addEventListener("show.bs.colla
     document.getElementById("colconfigprincipalalm").style.zIndex = "2";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principalalm").style.zIndex = "3";/*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
     document.getElementById("btn-extras-principalalm").style.scale = "3"; /*Hara que el boton se haga mas pequeno*/
-    document.getElementById("btn-extras-principalalm").style.right = "calc(47vw - 30px)";/*Posicion que tomara a la derecha cuando el menu este dezplegado*/
-    document.getElementById("btn-extras-principalalm").style.top = "200px";/*Posicion que tomara a lo alto cuando el menu este dezplegado*/
+    document.getElementById("btn-extras-principalalm").style.top = "15vh";/*Posicion que tomara a lo alto cuando el menu este dezplegado*/
     document.getElementById("btn-extras-principalalm").style.rotate = "360deg"; /* Utilizado para dar la a animacionde girar*/
+    /*Media querys de js*/
+    const mediaQuery = window.matchMedia("(max-width: 500px)"); /*Obtiene el valor de la pantalla y arigna un verificador antes del iof como match con el tamaño que quieras*/
+
+    if (mediaQuery.matches) { /*si hace match o existe el match*/
+        document.getElementById("btn-extras-principalalm").style.right = "38vw"; /*Esta en resolucion de telefono y cambias la posicion del avatar*/
+    } else {
+        document.getElementById("btn-extras-principalalm").style.right = "calc(48vw - 30px)"; /*Esta en posicion de pc entonces se asigna otra posicion*/
+    }
 });
 
 /*De la misma manera se aplica el event de hidden a la col que se quiera ocultar al agregarle el hide.bs,collapse*/

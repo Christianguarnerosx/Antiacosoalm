@@ -331,7 +331,14 @@ haciendo mas reciclabe el codigo*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
 /*Input grande*/
 .input-g {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  .input-g {
+    transform: scaleX(0.95); /*Si es resolucion phone, se hace mas pequeño el input*/
+  }
 }
 
 /*Utilizado para que los links no tengan esa linea subrayada*/
