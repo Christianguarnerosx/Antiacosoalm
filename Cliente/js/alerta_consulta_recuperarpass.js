@@ -7,8 +7,8 @@ const resultado = urlParams.get("resultado");
 if (resultado === "exito") {
   Swal.fire({
     icon: "success",
-    title: "SIUUUU",
-    text: "Envie tu pass a tu correo crack",
+    title: "SIUUUU 😎",
+    text: "Envie tu pass a tu correo crack ",
   });
 } else if (resultado === "error") {
   Swal.fire({
@@ -20,12 +20,12 @@ if (resultado === "exito") {
   Swal.fire({
     icon: "warning",
     title: "Oh Oh...",
-    text: "No existe ese usuario, revisa tu id o correo",
+    text: "No existe el usuario. Revisa tu id o correo",
   });
 } else if (resultado === "vacio") {
   Swal.fire({
     icon: "warning",
     title: "Oops...",
-    text: "Dame un dato para buscar",
+    text: "Al parecer no ingresaste nada",
   });
 }

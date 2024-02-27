@@ -56,14 +56,14 @@ if (!empty($_POST)) {
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; //Te fallo bro, nouuuuuu
 
-                header("Location: ../Cliente/recuperarcontraseña.php?resultado=error");
+                header("Location: ../Cliente/recuperarpass.php?resultado=error");
             }
         } else {
-            header("Location: ../Cliente/recuperarcontraseña.php?resultado=fracaso");
+            header("Location: ../Cliente/recuperarpass.php?resultado=fracaso");
         }
     } else {
-        header("Location: ../Cliente/recuperarcontraseña.php?resultado=vacio");
+        header("Location: ../Cliente/recuperarpass.php?resultado=vacio");
     }
 } else {
-    header("Location: ../Cliente/recuperarcontraseña.php?resultado=vacio");
+    header("Location: ../Cliente/recuperarpass.php?resultado=vacio");
 }
