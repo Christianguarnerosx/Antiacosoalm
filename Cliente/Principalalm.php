@@ -74,9 +74,9 @@ session_start();
 
                                 <!--Barra de busqueda-->
                                 <!--Form para mandar info por el action-->
-                                <form action="" method="post"> <!-- Hacer la connexion para mandar donde diga el action -->
-                                    <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
-                                    <div id="principalalm-barra-busqueda" class="row centrar"> <!--Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
+                                <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
+                                <div id="principalalm-barra-busqueda" class="row"> <!--(al estar rl form se centra en el ya que es el "contenedor padre")Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
+                                    <form class="centrar" action="" method="post"> <!-- Hacer la connexion para mandar donde diga el action -->
                                         <div class="col">
                                             <input class="form-control text-m borde-r-c" id="principalalm-input-busqueda" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
                                         </div>
@@ -85,8 +85,8 @@ session_start();
                                                 <img class="icono-c" id="principalalm-icono-busqueda" src="imagenes/iconos/enviar.png" alt=""> <!--Se agrega un id para poder utilizar mediaquerys par el uso del icono enotras resoluciones de manera independiente-->
                                             </button>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
 
                             </div>
                         </div>

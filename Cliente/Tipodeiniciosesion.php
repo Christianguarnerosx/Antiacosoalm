@@ -17,14 +17,15 @@
     <!--Contenedor principal que se centra en medio (centrar div)-->
     <div class="container-fluid centrar" id="contenedor-tiposesion"> <!--Se utiliza el body para ponerle un fondo de imagen a toda la pantalla-->
         <div class="row txt-blanco"> <!--Se utiliza centrar-vertical para poder darle un margen a lo alto-->
-            <a href="" class="col opciontiposesion"> <!-- OJO  Un a con clase COL para manejar las tarjetas como a con links (abajo). Las dos columnas en donde cada una albergara una tarjeta--> <!--Tarjeta 1 aqui se declara el fondo de la tarjeta-->
+
+            <a href="" class="col opciontiposesion decoracion-no txt-blanco borde-r-m"> <!-- OJO  Un a con clase COL para manejar las tarjetas como a con links (abajo). Las dos columnas en donde cada una albergara una tarjeta--> <!--Tarjeta 1 aqui se declara el fondo de la tarjeta-->
                 <div class="row filatextotiposesion">
                     <h1 class="titulo-m">Inicio dinámico</h1>
                     <p class="text-m">En este inicio necesitarás de tu cara o tu QR para iniciar sesión</p>
                 </div>
             </a>
 
-            <a href="Inicionormal.php" class="col opciontiposesion decoracion-no"> <!--Tarjeta 2 aqui se declara el fondo de la tarjeta con class opciontiposesion-->
+            <a href="Inicionormal.php" class="col opciontiposesion decoracion-no txt-blanco borde-r-m"> <!--Tarjeta 2 aqui se declara el fondo de la tarjeta con class opciontiposesion-->
                 <div class="row filatextotiposesion">
                     <h1 class="titulo-m">Inicio normal</h1>
                     <p class="text-m">Aquí ingresarás con tu id y cotraseña</p>

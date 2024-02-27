@@ -337,7 +337,9 @@ haciendo mas reciclabe el codigo*/
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
   .input-g {
-    transform: scaleX(0.95); /*Si es resolucion phone, se hace mas pequeño el input*/
+    transform: scaleX(
+      0.95
+    ); /*Si es resolucion phone, se hace mas pequeño el input*/
   }
 }
 
@@ -482,6 +484,8 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /*Tarjetas/cards que tendran el mismo formato*/
@@ -492,17 +496,22 @@ Asi logras evadir lo de position y z index en los elementos*/
   background-size: cover;
   background-position: center;
   opacity: 0.7;
-  height: calc(
-    25vh + 350px
-  ); /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
-  width: calc(
-    20vw + 100px
-  ); /*Controla el ancho de las cards/ se utiliza calc para adaptarse a cada tipo de pantalla*/
+  height: calc(25vh + 350px);
+  /*Controla el alto de las tarjetas en * la resolucion de 780px queda muy pequeña y si se ocupa hv en la resolucion de telefono se vera muy alargado por eso en px "La combinacion de vh y px podria ser una de las mejores soluciones para poder acomodar el tamaño de las cards en todas las resoluciones"*/
+  width: calc(25vw + 100px);
+  /*Controla el ancho de las cards/ se utiliza calc para adaptarse a cada tipo de pantalla*/
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.257);
-  border-radius: 20px;
-  margin-right: 2px; /*Separa a las 2 cards de tipo de sesion una de otra*/
+  margin: 5px; /*Separa a las 2 cards de tipo de sesion una de otra*/
   transition: 0.3s ease; /*Elimina las lineas del texto tipo link*/
-  color: aliceblue; /*Pone el color de texto tipo link (a) color blanco*/
+}
+
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  /*Tarjetas/cards que tendran el mismo formato*/
+  .opciontiposesion {
+    height: 400px;
+    width: 46vw;
+  }
 }
 
 /*Hace que cuando el mouse se sobrepone el cuadro contenedor de cada opcion de tipo de sesion sea mas visible, aparte de ponerle una sombra de color verde */
@@ -682,19 +691,23 @@ Asi logras evadir lo de position y z index en los elementos*/
   box-shadow: 0px 0px 25px 5px rgba(156, 156, 156, 0.399);
 }
 
+/*Asigna a el input de busqueda principal la altura deseada en version pc*/
 #principalalm-input-busqueda {
   height: 48px;
 }
 
+/*Asigna a el icono junto al input de busqueda principal el tama;o y posicion adecuados deseada en version pc*/
 #principalalm-icono-busqueda {
   width: 35px;
   height: 35px;
   margin-left: -10px;
 }
 
-@media (max-width: 500px) {
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 768px) {
+  /*Asigna a el icono junto al input de busqueda principal el tama;o y posicion adecuados deseada en version pc*/
   #principalalm-icono-busqueda {
-    margin-left: -10px;
+    margin-right: -55px;
     width: 25px;
     height: 25px;
   }
