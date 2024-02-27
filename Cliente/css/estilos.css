@@ -707,7 +707,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 @media (max-width: 768px) {
   /*Asigna a el icono junto al input de busqueda principal el tama;o y posicion adecuados deseada en version pc*/
   #principalalm-icono-busqueda {
-    margin-right: -55px;
+    margin-right: -55px; /*Se hace asi y no left para que no afcete a las col (si tuviese left tomaria parte del input como parte del boton)*/
     width: 25px;
     height: 25px;
   }
