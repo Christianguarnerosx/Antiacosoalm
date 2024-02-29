@@ -12,7 +12,7 @@
 /*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
 haciendo mas reciclabe el codigo*/
 
-/*Scroll*/
+/*Cambiar de dise;o a todo el Scroll en toda la interfaz*/
 ::-webkit-scrollbar {
   width: 5px; /* Grosor de la barra */
   height: 10px; /* Grosor de la barra */
@@ -278,7 +278,7 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*Este tipo de icono involucra al vatar y para darle formato circular al avatar le ponemos el border de 100% como el de su contenedor padre*/
-.icono-avatar-m {
+.icono-btn {
   width: 100%; /*Obtiene el 100 del tamaño de su contenedor padre que es el boton(El 1005 del tamaño del bopto y asi actura junto con el boton)*/
   border-radius: 100%;
 }
@@ -619,12 +619,13 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin de ubicar a un elemento de esta forma estatico por lo regular)*/
 #principalalm-cuadro {
-  position: relative;
+  position: relative; /*Relative para que los elementos que utilicen absolute tomen como referencia a este (que es el padre)*/
+  width: 100%;
 }
 
 /*Boton de menu que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-menu-principalalm {
-  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  position: absolute; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 2; /*Se asigna un index 1 para poner encima/enfrente de todos los componentes la interfaz y siempre este arriba*/
   left: 5px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
@@ -632,31 +633,61 @@ Asi logras evadir lo de position y z index en los elementos*/
   transition: 0.4s ease-out;
 }
 
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  #btn-menu-principalalm {
+    width: 50px;
+  }
+}
+
 /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
 #btn-extras-principalalm {
-  position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
+  position: absolute; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 3; /*Se asigna un index 3 para poner encima/enfrente de toda la interfaz y de la columna extras quer tiene un z index 2*/
-  right: 25px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
-  top: 25px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
-  width: 80px;
-  height: 80px;
+  right: 15px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
+  top: 12px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
+  width: 60px;
+  height: 60px;
   background-color: aliceblue;
   border-radius: 50%;
   transition: 0.35s;
 }
 
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
+  #btn-extras-principalalm {
+    width: 43px;
+    height: 43px;
+  }
+}
+
 /*Logo aliados top izq principalalm*/
 #principalalm-logo {
-  margin-top: -45px;
-  margin-left: 15px;
+  position: absolute; /*Absolute para tener como refrencia al contenedor padre que deberia tener una position relative*/
+  top: -50px;
+  left: 10px;
+  z-index: 1; /*Mantiene arriba del contenido pero denajo de los menus/configuraciones*/
+}
+
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+@media (max-width: 500px) {
+  /*Logo aliados top izq principalalm*/
+  #principalalm-logo {
+    top: -20px;
+    width: 20%;
+  }
 }
 
 /*Contenedor donde va el contenido de enmedio, cards normalmente */
 #principalalm-main {
+  position: absolute;
+  bottom: 70px; /*Hace que el contenedor se fije desde abajo*/
+  height: 83%; /*Para que tenga un tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
+  width: 95%;
   overflow-y: auto; /*Permite el scroll de arriba a bajo*/
   overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
-  height: 75vh; /*Para que tenga un tama;o de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
-  width: 100%;
+  background-color: rgb(207, 255, 207);
 }
 
 /*Tarjeta de opciones grande*/
@@ -700,16 +731,16 @@ Asi logras evadir lo de position y z index en los elementos*/
 #principalalm-icono-busqueda {
   width: 35px;
   height: 35px;
-  margin-left: -10px;
+  margin-left: -40px;
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 768px) {
   /*Asigna a el icono junto al input de busqueda principal el tama;o y posicion adecuados deseada en version pc*/
   #principalalm-icono-busqueda {
-    margin-right: -55px; /*Se hace asi y no left para que no afcete a las col (si tuviese left tomaria parte del input como parte del boton)*/
     width: 25px;
     height: 25px;
+    margin-right: -30px; /*Se hace asi y no left para que no afcete a las col (si tuviese left tomaria parte del input como parte del boton)*/
   }
 }
 

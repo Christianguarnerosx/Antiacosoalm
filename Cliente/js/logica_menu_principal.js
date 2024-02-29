@@ -29,7 +29,7 @@ document.getElementById("colconfigprincipalalm").addEventListener("show.bs.colla
     const mediaQuery = window.matchMedia("(max-width: 500px)"); /*Obtiene el valor de la pantalla y arigna un verificador antes del iof como match con el tamaño que quieras*/
 
     if (mediaQuery.matches) { /*si hace match o existe el match*/
-        document.getElementById("btn-extras-principalalm").style.right = "38vw"; /*Esta en resolucion de telefono y cambias la posicion del avatar*/
+        document.getElementById("btn-extras-principalalm").style.right = "42vw"; /*Esta en resolucion de telefono y cambias la posicion del avatar*/
     } else {
         document.getElementById("btn-extras-principalalm").style.right = "calc(48vw - 30px)"; /*Esta en posicion de pc entonces se asigna otra posicion*/
     }
@@ -38,7 +38,7 @@ document.getElementById("colconfigprincipalalm").addEventListener("show.bs.colla
 /*De la misma manera se aplica el event de hidden a la col que se quiera ocultar al agregarle el hide.bs,collapse*/
 document.getElementById("colconfigprincipalalm").addEventListener("hide.bs.collapse", function () {
     document.getElementById("btn-extras-principalalm").style.scale = "1"; /*Este ahce que se sobreponga a todo lo demas del contenido es como en canva/word "Traer/mandar adelante de todo (lo que este debajo de "1")*/
-    document.getElementById("btn-extras-principalalm").style.right = "25px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
-    document.getElementById("btn-extras-principalalm").style.top = "25px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
+    document.getElementById("btn-extras-principalalm").style.right = "15px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
+    document.getElementById("btn-extras-principalalm").style.top = "12px";/*Esta es la medida que tiene en el css (Con la que comienza) Regresar a la misma posicion*/
     document.getElementById("btn-extras-principalalm").style.rotate = "0deg"; /* Utilizado para dar la a animacionde girar*/
 });

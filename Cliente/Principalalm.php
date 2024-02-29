@@ -36,61 +36,60 @@ session_start();
             <div class="col centrar" id="principalalm-contenedor">
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipalalm" aria-expanded="false" aria-controls="colmenuprincipalalm">
-                    <img src="imagenes/iconos/menudesactivado.png" class="icono-m rotar-90" alt="">
+                    <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
                 </button>
                 <button type="button" id="btn-extras-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigprincipalalm" aria-expanded="false" aria-controls="colconfigprincipalalm">
-                    <img class="icono-avatar-m" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Se obtiene el avatar con php -->
+                    <img class="icono-btn" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Se obtiene el avatar con php la clse icono avatar hace referencia al 100% del padre(el tama;o del boton)-->
                 </button>
 
-                <!--1 contenedor principal ya el contenido de enmedio/principal de la interfaz-->
-                <section id="principalalm-cuadro" class="cuadro-fondo blanco-transparente borde-r-m"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
+                <!--1 contenedor de cuadro blanco ya el contenido de enmedio/principal de la interfaz-->
+                <section id="principalalm-cuadro" class="cuadro-fondo centrar blanco-transparente borde-r-m"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
                     <!--Logo del contenedor de contenido de enmedio-->
                     <img id="principalalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
                     <!--Contenedor principal (central) de todos los componentes de la interfaz-->
 
-                    <!-- a este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
-                    <main id="principalalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                    <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
+                    <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
+                    <main id="principalalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col">
-                            <div class="row centrar espacio-left-c">
+                            <div class="row centrar espacio-top-c espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
-                                <div class="row espacio-left-c">
-                                    <h1 class="titulo-m"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
-                                        Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
-                                    </h1>
-                                    <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
-                                </div>
-
-                                <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
-                                <div class="row espacio-top-c espacio-left-c"> <!--Seccion de card de opciones principalalm-->
-                                    <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                    <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
-                                        <div class="row espacio-top-m"><!--Fila de texto de la card-->
-                                            <h1 class="text-m txt-negro">Comunidad</h1>
-                                            <p class="text-c txt-negro">Reportes de aliado</p>
-                                            <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!--Barra de busqueda-->
-                                <!--Form para mandar info por el action-->
-                                <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
-                                <div id="principalalm-barra-busqueda" class="row"> <!--(al estar rl form se centra en el ya que es el "contenedor padre")Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
-                                    <form class="centrar" action="" method="post"> <!-- Hacer la connexion para mandar donde diga el action -->
-                                        <div class="col">
-                                            <input class="form-control text-m borde-r-c" id="principalalm-input-busqueda" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
-                                        </div>
-                                        <div class="col-1 centrar espacio-right-c">
-                                            <button class="btn-transparente hover-btn" type="submit">
-                                                <img class="icono-c" id="principalalm-icono-busqueda" src="imagenes/iconos/enviar.png" alt=""> <!--Se agrega un id para poder utilizar mediaquerys par el uso del icono enotras resoluciones de manera independiente-->
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-
+                                <h1 class="titulo-m"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
+                                    Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                                </h1>
+                                <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
                             </div>
+
+                            <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
+                            <div class="row espacio-top-c centrar"> <!--Seccion de card de opciones principalalm-->
+                                <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                    <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                        <h1 class="text-m txt-negro">Comunidad</h1>
+                                        <p class="text-c txt-negro">Reportes de aliado</p>
+                                        <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+
                         </div>
                     </main>
+
+                    <!--Barra de busqueda-->
+                    <!--Form para mandar info por el action-->
+                    <!--Contenedor de buscar/entrada de principalalm contiene el input y el boton-->
+                    <div id="principalalm-barra-busqueda" class="row"> <!--(al estar el form se centra en el ya que es el "contenedor padre")Centra los elementos tomando como referencia al contenedor/fila padre la fila que los contiene-->
+                        <form class="row centrar" action="" method="post"> <!-- Hacer la connexion para mandar donde diga el action -->
+                            <div class="col">
+                                <input class="form-control text-m borde-r-c" id="principalalm-input-busqueda" type="text" placeholder="Escribe lo que estas buscando" aria-label="">
+                            </div>
+                            <div class="col-1 centrar espacio-right-c">
+                                <button class="btn-transparente hover-btn" type="submit">
+                                    <img class="icono-c" id="principalalm-icono-busqueda" src="imagenes/iconos/enviar.png" alt=""> <!--Se agrega un id para poder utilizar mediaquerys par el uso del icono enotras resoluciones de manera independiente-->
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </div>
 
