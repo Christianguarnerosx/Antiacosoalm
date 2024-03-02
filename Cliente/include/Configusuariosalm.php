@@ -35,8 +35,18 @@
                 </div>
                 <div class="row">
                     <!--Conetenedor de cambiar avatar (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm" id="contenedor-cambiaravataralm">
-
+                    <div class="collapse opcionconfigusualm scroll-y alinear-center" id="contenedor-cambiaravataralm">
+                        <h1 class="espacio-top-c text-m txt-blanco"> Elige tu nuevo avatar</h1>
+                        <div class="row centrar">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
+                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-princesafuego.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-princesafuego.gif')">
+                        </div>
                     </div>
 
                     <!--Conetenedor de cambiar fondo (inicialmente esta collapsado)-->
@@ -54,7 +64,12 @@
     </div>
 </body>
 
+<!-- Framework jQuery --> <!--Utilizado para que sirva la seleccion de avatar, sin este no funciona el js que fue seleccionado-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!--Mandamos a traer la logica de como se dezplegan los contenedores de las opciones-->
 <script src="js/logica_config_menu_principal.js"></script>
+
+<script src="js/confirmar_avatar.js"></script>
 
 </html>

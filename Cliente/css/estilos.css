@@ -368,6 +368,13 @@ haciendo mas reciclabe el codigo*/
   overflow: hidden;
 }
 
+.scroll-y {
+  /*Haces que el contenedor de escroll sea aun mas largo que ne resolucion de pc*/
+  overflow-y: auto; /*Activa el scroll en y arriba abajo*/
+  overflow-x: hidden; /*Bloquea el scroll en x izq der*/
+  height: 90vh; /*Este es el que cambia respecto a pc para ser mas grande*/
+}
+
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
   .scroll-y {
@@ -790,13 +797,22 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Hace Asigna el contenedor que se abre de todas las opciones el mismo ta*/
 .opcionconfigusualm {
   position: absolute;
-  left: 25vw;
-  height: 60vh;
-  width: 50vw;
-  background-color: rgb(255, 255, 255);
+  left: 14.5vw;
+  height: 45vh;
+  width: 70vw;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+/*Hace que el contenedor en telefonos sea mas largo y tenga un ancho especial*/
+@media (max-width: 500px) {
+  /*Hace Asigna el contenedor que se abre de todas las opciones el mismo ta*/
+  .opcionconfigusualm {
+    left: 17vw;
+    height: 60vh;
+    width: 70vw;
+  }
 }
 
 /**/
 #contenedor-cambiaravataralm {
-
 }
