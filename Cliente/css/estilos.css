@@ -356,7 +356,7 @@ haciendo mas reciclabe el codigo*/
 
 /*Asigna un color blanco solido de fondo a cualquier elemento*/
 .blanco-solido {
-  background-color: rgba(240, 248, 255, 0.836);
+  background-color: rgb(255, 255, 255);
 }
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Scroll ++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -580,7 +580,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
 /*Contenedor que asigan ek fondo de imagen de la interfas*/
-#principalalm-contenedor {
+#contenedor-principalalm {
   background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -646,8 +646,8 @@ Asi logras evadir lo de position y z index en los elementos*/
   z-index: 3; /*Se asigna un index 3 para poner encima/enfrente de toda la interfaz y de la columna extras quer tiene un z index 2*/
   right: 17px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
   top: 10px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background-color: aliceblue;
   border-radius: 50%;
   transition: 0.35s;
@@ -657,8 +657,8 @@ Asi logras evadir lo de position y z index en los elementos*/
 @media (max-width: 500px) {
   /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
   #btn-extras-principalalm {
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -755,4 +755,48 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Maneja lod drops que cuando se abran las opciones esten mas a la derecha y no debajo*/
 .menualmdrop {
   margin-left: 200px;
+}
+
+/*************************************************************************************** Configsusuavatar *****************************/
+/*Contenedor que contiene las opciones de configuracion*/
+#contenedor-configusuariosalm {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 26vh;
+}
+
+/*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
+/*Hace que para telefonos este mas arriba el contenedor*/
+@media (max-width: 500px) {
+  #contenedor-configusuariosalm {
+    padding-top: 23vh;
+  }
+}
+
+/*Asigna el tama;o a todas las opciones de configuraciones*/
+.opcionconfigusu {
+  width: 200px;
+  height: 200px;
+}
+
+/*Hace que las opciones para telefono sean mas peque;as*/
+@media (max-width: 500px) {
+  .opcionconfigusu {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*Hace Asigna el contenedor que se abre de todas las opciones el mismo ta*/
+.opcionconfigusualm {
+  position: absolute;
+  left: 25vw;
+  height: 60vh;
+  width: 50vw;
+  background-color: rgb(255, 255, 255);
+}
+
+/**/
+#contenedor-cambiaravataralm {
+
 }

@@ -33,7 +33,7 @@ session_start();
             </div>
 
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
-            <div class="col centrar" id="principalalm-contenedor">
+            <div class="col centrar" id="contenedor-principalalm">
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipalalm" aria-expanded="false" aria-controls="colmenuprincipalalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
@@ -95,7 +95,7 @@ session_start();
 
             <!--Columna de configuracion se abre dando click al avatar, aqui se manda a traer las opciones posibkes a configuar-->
             <div class="col collapse" id="colconfigprincipalalm"> <!--Barra menu de la izq-->
-
+                <?Php include("include/Configusuariosalm.php") ?>
             </div>
         </div>
     </div>

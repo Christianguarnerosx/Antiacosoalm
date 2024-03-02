@@ -1,5 +1,6 @@
 <!--Para que funcione bien el menu con la logica de menus en principalalm -->
 <!--Es muy importante no tener los links de bootstrap, ya que si no entraran en conflicto al tener dos en principal alm y no funcionara -->
+<!--En todo el documento se utilizan rutas locales de donde se va a importar el doc-->
 
 <!doctype html>
 <html lang="en">
