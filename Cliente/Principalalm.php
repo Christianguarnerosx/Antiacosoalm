@@ -66,8 +66,8 @@
                         <div class="col">
                             <div class="row centrar espacio-top-c espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
-                                <h1 class="titulo-m"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
-                                    Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?>: <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
+                                <h1 class="titulo-g"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
+                                    Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
                                 </h1>
                                 <h2 class="text-g">¿En qué puedo ser tu aliado de hoy?</h2>
                             </div>
@@ -75,7 +75,7 @@
                             <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
                             <div class="row espacio-top-c centrar"> <!--Seccion de card de opciones principalalm-->
                                 <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                <a href="" class="card-principalalm blanco-solido decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                <a href="" class="card-principalalm decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                     <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                         <h1 class="text-m txt-negro">Comunidad</h1>
                                         <p class="text-c txt-negro">Reportes de aliado</p>
@@ -83,7 +83,7 @@
                                     </div>
                                 </a>
                                 <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                <a href="" class="card-principalalm blanco-solido decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                <a href="" class="card-principalalm decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                     <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                         <h1 class="text-m txt-negro">Rendimiento</h1>
                                         <p class="text-c txt-negro">Estadisticas</p>

@@ -30,12 +30,12 @@
                         <h1 class="text-g"><img src="imagenes/iconos/iconoconfig.png" alt="">Fondo</h1>
                     </a>
                     <a href="" id="confiapodoalm" class="opcionconfigusu centrar decoracion-no txt-blanco hover-btn">
-                        <h1 class="text-g"><img src="imagenes/iconos/iconoconfig.png" alt="">Apodo</h1>
+                        <h1 class="text-g"><img src="imagenes/iconos/iconoconfig.png" alt="">Tema</h1>
                     </a>
                 </div>
                 <div class="row">
-                    <!--Conetenedor de cambiar avatar (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm scroll-y alinear-center" id="contenedor-cambiaravataralm">
+                    <!--Conetenedor de cambiar avatar (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->
+                    <div class="collapse opcionconfigusualm scroll-y alinear-center borde-r-c" id="contenedor-cambiaravataralm">
                         <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo avatar</h1>
                         <div class="row centrar">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
@@ -49,8 +49,8 @@
                         </div>
                     </div>
 
-                    <!--Conetenedor de cambiar fondo (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm scroll-y alinear-center" id="contenedor-cambiarfondoalm">
+                    <!--Conetenedor de cambiar fondo (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->
+                    <div class="collapse opcionconfigusualm scroll-y alinear-center borde-r-c" id="contenedor-cambiarfondoalm">
                         <div class="row centrar">
                             <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo fondo</h1>
                             <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-gusano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-gusano.gif')">
@@ -60,8 +60,8 @@
                         </div>
                     </div>
 
-                    <!--Conetenedor de cambiar apodo (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm centrar" id="contenedor-cambiarapodoalm">
+                    <!--Conetenedor de cambiar apodo (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->
+                    <div class="collapse opcionconfigusualm centrar borde-r-c alinear-center" id="contenedor-cambiarapodoalm">
 
                     </div>
                 </div>
@@ -70,7 +70,7 @@
     </div>
 </body>
 
-<!-- Framework jQuery --> <!--Utilizado para que sirva la seleccion de avatar, sin este no funciona el js que fue seleccionado-->
+<!-- Framework jQuery --> <!--Utilizado para que sirva la seleccion de avatar, sin este no funciona el js de que fue seleccionado (el onclick de js)-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!--Mandamos a traer la logica de como se dezplegan los contenedores de las opciones-->

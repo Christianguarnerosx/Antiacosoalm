@@ -167,6 +167,17 @@ haciendo mas reciclabe el codigo*/
   background-color: rgb(255, 110, 32);
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Dropdowns +++++++++++++++++++++*/
+/*Asigna a todos los dropdowns el mismo tamaño para que no tome el ancho segun la letra y esten todos disparejos*/
+.drop-m {
+  width: 80px;
+}
+
+/*Asigna a todos los dropdowns el mismo tamaño para que no tome el ancho segun la letra y esten todos disparejos*/
+.drop-g {
+  width: 160px;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Bordes +++++++++++++++++++++*/
 /*Normalmente es asigando a las cards/botones borde c*/
 .borde-r-c {
@@ -315,10 +326,10 @@ haciendo mas reciclabe el codigo*/
 
 /*Clase que se utiliza cuando quiere poner el tamano a un icono*/
 .avatar-c {
-  width: 100px;
-  height: 100px;
+  width: 134px;
+  height: 130px;
   border-radius: 50%;
-  background-color:rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Cuadros contenedores +++++++++++++++++++++*/
@@ -628,17 +639,17 @@ Asi logras evadir lo de position y z index en los elementos*/
 #colmenuprincipalalm {
   width: 300px; /*Este tamano solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
   transition: 0.25s ease-in;
+    background-color: rgba(120, 233, 178, 0.863);
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
-  /*Entonces la columna principal se sobre pondra y dejara de ser */
+  /*Entonces la columna principal se sobre pondra y dejara de ser relativa a el copntenido*/
   #colmenuprincipalalm {
     position: fixed; /*Se desancla de toda la iterfaz y se vuelve independiente*/
     z-index: 2; /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
     width: 300px; /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
     height: 100vh; /*Le asignamos un valor de alto determinado, ya que no tiene contenedor padre y esta solo*/
-    background-color: aliceblue; /*Al parecer desaparecen las clases asi que debemos ponerle el fondo aqui tambien*/
   }
 }
 
@@ -646,7 +657,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 #colconfigprincipalalm {
   position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
-  background-color: rgba(80, 162, 218, 0.884);
+  background-color: rgba(80, 163, 218, 0.938);
   height: 100vh; /*Asigna todo el tama;o heiht/vertical de toda la panatalla usando el viweport*/
   width: 100vw; /*Asigna todo el tama;o width/horizontal de toda la panatalla usando el viweport*/
   transition: 0.25s ease-in; /*Se asigna una transicion para que cuando sufra cambios la animacion sea mas suave*/
@@ -741,6 +752,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   margin-left: 2.5vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.2s ease;
+  background-color: rgba(131, 205, 255, 0.884);
 }
 
 /*Hover para las cards que tienen las opciones al inicio de principalalm*/
@@ -795,7 +807,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 /******************************************************************************************************* Menualm/include **************/
 /*Maneja lod drops que cuando se abran las opciones esten mas a la derecha y no debajo*/
 .menualmdrop {
-  margin-left: 200px;
+  margin-left: 213px;
 }
 
 /*************************************************************************************** Configsusuavatar *****************************/
@@ -810,7 +822,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Hace que para telefonos este mas arriba el contenedor*/
 @media (max-width: 500px) {
   #contenedor-configusuariosalm {
-    padding-top: 23vh;
+    padding-top: 23vh; /*Asigna un espacio arriba dependiendo el dispositivo*/ 
   }
 }
 
