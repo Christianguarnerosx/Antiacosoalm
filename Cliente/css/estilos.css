@@ -590,14 +590,15 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*-------------------------------------------------------------------------------------------------------------- ELEGIR fondo alum --------------------------*/
+/*Asigna una transition para todas las opciones de fondos (hace que sea mas fluido)*/
 .fondo-elegir {
   transition: 0.3s ease;
-  width: 50%;
+  width: 50%; /*Asigna un tama;o de medio ancho contenedor padre al estar en resolucion pc*/
 }
 
 @media (max-width: 500px) {
   .fondo-elegir {
-    width: 100%;
+    width: 100%; /*Asigna un tama;o completo ancho del contenedor padre al estar en resolucion pc*/
   }
 }
 /*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
@@ -729,6 +730,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/*Hover para las cards que tienen las opciones al inicio de principalalm*/
 .card-principalalm:hover {
   transform: scale(1.05);
 }
