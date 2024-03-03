@@ -20,7 +20,7 @@
 <body>
     <div class="container-fluid">
         <div class="row centrar-h espacio-top-c">
-            <img class="avatar-c" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Img de menu Debe de ponerse la ruta calculada desde donde se manda a traer en este caso es para la de menual pricnipal-->
+            <img class="avatar-c" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Img  de menu Debe de ponerse la ruta calculada desde donde se manda a traer en este caso es para la de menual pricnipal-->
         </div>
         <div class="row espacio-top-m">
             <nav class="nav nav-pills flex-column text-m"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->

@@ -625,9 +625,10 @@ Asi logras evadir lo de position y z index en los elementos*/
     width: 100%; /*Asigna un tama;o completo ancho del contenedor padre al estar en resolucion pc*/
   }
 }
-/*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
+
+/*************************************************************************************  Plantilla menus */
 /*Contenedor que asigan ek fondo de imagen de la interfas*/
-#contenedor-principalalm {
+#contenedor-plantillaalm {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; /*Centra a el fondo siempre en medio en cualquier medida que tome*/
@@ -636,16 +637,16 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Asigna el tamano de la columna izq/menualm de forma predeterminada*/
-#colmenuprincipalalm {
+#colmenuplantillaalm {
   width: 300px; /*Este tamano solo se utilizara provisionlamnete mientras se desarrolla para pon tener que estra abre y cierra el menu, se pone ya que si no abre de mas el menu, y asi mantiene la coherencia con el tamano asignado en el js logica menu*/
   transition: 0.25s ease-in;
-    background-color: rgba(120, 233, 178, 0.863);
+  background-color: rgba(120, 233, 178, 0.863);
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
   /*Entonces la columna principal se sobre pondra y dejara de ser relativa a el copntenido*/
-  #colmenuprincipalalm {
+  #colmenuplantillaalm {
     position: fixed; /*Se desancla de toda la iterfaz y se vuelve independiente*/
     z-index: 2; /*Enviamos al frente de todo (todo el cotenido esta en entre z-0 y z-1) entonces se pone encima de todo eso*/
     width: 300px; /*Le asignamos un valor de ancho determinado, ya que no tiene contenedor padre y esta solo*/
@@ -654,7 +655,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Columna de configuraciones de alm*/
-#colconfigprincipalalm {
+#colconfigplantillaalm {
   position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
   background-color: rgba(80, 163, 218, 0.938);
@@ -664,13 +665,13 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Posicio relative para que otros elementos que sean absolutes partan de esta refrencia a la hora de hacer left o rigth (en fin de ubicar a un elemento de esta forma estatico por lo regular)*/
-#principalalm-cuadro {
+#plantillaalm-cuadro {
   position: relative; /*Relative para que los elementos que utilicen absolute tomen como referencia a este (que es el padre)*/
   width: 100%;
 }
 
 /*Boton de menu que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
-#btn-menu-principalalm {
+#btn-menu-plantillaalm {
   position: absolute; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 2; /*Se asigna un index 1 para poner encima/enfrente de todos los componentes la interfaz y siempre este arriba*/
   left: 5px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
@@ -681,13 +682,13 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
-  #btn-menu-principalalm {
+  #btn-menu-plantillaalm {
     width: 50px;
   }
 }
 
 /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
-#btn-extras-principalalm {
+#btn-extras-plantillaalm {
   position: absolute; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 3; /*Se asigna un index 3 para poner encima/enfrente de toda la interfaz y de la columna extras quer tiene un z index 2*/
   right: 17px; /*Cuando se cambia el valor de aqui, tambien se debera cambiar en la logica del menu pues van de la mano*/
@@ -702,14 +703,14 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 800px) {
   /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
-  #btn-extras-principalalm {
+  #btn-extras-plantillaalm {
     width: 45px;
     height: 45px;
   }
 }
 
 /*Logo aliados top izq principalalm*/
-#principalalm-logo {
+#plantillaalm-logo {
   position: absolute; /*Absolute para tener como refrencia al contenedor padre que deberia tener una position relative*/
   top: -50px;
   left: 10px;
@@ -719,14 +720,14 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
   /*Logo aliados top izq principalalm*/
-  #principalalm-logo {
+  #plantillaalm-logo {
     top: -20px;
     width: 20%;
   }
 }
 
 /*Contenedor donde va el contenido de enmedio, cards normalmente */
-#principalalm-main {
+#plantillaalm-main {
   position: absolute;
   bottom: 70px; /*Hace que el contenedor se fije desde abajo*/
   height: 80%; /*Para que tenga un tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
@@ -737,11 +738,12 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
-  #principalalm-main {
+  #plantillaalm-main {
     height: 86%; /*Para que tenga un tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
   }
 }
 
+/*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
 /*Tarjeta de opciones grande*/
 .card-principalalm {
   position: relative; /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
@@ -822,7 +824,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Hace que para telefonos este mas arriba el contenedor*/
 @media (max-width: 500px) {
   #contenedor-configusuariosalm {
-    padding-top: 23vh; /*Asigna un espacio arriba dependiendo el dispositivo*/ 
+    padding-top: 23vh; /*Asigna un espacio arriba dependiendo el dispositivo*/
   }
 }
 

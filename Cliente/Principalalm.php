@@ -23,7 +23,7 @@
         /*Para que funcione bien se debe hacer con el **ID** y NO con clases. Si no hace un fallo al utilizar las variables de session*/
         /*MUY IMPORTANTE que la conexion hacia la session este hasta arriba antes que este codigo SIEMPRE*/
         /*Para poder asignar el fondo en cada interfaz es necesario que sea en html ya que css no puede hacer conexion con*/
-        #contenedor-principalalm {
+        #contenedor-plantillaalm {
             background-image: url('<?php include("../Servidor/funciones_session/session_fondo.php") ?>');
         }
     </style>
@@ -36,33 +36,33 @@
 
             <!--Columna de menus se abre dando click al boton menu, aqui se manda a traer las opciones posibles a configuar-->
             <!--La clase collapse propia de bootstrap 5, utilizada para poder ocultar/contraer columnas y hacer el efecto de menu-->
-            <div class="col-2 collapse" id="colmenuprincipalalm"> <!--Barra menu de la izq. Principalmente esta colapsada (no se ve)    TAMBIEN se utiliza el tama;o de col por que si no no obtiene el tamano que se le asigan en el css-->
+            <div class="col-2 collapse" id="colmenuplantillaalm"> <!--Barra menu de la izq. Principalmente esta colapsada (no se ve)    TAMBIEN se utiliza el tama;o de col por que si no no obtiene el tamano que se le asigan en el css-->
                 <?php
                 include("include/Menualm.php");
                 ?>
             </div>
 
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
-            <div class="col centrar fondo" id="contenedor-principalalm">
+            <div class="col centrar fondo" id="contenedor-plantillaalm">
 
 
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
-                <button type="button" id="btn-menu-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipalalm" aria-expanded="false" aria-controls="colmenuprincipalalm">
+                <button type="button" id="btn-menu-plantillaalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuplantillaalm" aria-expanded="false" aria-controls="colmenuplantillaalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
                 </button>
-                <button type="button" id="btn-extras-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigprincipalalm" aria-expanded="false" aria-controls="colconfigprincipalalm">
+                <button type="button" id="btn-extras-plantillaalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colconfigplantillaalm" aria-expanded="false" aria-controls="colconfigplantillaalm">
                     <img class="icono-btn" src="<?php include("../Servidor/funciones_session/session_avatar.php"); ?>" alt=""> <!--Se obtiene el avatar con php la clse icono avatar hace referencia al 100% del padre(el tama;o del boton)-->
                 </button>
 
                 <!--1 contenedor de cuadro blanco ya el contenido de enmedio/principal de la interfaz-->
-                <section id="principalalm-cuadro" class="cuadro-fondo centrar blanco-transparente borde-r-c"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
+                <section id="plantillaalm-cuadro" class="cuadro-fondo centrar blanco-transparente borde-r-c"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
                     <!--Logo del contenedor de contenido de enmedio-->
-                    <img id="principalalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
+                    <img id="plantillaalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
                     <!--Contenedor principal (central) de todos los componentes de la interfaz-->
 
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
-                    <main id="principalalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                    <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col">
                             <div class="row centrar espacio-top-c espacio-left-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
@@ -114,7 +114,7 @@
             </div>
 
             <!--Columna de configuracion se abre dando click al avatar, aqui se manda a traer las opciones posibkes a configuar-->
-            <div class="col collapse" id="colconfigprincipalalm"> <!--Barra menu de la izq-->
+            <div class="col collapse" id="colconfigplantillaalm"> <!--Barra menu de la izq-->
                 <?Php include("include/Configusuariosalm.php") ?>
             </div>
         </div>
@@ -128,7 +128,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
-    <script src="js/logica_menu_principal.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
+    <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 </body>
 
