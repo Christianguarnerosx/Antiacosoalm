@@ -55,7 +55,7 @@
                 </button>
 
                 <!--1 contenedor de cuadro blanco ya el contenido de enmedio/principal de la interfaz-->
-                <section id="principalalm-cuadro" class="cuadro-fondo centrar blanco-transparente borde-r-m"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
+                <section id="principalalm-cuadro" class="cuadro-fondo centrar blanco-transparente borde-r-c"> <!--El id se ha utilizado para poner su position relative y asi sea refremcia de otros elementos-->
                     <!--Logo del contenedor de contenido de enmedio-->
                     <img id="principalalm-logo" class="logo-c" src="imagenes/logos/logoaliadoshorizontal.gif" alt="">
                     <!--Contenedor principal (central) de todos los componentes de la interfaz-->
@@ -75,10 +75,18 @@
                             <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
                             <div class="row espacio-top-c centrar"> <!--Seccion de card de opciones principalalm-->
                                 <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                <a href="" class="card-principalalm blanco-solido decoracion-no"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                <a href="" class="card-principalalm blanco-solido decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                     <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                         <h1 class="text-m txt-negro">Comunidad</h1>
                                         <p class="text-c txt-negro">Reportes de aliado</p>
+                                        <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
+                                    </div>
+                                </a>
+                                <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
+                                <a href="" class="card-principalalm blanco-solido decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                    <div class="row espacio-top-m"><!--Fila de texto de la card-->
+                                        <h1 class="text-m txt-negro">Rendimiento</h1>
+                                        <p class="text-c txt-negro">Estadisticas</p>
                                         <img class="icono-card-rb" src="imagenes/iconos/iconoplay.png" alt="">
                                     </div>
                                 </a>

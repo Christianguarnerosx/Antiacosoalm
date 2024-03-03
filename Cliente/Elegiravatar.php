@@ -44,7 +44,7 @@ session_start();
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
-                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-princesafuego.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-princesafuego.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gatoblanco.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gatoblanco.gif')">
                     </div>
                 </div>
             </div>

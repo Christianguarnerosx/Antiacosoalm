@@ -38,14 +38,14 @@
                     <div class="collapse opcionconfigusualm scroll-y alinear-center" id="contenedor-cambiaravataralm">
                         <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo avatar</h1>
                         <div class="row centrar">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-princesafuego.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-princesafuego.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
+                        <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gatoblanco.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gatoblanco.gif')">
                         </div>
                     </div>
 
@@ -53,10 +53,10 @@
                     <div class="collapse opcionconfigusualm scroll-y alinear-center" id="contenedor-cambiarfondoalm">
                         <div class="row centrar">
                             <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo fondo</h1>
-                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-gusano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-gusano.gif')">
-                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-zen.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-zen.gif')">
-                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-bmobaraba.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobaraba.gif')">
-                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-bmobano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobano.gif')">
+                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-gusano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-gusano.gif')">
+                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-zen.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-zen.gif')">
+                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-bmobaraba.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobaraba.gif')">
+                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-bmobano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobano.gif')">
                         </div>
                     </div>
 
