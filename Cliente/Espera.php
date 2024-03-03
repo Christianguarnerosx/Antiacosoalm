@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="container-fluid centrar" id="contenedor-espera"> <!--Contenedor principal donde se le adjunta un background de imagen-->
+  <div class="container-fluid centrar fondo" id="contenedor-espera"> <!--Contenedor principal donde se le adjunta un background de imagen-->
     <img src="imagenes/logos/logosinfondo.gif" alt="" class="logotopleft">
 
     <div class="row centrar">

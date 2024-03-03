@@ -28,7 +28,7 @@ function Imagenseleccionada(rutaAvatar) {
 function enviarRutaAvatarAlServidor(rutaAvatar, callback) {
   //solicitud AJAX (es una combinacion de javascript y xml)
   $.ajax({
-    url: "../Servidor/Insertaravatar.php", // Nombre del archivo al que se enviara la informacion (ruta del avatar)
+    url: "../Servidor/actualizaravatar.php", // Nombre del archivo al que se enviara la informacion (ruta del avatar)
     type: "POST", //Tipo de envio de dato
     data: { rutaav: rutaAvatar }, // Envia a la ruta el avatar {(nombre de la variable a enviar utilizara como el name), (la ruta que tiene la funcion)}
     success: function (response) { //Si todo es correcto/se cumple

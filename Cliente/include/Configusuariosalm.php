@@ -23,13 +23,13 @@
             <div class="col">
                 <div class="row alinear-center"> <!--Deja todo alineado para que este centrado de manera correcta-->
                     <!--La calse de opcionconfigusu de los elementos 'a' es para asignar el mismo contenedor/"layout" de todas las opciones abiertas-->
-                    <a href="" id="configavataralm" class="opcionconfigusu centrar decoracion-no txt-blanco hover-btn">
+                    <a href="" id="configavataralm" class="opcionconfigusu centrar decoracion-no txt-blanco hover-c">
                         <h1><img src="imagenes/iconos/iconoconfig.png" alt=""> Avatar</h1>
                     </a>
-                    <a href="" class="opcionconfigusu centrar decoracion-no txt-blanco">
+                    <a href="" id="confifondoalm" class="opcionconfigusu centrar decoracion-no txt-blanco">
                         <h1><img src="imagenes/iconos/iconoconfig.png" alt="">Fondo</h1>
                     </a>
-                    <a href="" class="opcionconfigusu centrar decoracion-no txt-blanco">
+                    <a href="" id="confiapodoalm" class="opcionconfigusu centrar decoracion-no txt-blanco">
                         <h1><img src="imagenes/iconos/iconoconfig.png" alt="">Apodo</h1>
                     </a>
                 </div>
@@ -50,13 +50,18 @@
                     </div>
 
                     <!--Conetenedor de cambiar fondo (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm" id="contenedor-cambiarfondoalm">
-
+                    <div class="collapse opcionconfigusualm scroll-y" id="contenedor-cambiarfondoalm">
+                        <div class="row centrar">
+                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-gusano.gif" alt="" onclick="Fondoseleccionado('../imagenes/fondos/fondo-gusano.gif')">
+                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-zen.gif" alt="" onclick="Fondoseleccionado('../imagenes/fondos/fondo-zen.gif')">
+                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-bmobaraba.gif" alt="" onclick="Fondoseleccionado('../imagenes/fondos/fondo-bmobaraba.gif')">
+                            <img class="fondo-elegir hover-m espacio-top-c" src="imagenes/fondos/fondo-bmobano.gif" alt="" onclick="Fondoseleccionado('../imagenes/fondos/fondo-bmobano.gif')">
+                        </div>
                     </div>
 
                     <!--Conetenedor de cambiar apodo (inicialmente esta collapsado)-->
-                    <div class="collapse opcionconfigusualm" id="contenedor-cambiarapodoalmsss">
-
+                    <div class="collapse opcionconfigusualm centrar" id="contenedor-cambiarapodoalm">
+                        
                     </div>
                 </div>
             </div>
@@ -71,5 +76,6 @@
 <script src="js/logica_config_menu_principal.js"></script>
 
 <script src="js/confirmar_avatar.js"></script>
+<script src="js/confirmar_fondo.js"></script>
 
 </html>

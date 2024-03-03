@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <title>Bienvenido</title>
+
 </head>
 
 <!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
@@ -33,7 +34,7 @@ session_start();
             </div>
 
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
-            <div class="col centrar" id="contenedor-principalalm">
+            <div class="col centrar fondo" id="contenedor-principalalm">
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipalalm" aria-expanded="false" aria-controls="colmenuprincipalalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
@@ -63,7 +64,7 @@ session_start();
                             <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
                             <div class="row espacio-top-c centrar"> <!--Seccion de card de opciones principalalm-->
                                 <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
-                                <a href="" class="card-principalalm blanco-solido decoracion-no hover-btn"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
+                                <a href="" class="card-principalalm blanco-solido decoracion-no"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                     <div class="row espacio-top-m"><!--Fila de texto de la card-->
                                         <h1 class="text-m txt-negro">Comunidad</h1>
                                         <p class="text-c txt-negro">Reportes de aliado</p>
@@ -107,10 +108,9 @@ session_start();
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito-->
+    <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
     <script src="js/logica_menu_principal.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
-
 </body>
 
 </html>

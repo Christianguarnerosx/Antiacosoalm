@@ -15,7 +15,7 @@
 
 <body>
     <!--Contenedor principal que se centra en medio (centrar div)-->
-    <div class="container-fluid centrar" id="contenedor-tiposesion"> <!--Se utiliza el body para ponerle un fondo de imagen a toda la pantalla-->
+    <div class="container-fluid centrar fondo" id="contenedor-tiposesion"> <!--Se utiliza el body para ponerle un fondo de imagen a toda la pantalla-->
         <div class="row txt-blanco"> <!--Se utiliza centrar-vertical para poder darle un margen a lo alto-->
 
             <a href="" class="col opciontiposesion decoracion-no txt-blanco borde-r-m"> <!-- OJO  Un a con clase COL para manejar las tarjetas como a con links (abajo). Las dos columnas en donde cada una albergara una tarjeta--> <!--Tarjeta 1 aqui se declara el fondo de la tarjeta-->

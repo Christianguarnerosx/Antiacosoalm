@@ -23,7 +23,7 @@ session_start();
 ?>
 
 <body>
-    <div class="container-fluid contenedor-elegiravatar display-f centrar">
+    <div class="container-fluid fondo contenedor-elegiravatar display-f centrar">
         <section class="cuadro-h blanco-transparente centrar">
             <div class="row centrar">
                 <div class="col-4">
@@ -36,7 +36,7 @@ session_start();
                     </h1>
                 </div>
                 <div class="col-7 scroll-y">
-                    <div class="row centrar">
+                    <div class="row centrar espacio-top-g">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
                         <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">

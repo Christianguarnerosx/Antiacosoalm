@@ -58,6 +58,11 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Texto Alinear +++++++++++++++++++++*/
+.fondo {
+  background-image: url("../imagenes/fondos/fondo-gusano.gif");
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Texto Alinear +++++++++++++++++++++*/
 /*Alinea el texto en medio/ Justificado enmedio*/
 .alinear-center {
   text-align: center;
@@ -368,6 +373,13 @@ haciendo mas reciclabe el codigo*/
   overflow: hidden;
 }
 
+.scroll-x {
+  /*Haces que el contenedor de escroll sea aun mas largo que ne resolucion de pc*/
+  overflow-y: hidden; /*Activa el scroll en y arriba abajo*/
+  overflow-x: auto; /*Bloquea el scroll en x izq der*/
+  width: 90vw; /*Este es el que cambia respecto a pc para ser mas grande*/
+}
+
 .scroll-y {
   /*Haces que el contenedor de escroll sea aun mas largo que ne resolucion de pc*/
   overflow-y: auto; /*Activa el scroll en y arriba abajo*/
@@ -402,10 +414,6 @@ haciendo mas reciclabe el codigo*/
   transform: scale(1.05);
 }
 
-.hover-card {
-  transform: scale(1.1);
-}
-
 /*Hover para que todos los links que la utilizen cambien color y tamano*/
 .hover-link:hover {
   color: rgb(76, 165, 255);
@@ -417,7 +425,6 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*No repeat es indispensable solo para que aparezca 1*/
 /*Background size logra que este cubra todo el body*/
 #contenedor-espera {
-  background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -487,7 +494,6 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*---------------------------------------------------------------------------Tiposesiom------------------------------------------------------------*/
 /*Asigan a el contenedor principal de esta interfaz el fondo y demas caracteristicas*/
 #contenedor-tiposesion {
-  background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; /*Darle un tamaño predeterminado al contendor para que aparezca el background*/
@@ -498,7 +504,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*Tarjetas/cards que tendran el mismo formato*/
 .opciontiposesion {
   position: relative;
-  background-image: url("../imagenes/fondos/gusano.gif");
+  background-image: url("../imagenes/fondos/fondo-gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -541,7 +547,6 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
 /*Contendor principal de inicio que asigna el fondo*/
 .contenedor-inicionormal {
-  background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -559,7 +564,6 @@ Asi logras evadir lo de position y z index en los elementos*/
 /*-------------------------------------------------------------------------------------------------------------- ELEGIR AVATAR alum --------------------------*/
 /*Utilizado para darle fondo a la interfaz de elegir avatar*/
 .contenedor-elegiravatar {
-  background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -585,10 +589,20 @@ Asi logras evadir lo de position y z index en los elementos*/
   border: 8px solid rgb(76, 247, 165);
 }
 
+/*-------------------------------------------------------------------------------------------------------------- ELEGIR fondo alum --------------------------*/
+.fondo-elegir {
+  transition: 0.3s ease;
+  width: 50%;
+}
+
+@media (max-width: 500px) {
+  .fondo-elegir {
+    width: 100%;
+  }
+}
 /*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
 /*Contenedor que asigan ek fondo de imagen de la interfas*/
 #contenedor-principalalm {
-  background-image: url("../imagenes/fondos/gusano.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; /*Centra a el fondo siempre en medio en cualquier medida que tome*/
@@ -712,6 +726,11 @@ Asi logras evadir lo de position y z index en los elementos*/
   width: 300px; /*Asigan el tama;o de la card*/
   margin-top: 15px;
   margin-left: 2.5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-principalalm:hover {
+  transform: scale(1.05);
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
@@ -808,11 +827,8 @@ Asi logras evadir lo de position y z index en los elementos*/
   /*Hace Asigna el contenedor que se abre de todas las opciones el mismo ta*/
   .opcionconfigusualm {
     left: 17vw;
+    margin-top: 4vh;
     height: 60vh;
     width: 70vw;
   }
-}
-
-/**/
-#contenedor-cambiaravataralm {
 }
