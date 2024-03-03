@@ -1,6 +1,6 @@
 <?php
-/*Primero (arriba) se inicializo la session_start()*/
-include("../Servidor/Conexion.php"); /*Incluimos la ocnexion (OJOOOO se debe calcular la ruta desde donde se manda atraer no desde aqui) */
+/*Primero donde se importe se debio haber inicializado la session_start()*/
+include("../Servidor/Conexion.php"); /*Incluimos la conexion (OJOOOO se debe calcular la ruta desde donde se manda atraer no desde aqui) */
 $id = $_SESSION['usuario']; /*Mandamos a llamar a la variable sesion y la asignamos a una nieva variable (id)*/
 $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = $id"; /*Declaramos la consulta*/
 $consulta = mysqli_query($conexion, $query); /* ejecutamos la consulta mandando la conexion y la consulta*/

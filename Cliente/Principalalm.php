@@ -13,13 +13,22 @@
 
     <title>Bienvenido</title>
 
-</head>
+    <!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
+    <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
+    <?php
+    session_start();
+    ?>
 
-<!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
-<!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
-<?php
-session_start();
-?>
+    <style>
+        /*Para que funcione bien se debe hacer con el **ID** y NO con clases. Si no hace un fallo al utilizar las variables de session*/
+        /*MUY IMPORTANTE que la conexion hacia la session este hasta arriba antes que este codigo SIEMPRE*/
+        /*Para poder asignar el fondo en cada interfaz es necesario que sea en html ya que css no puede hacer conexion con*/
+        #contenedor-principalalm {
+            background-image: url('<?php include("../Servidor/funciones_session/session_fondo.php") ?>');
+        }
+    </style>
+
+</head>
 
 <body class="scroll-body-no">
     <div class="container-fluid">
@@ -35,6 +44,8 @@ session_start();
 
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
             <div class="col centrar fondo" id="contenedor-principalalm">
+
+
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-principalalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuprincipalalm" aria-expanded="false" aria-controls="colmenuprincipalalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">

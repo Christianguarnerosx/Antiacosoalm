@@ -1,5 +1,5 @@
 <?php
-/*Primero (arriba) se inicializo la session_start()*/
+/*Primero donde se importe se debio haber inicializado la session_start()*/
 include("../Servidor/Conexion.php"); /*Incluimos la ocnexion */
 $id = $_SESSION['usuario']; /*Mandamos a llamar a la variable sesion y la asignamos a una nieva variable (id)*/
 $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = $id"; /*Declaramos la consulta*/
