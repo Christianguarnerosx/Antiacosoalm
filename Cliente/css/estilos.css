@@ -8,6 +8,9 @@
 /*Flex- no wrap: /*Hace que cuando es espacio se reduzca no salte a mas filas los elementos*/
 /*White-espace no wrap: /*Espacio en blanco no enter, se usa solo para dejarlo en una linea y no dividir el texto por espacio en */
 
+/*paleta de colores:
+grisazulado :  rgba(64, 145, 199, 0.774);*/
+
 /*CLASES GENERALES personales*/
 /*Este tipo de clases se utilizan para poder ser reutilizables en cualquier elemento y no declarar el mismo estilo una y otra vez a cada elemento
 haciendo mas reciclabe el codigo*/
@@ -633,7 +636,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 #colconfigprincipalalm {
   position: fixed; /*Se vuelve fixed para que se comporte de manera independiente al contenido*/
   z-index: 1; /*Se asigna un index 1 para poner encima/enfrente de toda la interfaz*/
-  background-color: rgba(252, 16, 16, 0.955);
+  background-color: rgba(80, 162, 218, 0.884);
   height: 100vh; /*Asigna todo el tama;o heiht/vertical de toda la panatalla usando el viweport*/
   width: 100vw; /*Asigna todo el tama;o width/horizontal de toda la panatalla usando el viweport*/
   transition: 0.25s ease-in; /*Se asigna una transicion para que cuando sufra cambios la animacion sea mas suave*/
@@ -676,7 +679,7 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   /*Boton de extras que esta en la interfaz principalalm que maneja posicion y duracion de transisioones de el boton*/
   #btn-extras-principalalm {
     width: 45px;
@@ -709,7 +712,6 @@ Asi logras evadir lo de position y z index en los elementos*/
   width: 95%;
   overflow-y: auto; /*Permite el scroll de arriba a bajo*/
   overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
-  background-color: rgb(207, 255, 207);
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
@@ -822,6 +824,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   height: 45vh;
   width: 70vw;
   background-color: rgba(255, 255, 255, 0.13);
+  margin-top: -50px;
 }
 
 /*Hace que el contenedor en telefonos sea mas largo y tenga un ancho especial*/

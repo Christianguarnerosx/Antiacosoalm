@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3310
--- Tiempo de generación: 08-12-2023 a las 08:05:30
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1:3310
+-- Generation Time: Mar 03, 2024 at 08:38 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `escuela`
+-- Database: `escuela`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `actividades`
+-- Table structure for table `actividades`
 --
 
 CREATE TABLE `actividades` (
@@ -38,7 +38,7 @@ CREATE TABLE `actividades` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumnos`
+-- Table structure for table `alumnos`
 --
 
 CREATE TABLE `alumnos` (
@@ -51,17 +51,17 @@ CREATE TABLE `alumnos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `alumnos`
+-- Dumping data for table `alumnos`
 --
 
 INSERT INTO `alumnos` (`id_alumno`, `id_usuario`, `id_grado`, `id_grupo`, `id_padre`, `id_docente`) VALUES
-(1, 12, 3, 2, 1, 1),
+(1, 12, 1, 2, 1, 1),
 (2, 13, 4, 3, 2, 3);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `consejos`
+-- Table structure for table `consejos`
 --
 
 CREATE TABLE `consejos` (
@@ -74,7 +74,7 @@ CREATE TABLE `consejos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `docentes`
+-- Table structure for table `docentes`
 --
 
 CREATE TABLE `docentes` (
@@ -85,7 +85,7 @@ CREATE TABLE `docentes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `docentes`
+-- Dumping data for table `docentes`
 --
 
 INSERT INTO `docentes` (`id_docente`, `id_usuario`, `id_grado`, `id_grupo`) VALUES
@@ -97,7 +97,7 @@ INSERT INTO `docentes` (`id_docente`, `id_usuario`, `id_grado`, `id_grupo`) VALU
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `grados`
+-- Table structure for table `grados`
 --
 
 CREATE TABLE `grados` (
@@ -106,7 +106,7 @@ CREATE TABLE `grados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `grados`
+-- Dumping data for table `grados`
 --
 
 INSERT INTO `grados` (`id_grado`, `nombre_grado`) VALUES
@@ -120,7 +120,7 @@ INSERT INTO `grados` (`id_grado`, `nombre_grado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `grupos`
+-- Table structure for table `grupos`
 --
 
 CREATE TABLE `grupos` (
@@ -129,7 +129,7 @@ CREATE TABLE `grupos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `grupos`
+-- Dumping data for table `grupos`
 --
 
 INSERT INTO `grupos` (`id_grupo`, `nombre_grupo`) VALUES
@@ -140,7 +140,7 @@ INSERT INTO `grupos` (`id_grupo`, `nombre_grupo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `padres`
+-- Table structure for table `padres`
 --
 
 CREATE TABLE `padres` (
@@ -151,7 +151,7 @@ CREATE TABLE `padres` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `padres`
+-- Dumping data for table `padres`
 --
 
 INSERT INTO `padres` (`id_padre`, `id_usuario`, `id_grado`, `id_grupo`) VALUES
@@ -162,7 +162,7 @@ INSERT INTO `padres` (`id_padre`, `id_usuario`, `id_grado`, `id_grupo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `proyectos`
+-- Table structure for table `proyectos`
 --
 
 CREATE TABLE `proyectos` (
@@ -176,7 +176,7 @@ CREATE TABLE `proyectos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `reportes`
+-- Table structure for table `reportes`
 --
 
 CREATE TABLE `reportes` (
@@ -194,7 +194,7 @@ CREATE TABLE `reportes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `reportes_acumulados`
+-- Table structure for table `reportes_acumulados`
 --
 
 CREATE TABLE `reportes_acumulados` (
@@ -207,7 +207,7 @@ CREATE TABLE `reportes_acumulados` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -220,38 +220,40 @@ CREATE TABLE `usuarios` (
   `contraseña` varchar(30) NOT NULL,
   `estatus` varchar(8) NOT NULL,
   `tipo` varchar(13) NOT NULL,
-  `avatar` varchar(55) NOT NULL
+  `avatar` varchar(55) NOT NULL,
+  `fondo` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidop`, `apellidom`, `correo`, `telefono`, `contraseña`, `estatus`, `tipo`, `avatar`) VALUES
-(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Administrador', ''),
-(2, 'Vianney', 'Morales', 'Zamora', 'Vianney@gmail.com', '2225847475', '12345678', 'Activo', 'Docente', ''),
-(3, 'Ivan', 'Sanchez', 'Juarez', 'Ivan@gmail.com', '2461234588', 'asdfghjklñ', 'Activo', 'Docente', ''),
-(4, 'Maria Petra', 'Paredes', 'Xochihua', 'Petra@gmail.com', '2461472535', '12345678', 'Activo', 'Docente', ''),
-(6, 'Raymundo', 'Montiel', 'Lira', 'ray@gmail.com', '2467854849', '12345678', 'Inactivo', 'Docente', ''),
-(9, 'Cecilia', 'Guarneros', 'Ramirez', 'Ceciliaguarneros1983@gmail.com', '2481332000', '12345678', 'Activo', 'Docente', ''),
-(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 'Activo', 'Docente', ''),
-(11, 'Moises', 'Guarneros', 'Ramirez', 'moi@gmail.com', '2481754645', '12345678', 'Inactivo', 'Docente', ''),
-(12, 'Christian Yair', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Alumno', ''),
-(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 'Activo', 'Alumno', '');
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidop`, `apellidom`, `correo`, `telefono`, `contraseña`, `estatus`, `tipo`, `avatar`, `fondo`) VALUES
+(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Administrador', 'imagenes/avatares/avatar-finn.gif', 'imagenes/fondos/fondo-bmobano.gif'),
+(2, 'Vianney', 'Morales', 'Zamora', 'Vianney@gmail.com', '2225847475', '12345678', 'Activo', 'Docente', 'imagenes/avatares/avatar-jakfin.gif', ''),
+(3, 'Ivan', 'Sanchez', 'Juarez', 'Ivan@gmail.com', '2461234588', 'asdfghjklñ', 'Activo', 'Docente', '', ''),
+(4, 'Maria Petra', 'Paredes', 'Xochihua', 'Petra@gmail.com', '2461472535', '12345678', 'Activo', 'Docente', '', ''),
+(6, 'Raymundo', 'Montiel', 'Lira', 'ray@gmail.com', '2467854849', '12345678', 'Inactivo', 'Docente', '', ''),
+(9, 'Cecilia', 'Guarneros', 'Ramirez', 'Ceciliaguarneros1983@gmail.com', '2481332000', '12345678', 'Activo', 'Docente', '', ''),
+(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 'Activo', 'Docente', '', ''),
+(11, 'Moises', 'Guarneros', 'Ramirez', 'moi@gmail.com', '2481754645', '12345678', 'Inactivo', 'Docente', '', ''),
+(12, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Alumno', '', ''),
+(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 'Activo', 'Alumno', '', ''),
+(14, 'Daniel', 'Guarneros', 'Martinez', 'guar98953@gmail.com', '2441875082', 'tetenegra', 'Activo', 'Administrador', '', '');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `actividades`
+-- Indexes for table `actividades`
 --
 ALTER TABLE `actividades`
   ADD PRIMARY KEY (`id_actividad`),
   ADD UNIQUE KEY `id_actividad` (`id_actividad`);
 
 --
--- Indices de la tabla `alumnos`
+-- Indexes for table `alumnos`
 --
 ALTER TABLE `alumnos`
   ADD PRIMARY KEY (`id_alumno`),
@@ -262,7 +264,7 @@ ALTER TABLE `alumnos`
   ADD KEY `id_docente` (`id_docente`);
 
 --
--- Indices de la tabla `consejos`
+-- Indexes for table `consejos`
 --
 ALTER TABLE `consejos`
   ADD PRIMARY KEY (`id_consejo`),
@@ -270,7 +272,7 @@ ALTER TABLE `consejos`
   ADD KEY `id_docente` (`id_docente`);
 
 --
--- Indices de la tabla `docentes`
+-- Indexes for table `docentes`
 --
 ALTER TABLE `docentes`
   ADD PRIMARY KEY (`id_docente`),
@@ -279,21 +281,21 @@ ALTER TABLE `docentes`
   ADD KEY `id_grupo` (`id_grupo`);
 
 --
--- Indices de la tabla `grados`
+-- Indexes for table `grados`
 --
 ALTER TABLE `grados`
   ADD PRIMARY KEY (`id_grado`),
   ADD UNIQUE KEY `id_grado` (`id_grado`);
 
 --
--- Indices de la tabla `grupos`
+-- Indexes for table `grupos`
 --
 ALTER TABLE `grupos`
   ADD PRIMARY KEY (`id_grupo`),
   ADD UNIQUE KEY `id_grupo` (`id_grupo`);
 
 --
--- Indices de la tabla `padres`
+-- Indexes for table `padres`
 --
 ALTER TABLE `padres`
   ADD PRIMARY KEY (`id_padre`),
@@ -302,7 +304,7 @@ ALTER TABLE `padres`
   ADD KEY `padres_ibfk_3` (`id_grupo`);
 
 --
--- Indices de la tabla `proyectos`
+-- Indexes for table `proyectos`
 --
 ALTER TABLE `proyectos`
   ADD PRIMARY KEY (`id_proyecto`),
@@ -310,7 +312,7 @@ ALTER TABLE `proyectos`
   ADD KEY `id_docente` (`id_docente`);
 
 --
--- Indices de la tabla `reportes`
+-- Indexes for table `reportes`
 --
 ALTER TABLE `reportes`
   ADD PRIMARY KEY (`id_reporte`),
@@ -321,89 +323,89 @@ ALTER TABLE `reportes`
   ADD KEY `id_docente` (`id_docente`);
 
 --
--- Indices de la tabla `reportes_acumulados`
+-- Indexes for table `reportes_acumulados`
 --
 ALTER TABLE `reportes_acumulados`
   ADD PRIMARY KEY (`id_reporte_acumulado`),
   ADD KEY `id_alumno` (`id_alumno`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
   ADD UNIQUE KEY `id_usuario` (`id_usuario`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `actividades`
+-- AUTO_INCREMENT for table `actividades`
 --
 ALTER TABLE `actividades`
   MODIFY `id_actividad` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `alumnos`
+-- AUTO_INCREMENT for table `alumnos`
 --
 ALTER TABLE `alumnos`
   MODIFY `id_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `consejos`
+-- AUTO_INCREMENT for table `consejos`
 --
 ALTER TABLE `consejos`
   MODIFY `id_consejo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `docentes`
+-- AUTO_INCREMENT for table `docentes`
 --
 ALTER TABLE `docentes`
   MODIFY `id_docente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `grados`
+-- AUTO_INCREMENT for table `grados`
 --
 ALTER TABLE `grados`
   MODIFY `id_grado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `grupos`
+-- AUTO_INCREMENT for table `grupos`
 --
 ALTER TABLE `grupos`
   MODIFY `id_grupo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `padres`
+-- AUTO_INCREMENT for table `padres`
 --
 ALTER TABLE `padres`
   MODIFY `id_padre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `proyectos`
+-- AUTO_INCREMENT for table `proyectos`
 --
 ALTER TABLE `proyectos`
   MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `reportes`
+-- AUTO_INCREMENT for table `reportes`
 --
 ALTER TABLE `reportes`
   MODIFY `id_reporte` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `alumnos`
+-- Constraints for table `alumnos`
 --
 ALTER TABLE `alumnos`
   ADD CONSTRAINT `alumnos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
@@ -413,13 +415,13 @@ ALTER TABLE `alumnos`
   ADD CONSTRAINT `alumnos_ibfk_5` FOREIGN KEY (`id_docente`) REFERENCES `docentes` (`id_docente`);
 
 --
--- Filtros para la tabla `consejos`
+-- Constraints for table `consejos`
 --
 ALTER TABLE `consejos`
   ADD CONSTRAINT `consejos_ibfk_1` FOREIGN KEY (`id_docente`) REFERENCES `docentes` (`id_docente`);
 
 --
--- Filtros para la tabla `docentes`
+-- Constraints for table `docentes`
 --
 ALTER TABLE `docentes`
   ADD CONSTRAINT `docentes_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
@@ -427,7 +429,7 @@ ALTER TABLE `docentes`
   ADD CONSTRAINT `docentes_ibfk_3` FOREIGN KEY (`id_grupo`) REFERENCES `grupos` (`id_grupo`);
 
 --
--- Filtros para la tabla `padres`
+-- Constraints for table `padres`
 --
 ALTER TABLE `padres`
   ADD CONSTRAINT `padres_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
@@ -435,13 +437,13 @@ ALTER TABLE `padres`
   ADD CONSTRAINT `padres_ibfk_3` FOREIGN KEY (`id_grupo`) REFERENCES `grupos` (`id_grupo`);
 
 --
--- Filtros para la tabla `proyectos`
+-- Constraints for table `proyectos`
 --
 ALTER TABLE `proyectos`
   ADD CONSTRAINT `proyectos_ibfk_1` FOREIGN KEY (`id_docente`) REFERENCES `docentes` (`id_docente`);
 
 --
--- Filtros para la tabla `reportes`
+-- Constraints for table `reportes`
 --
 ALTER TABLE `reportes`
   ADD CONSTRAINT `reportes_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`),
@@ -450,7 +452,7 @@ ALTER TABLE `reportes`
   ADD CONSTRAINT `reportes_ibfk_4` FOREIGN KEY (`id_docente`) REFERENCES `docentes` (`id_docente`);
 
 --
--- Filtros para la tabla `reportes_acumulados`
+-- Constraints for table `reportes_acumulados`
 --
 ALTER TABLE `reportes_acumulados`
   ADD CONSTRAINT `reportes_acumulados_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`);
