@@ -1,5 +1,7 @@
 <?php
-/*Primero donde se importe se debio haber inicializado la session_start()*/
+/*PARA QUE FUNCION EL CODIGO a donde lo importas se debe iniciar una variable de session de php*/
+
+/*Funcion para obtener el nombre y apellido paterno*/
 include("../Servidor/Conexion.php"); /*Incluimos la conexion (OJOOOO se debe calcular la ruta desde donde se manda atraer no desde aqui) */
 $id = $_SESSION['usuario']; /*Mandamos a llamar a la variable sesion y la asignamos a una nieva variable (id)*/
 $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = $id"; /*Declaramos la consulta*/

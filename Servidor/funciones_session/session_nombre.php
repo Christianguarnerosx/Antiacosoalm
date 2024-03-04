@@ -1,5 +1,7 @@
 <?php
-/*Primero donde se importe se debio haber inicializado la session_start()*/
+/*PARA QUE FUNCION EL CODIGO a donde lo importas se debe iniciar una variable de session de php*/
+
+/*Funcion para obtener solo el nombre*/
 include("../Servidor/Conexion.php"); /*Incluimos la ocnexion */
 $id = $_SESSION['usuario']; /*Mandamos a llamar a la variable sesion y la asignamos a una nieva variable (id)*/
 $query = "SELECT nombre, apellidop FROM usuarios WHERE id_usuario = $id"; /*Declaramos la consulta*/

@@ -17,16 +17,8 @@
     <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
     <?php
     session_start();
+    include_once("../Servidor/funciones_session/session_fondo.php");
     ?>
-
-    <style>
-        /*Para que funcione bien se debe hacer con el **ID** y NO con clases. Si no hace un fallo al utilizar las variables de session*/
-        /*MUY IMPORTANTE que la conexion hacia la session este hasta arriba antes que este codigo SIEMPRE*/
-        /*Para poder asignar el fondo en cada interfaz es necesario que sea en html ya que css no puede hacer conexion con*/
-        #contenedor-plantillaalm {
-            background-image: url('<?php include("../Servidor/funciones_session/session_fondo.php") ?>');
-        }
-    </style>
 
 </head>
 
@@ -127,7 +119,7 @@
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="js/recibe_alerta_avatar.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
+    <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
     <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 </body>

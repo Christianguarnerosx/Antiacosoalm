@@ -1,6 +1,7 @@
 <?Php
-/*Funcion que obtinene la ruta del avatar del usuario*/
+/*PARA QUE FUNCION EL CODIGO a donde lo importas se debe iniciar una variable de session de php*/
 
+/*Funcion que obtinene la ruta del avatar del usuario*/
 include("../Servidor/Conexion.php"); /*Mandamos a traer la conexion al servidor de la db */
 
 $id = $_SESSION['usuario']; /*Obetenemos el id de quien incio la sesion y esta guardada en una vraiable session a la hora de autenticar */
