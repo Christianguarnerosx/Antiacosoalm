@@ -36,13 +36,11 @@
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu text-m menualmdrop"> <!--La clase menualmdrop hace que al abrir los dropdowns los menus dezplegados se vallan mas a la izq y se ubiquen a su lado-->
-                        <li><a class="dropdown-item" href="#">Mis estadisicas</a></li>
-                        <li><a class="dropdown-item" href="#">Reconocimientos</a></li>
-                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#">Mis Estadisicas</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="Reporte.php">Reporte aliado</a></li>
                     </ul>
                 </div>
 

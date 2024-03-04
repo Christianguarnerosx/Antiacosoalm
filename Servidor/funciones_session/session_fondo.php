@@ -1,8 +1,9 @@
 <?php
 /*PARA QUE FUNCION EL CODIGO a donde lo importas se debe iniciar una variable de session de php*/
 
-/*Funcion para obtener el fondo*/
+/*Funcion para obtener el fondo*/ 
 include("../Servidor/Conexion.php"); /*Incluimos la conexion (OJOOOO se debe calcular la ruta desde donde se manda atraer no desde aqui) */
+/* Para que se importe bien la conexion es necesario que sea SOLO include() porqueeeee si utilizas include_once() marca error*/
 
 $id = $_SESSION['usuario']; /*Mandamos a llamar a la variable sesion y la asignamos a una nieva variable (id)*/
 

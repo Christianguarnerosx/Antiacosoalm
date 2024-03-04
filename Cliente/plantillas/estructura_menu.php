@@ -17,7 +17,7 @@
     <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
     <?php
     session_start();
-    include_once("../Servidor/funciones_session/session_fondo.php");
+    include_once("../Servidor/funciones_session/session_fondo.php"); /*Mandamos a traer el fondo de la db y se lo aplicamos a un css que aqui importaremos*/
     ?>
 
 </head>
@@ -37,7 +37,6 @@
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
             <div class="col centrar fondo" id="contenedor-plantillaalm">
 
-
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-plantillaalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuplantillaalm" aria-expanded="false" aria-controls="colmenuplantillaalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
@@ -55,7 +54,7 @@
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
                     <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col">
+                        <div class="col"> <!-- AQUI LLEVA EL CONTENIDO QUE lleva la interfaz-->
 
                         </div>
                     </main>

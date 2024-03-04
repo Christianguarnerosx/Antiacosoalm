@@ -17,6 +17,7 @@
     <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
     <?php
     session_start();
+    include_once("../Servidor/funciones_session/session_fondo.php");
     ?>
 
 </head>
@@ -54,11 +55,17 @@
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
                     <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col">
-
+                        <div class="col centrar"> <!-- AQUI VA EL CONTENIDO PROPIO-->
+                            <div class="row">
+                                <h1>Crea un reporte aliado</h1>
+                                <div class="col">
+                                    <?php include("componentes_php/componente_grados.php"); ?>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
                         </div>
                     </main>
-
                 </section>
             </div>
 
