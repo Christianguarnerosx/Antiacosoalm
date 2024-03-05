@@ -55,8 +55,8 @@
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
                     <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col">
-                            <div class="row centrar espacio-top-c espacio-left-c">
+                        <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO -->
+                            <div class="row espacio-top-c">
                                 <!--Fila/seccion de titulos y subtitulos-->
                                 <h1 class="titulo-g"><!--Mensaje de bienvenida con nombre. Aqui se obtiene el nombre haciendo referencia a la variable sesion (que tiene el id (obtenido en autenticar)) y consultando en el php de abajo -->
                                     Hola <?Php include("../Servidor/funciones_session/session_nombreapa.php") ?> <!--Mandamos a trear una funcion que obtienen el nombre de la session iniciada (Para esto se debe corroborar si se inicio la session_start en este documento)-->
@@ -65,7 +65,7 @@
                             </div>
 
                             <!--fila/seccion de cards de opciones rapidas (Sera el contenedor y podra aguantar demasiadas tarjetas (elementos tipo a))-->
-                            <div class="row espacio-top-c centrar"> <!--Seccion de card de opciones principalalm-->
+                            <div class="row espacio-top-c"> <!--Seccion de card de opciones principalalm-->
                                 <!--Tarjeta de opciones de inicio/ en inetrfaz principal-->
                                 <a href="Reporte.php" class="card-principalalm decoracion-no borde-r-c"> <!-- Esta Es la tarjeta tipo a, para que sea un link cuando le den click, el espacion parq ue existan entre ellas no funciona si le pones la class espacio top, se agrego al class card perosnalizado-->
                                     <div class="row espacio-top-m"><!--Fila de texto de la card-->

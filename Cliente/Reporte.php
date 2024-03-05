@@ -54,16 +54,26 @@
 
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
-                    <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col centrar"> <!-- AQUI VA EL CONTENIDO PROPIO-->
-                            <div class="row">
-                                <h1>Crea un reporte aliado</h1>
-                                <div class="col">
-                                    <?php include("componentes_php/componente_grados.php"); ?>
-                                </div>
-                                <div class="col">
-                                </div>
-                            </div>
+                    <main id="plantillaalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                        <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
+                            <form class="row" action="" method="POST">
+                                    <h1>Crea un reporte aliado</h1>
+                                    <div class="row espacio-top-c">
+                                        <div class="col select-padre">
+                                            <?php include("componentes_php/componente_select_grados.php"); ?>
+                                        </div>
+                                        <div class="col select-hijo">
+                                            <?php include("componentes_php/componente_select_grupos.php"); ?>
+                                        </div>
+                                    </div>
+                                    <div class="row textarea-nieto centrar espacio-top-c">
+                                        <?php include("componentes_php/componente_textarea_reporte.php"); ?>
+                                    </div>
+                                    
+                                    <div class="row textarea-nieto centrar espacio-top-c">
+                                        <?php include("componentes_php/componente_btn_reporte.php"); ?>
+                                    </div>
+                            </form>
                         </div>
                     </main>
                 </section>
@@ -83,9 +93,13 @@
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <!--js de menu-->
     <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
     <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
+
+    <!--Js de esta interfaz-->
+    <script src="js/logica_select_reportes.js"></script>
 </body>
 
 </html>

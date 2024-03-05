@@ -76,9 +76,12 @@
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <!--js de menu-->
     <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
     <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
+
+    <!--Js de esta interfaz-->
 </body>
 
 </html>

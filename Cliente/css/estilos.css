@@ -37,6 +37,11 @@ haciendo mas reciclabe el codigo*/
   display: inline;
 }
 
+/*Utilzado para poder acomodar todos los elementos y se vayan recorriendo para abajo si es que se excede del contenedor*/
+.display-no {
+  display: none;
+}
+
 /*Have que un nav o cualquier otra cosa horizontal se haga vertical*/
 .flex-column {
   flex-direction: column;
@@ -146,8 +151,8 @@ haciendo mas reciclabe el codigo*/
 
 /*Hace el tamano de un boton mediano*/
 .btn-m {
-  width: 200px;
-  height: 65px;
+  width: 250px;
+  height: 50px;
   transition: 0.2s ease;
 }
 
@@ -730,10 +735,11 @@ Asi logras evadir lo de position y z index en los elementos*/
 #plantillaalm-main {
   position: absolute;
   bottom: 70px; /*Hace que el contenedor se fije desde abajo*/
-  height: 80%; /*Para que tenga un tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
+  height: 80%; /*Para que tenga u n tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
   width: 95%;
   overflow-y: auto; /*Permite el scroll de arriba a bajo*/
   overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
+  margin-left: 35px;
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
@@ -743,7 +749,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   }
 }
 
-/*------------------------------------------------------------------------------------------------------------ principalalm -------------*/
+/*----------------------------------------------------------------------------------------- principalalm -------------*/
 /*Tarjeta de opciones grande*/
 .card-principalalm {
   position: relative; /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
@@ -806,7 +812,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   }
 }
 
-/******************************************************************************************************* Menualm/include **************/
+/******************************************************************************************* Menualm/include **************/
 /*Maneja lod drops que cuando se abran las opciones esten mas a la derecha y no debajo*/
 .menualmdrop {
   margin-left: 213px;
@@ -861,4 +867,26 @@ Asi logras evadir lo de position y z index en los elementos*/
     height: 60vh;
     width: 70vw;
   }
+}
+
+/*Estos componenentes se utilizan apartir de el menu principal*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Componentes php ++++++++++++++++++++++++*/
+/*-------------------------------------------- Reportes ---------------------------------------*/
+/*Asigna al text area de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
+.form-floating .textarea-reporte {
+  height: 150px;
+}
+
+/*Asigna al boton de submit reporte de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
+.btn-reporte {
+  background-color: rgba(91, 224, 160, 0.863);
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+}
+
+/*Asigna al boton de submit reporte una animacion de crecer cuando se sobrepone de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
+.btn-reporte:hover {
+  background-color: rgba(50, 218, 137, 0.863);
+  transform: scale(1.1);
 }
