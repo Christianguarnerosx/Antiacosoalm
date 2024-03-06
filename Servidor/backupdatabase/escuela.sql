@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Mar 03, 2024 at 08:38 AM
+-- Generation Time: Mar 06, 2024 at 08:02 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -102,7 +102,7 @@ INSERT INTO `docentes` (`id_docente`, `id_usuario`, `id_grado`, `id_grupo`) VALU
 
 CREATE TABLE `grados` (
   `id_grado` int(11) NOT NULL,
-  `nombre_grado` varchar(1) NOT NULL
+  `nombre_grado` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -110,12 +110,12 @@ CREATE TABLE `grados` (
 --
 
 INSERT INTO `grados` (`id_grado`, `nombre_grado`) VALUES
-(1, '1'),
-(2, '2'),
-(3, '3'),
-(4, '4'),
-(5, '5'),
-(6, '6');
+(1, 'Primero'),
+(2, 'Segundo'),
+(3, 'Tercero'),
+(4, 'Cuarto'),
+(5, 'Quinto'),
+(6, 'Sexto');
 
 -- --------------------------------------------------------
 
@@ -181,15 +181,20 @@ CREATE TABLE `proyectos` (
 
 CREATE TABLE `reportes` (
   `id_reporte` int(11) NOT NULL,
-  `tipo` varchar(25) DEFAULT NULL,
-  `id_alumno` int(11) DEFAULT NULL,
-  `id_alumno_reportado` int(11) DEFAULT NULL,
+  `id_tipo_reporte` int(11) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_usuario_reportado` int(11) DEFAULT NULL,
   `fecha_reporte` date DEFAULT NULL,
   `texto_reporte` text DEFAULT NULL,
-  `audio_reporte` blob DEFAULT NULL,
-  `id_padre` int(11) DEFAULT NULL,
-  `id_docente` int(11) DEFAULT NULL
+  `audio_reporte` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `reportes`
+--
+
+INSERT INTO `reportes` (`id_reporte`, `id_tipo_reporte`, `id_usuario`, `id_usuario_reportado`, `fecha_reporte`, `texto_reporte`, `audio_reporte`) VALUES
+(1, 1, 1, 13, '2024-03-05', 'Dayra me dijo que le agradaba y se empezo a sobrepasar', NULL);
 
 -- --------------------------------------------------------
 
@@ -198,11 +203,70 @@ CREATE TABLE `reportes` (
 --
 
 CREATE TABLE `reportes_acumulados` (
-  `id_reporte_acumulado` int(11) NOT NULL,
+  `id_reportes_acumulados` int(11) NOT NULL,
   `id_alumno` int(11) DEFAULT NULL,
   `total_reportes_generados` int(11) DEFAULT NULL,
   `total_reportes_recibidos` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipo_estatus`
+--
+
+CREATE TABLE `tipo_estatus` (
+  `id_estatus` int(11) NOT NULL,
+  `nombre_estatus` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tipo_estatus`
+--
+
+INSERT INTO `tipo_estatus` (`id_estatus`, `nombre_estatus`) VALUES
+(1, 'Activo'),
+(2, 'Inactivo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipo_reportes`
+--
+
+CREATE TABLE `tipo_reportes` (
+  `id_tipo_reporte` int(11) NOT NULL,
+  `nombre_reporte` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tipo_reportes`
+--
+
+INSERT INTO `tipo_reportes` (`id_tipo_reporte`, `nombre_reporte`) VALUES
+(1, 'Texto'),
+(2, 'Audio');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipo_usuarios`
+--
+
+CREATE TABLE `tipo_usuarios` (
+  `id_tipo_usuario` int(11) NOT NULL,
+  `nombre_usuario` varchar(13) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tipo_usuarios`
+--
+
+INSERT INTO `tipo_usuarios` (`id_tipo_usuario`, `nombre_usuario`) VALUES
+(1, 'Administrador'),
+(2, 'Docente'),
+(3, 'Moderador'),
+(4, 'Alumno');
 
 -- --------------------------------------------------------
 
@@ -218,8 +282,8 @@ CREATE TABLE `usuarios` (
   `correo` varchar(50) NOT NULL,
   `telefono` varchar(10) NOT NULL,
   `contraseña` varchar(30) NOT NULL,
-  `estatus` varchar(8) NOT NULL,
-  `tipo` varchar(13) NOT NULL,
+  `id_estatus` int(11) NOT NULL,
+  `id_tipo_usuario` int(11) NOT NULL,
   `avatar` varchar(55) NOT NULL,
   `fondo` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -228,18 +292,18 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidop`, `apellidom`, `correo`, `telefono`, `contraseña`, `estatus`, `tipo`, `avatar`, `fondo`) VALUES
-(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Administrador', 'imagenes/avatares/avatar-finn.gif', 'imagenes/fondos/fondo-bmobano.gif'),
-(2, 'Vianney', 'Morales', 'Zamora', 'Vianney@gmail.com', '2225847475', '12345678', 'Activo', 'Docente', 'imagenes/avatares/avatar-jakfin.gif', ''),
-(3, 'Ivan', 'Sanchez', 'Juarez', 'Ivan@gmail.com', '2461234588', 'asdfghjklñ', 'Activo', 'Docente', '', ''),
-(4, 'Maria Petra', 'Paredes', 'Xochihua', 'Petra@gmail.com', '2461472535', '12345678', 'Activo', 'Docente', '', ''),
-(6, 'Raymundo', 'Montiel', 'Lira', 'ray@gmail.com', '2467854849', '12345678', 'Inactivo', 'Docente', '', ''),
-(9, 'Cecilia', 'Guarneros', 'Ramirez', 'Ceciliaguarneros1983@gmail.com', '2481332000', '12345678', 'Activo', 'Docente', '', ''),
-(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 'Activo', 'Docente', '', ''),
-(11, 'Moises', 'Guarneros', 'Ramirez', 'moi@gmail.com', '2481754645', '12345678', 'Inactivo', 'Docente', '', ''),
-(12, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 'Activo', 'Alumno', '', ''),
-(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 'Activo', 'Alumno', '', ''),
-(14, 'Daniel', 'Guarneros', 'Martinez', 'guar98953@gmail.com', '2441875082', 'tetenegra', 'Activo', 'Administrador', '', '');
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidop`, `apellidom`, `correo`, `telefono`, `contraseña`, `id_estatus`, `id_tipo_usuario`, `avatar`, `fondo`) VALUES
+(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 1, 1, 'imagenes/avatares/avatar-bmoranchero.gif', 'imagenes/fondos/fondo-bmobaraba.gif'),
+(2, 'Vianney', 'Morales', 'Zamora', 'Vianney@gmail.com', '2225847475', '12345678', 1, 2, 'imagenes/avatares/avatar-gato.gif', 'imagenes/fondos/fondo-gusano.gif'),
+(3, 'Ivan', 'Sanchez', 'Juarez', 'Ivan@gmail.com', '2461234588', 'asdfghjklñ', 2, 2, '', ''),
+(4, 'Maria Petra', 'Paredes', 'Xochihua', 'Petra@gmail.com', '2461472535', '12345678', 1, 2, '', ''),
+(6, 'Raymundo', 'Montiel', 'Lira', 'ray@gmail.com', '2467854849', '12345678', 2, 2, '', ''),
+(9, 'Cecilia', 'Guarneros', 'Ramirez', 'Ceciliaguarneros1983@gmail.com', '2481332000', '12345678', 1, 3, '', ''),
+(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 1, 4, '', ''),
+(11, 'Moises', 'Guarneros', 'Ramirez', 'moi@gmail.com', '2481754645', '12345678', 2, 3, '', ''),
+(12, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 1, 4, '', ''),
+(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 1, 1, '', ''),
+(14, 'Daniel', 'Guarneros', 'Martinez', 'guar98953@gmail.com', '2441875082', 'tetenegra', 1, 4, '', '');
 
 --
 -- Indexes for dumped tables
@@ -317,24 +381,43 @@ ALTER TABLE `proyectos`
 ALTER TABLE `reportes`
   ADD PRIMARY KEY (`id_reporte`),
   ADD UNIQUE KEY `id_reporte` (`id_reporte`),
-  ADD KEY `id_alumno` (`id_alumno`),
-  ADD KEY `id_alumno_reportado` (`id_alumno_reportado`),
-  ADD KEY `id_padre` (`id_padre`),
-  ADD KEY `id_docente` (`id_docente`);
+  ADD KEY `id_alumno` (`id_usuario`),
+  ADD KEY `id_alumno_reportado` (`id_usuario_reportado`),
+  ADD KEY `id_tipo_reporte` (`id_tipo_reporte`);
 
 --
 -- Indexes for table `reportes_acumulados`
 --
 ALTER TABLE `reportes_acumulados`
-  ADD PRIMARY KEY (`id_reporte_acumulado`),
+  ADD PRIMARY KEY (`id_reportes_acumulados`),
   ADD KEY `id_alumno` (`id_alumno`);
+
+--
+-- Indexes for table `tipo_estatus`
+--
+ALTER TABLE `tipo_estatus`
+  ADD PRIMARY KEY (`id_estatus`);
+
+--
+-- Indexes for table `tipo_reportes`
+--
+ALTER TABLE `tipo_reportes`
+  ADD PRIMARY KEY (`id_tipo_reporte`);
+
+--
+-- Indexes for table `tipo_usuarios`
+--
+ALTER TABLE `tipo_usuarios`
+  ADD PRIMARY KEY (`id_tipo_usuario`);
 
 --
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
-  ADD UNIQUE KEY `id_usuario` (`id_usuario`);
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_tipo_usuario` (`id_tipo_usuario`),
+  ADD KEY `id_estatus` (`id_estatus`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -392,7 +475,25 @@ ALTER TABLE `proyectos`
 -- AUTO_INCREMENT for table `reportes`
 --
 ALTER TABLE `reportes`
-  MODIFY `id_reporte` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tipo_estatus`
+--
+ALTER TABLE `tipo_estatus`
+  MODIFY `id_estatus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tipo_reportes`
+--
+ALTER TABLE `tipo_reportes`
+  MODIFY `id_tipo_reporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tipo_usuarios`
+--
+ALTER TABLE `tipo_usuarios`
+  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
@@ -446,16 +547,22 @@ ALTER TABLE `proyectos`
 -- Constraints for table `reportes`
 --
 ALTER TABLE `reportes`
-  ADD CONSTRAINT `reportes_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`),
-  ADD CONSTRAINT `reportes_ibfk_2` FOREIGN KEY (`id_alumno_reportado`) REFERENCES `alumnos` (`id_alumno`),
-  ADD CONSTRAINT `reportes_ibfk_3` FOREIGN KEY (`id_padre`) REFERENCES `padres` (`id_padre`),
-  ADD CONSTRAINT `reportes_ibfk_4` FOREIGN KEY (`id_docente`) REFERENCES `docentes` (`id_docente`);
+  ADD CONSTRAINT `id_tipo_reporte` FOREIGN KEY (`id_tipo_reporte`) REFERENCES `tipo_reportes` (`id_tipo_reporte`),
+  ADD CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
+  ADD CONSTRAINT `id_usuario_reportado` FOREIGN KEY (`id_usuario_reportado`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Constraints for table `reportes_acumulados`
 --
 ALTER TABLE `reportes_acumulados`
   ADD CONSTRAINT `reportes_acumulados_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`);
+
+--
+-- Constraints for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `id_estatus` FOREIGN KEY (`id_estatus`) REFERENCES `tipo_estatus` (`id_estatus`),
+  ADD CONSTRAINT `id_tipo_usuario` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `tipo_usuarios` (`id_tipo_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
