@@ -6,8 +6,8 @@ $consulta = mysqli_query($conexion, $query);
 
 if (mysqli_num_rows($consulta) > 0) {
 ?>
-    <div class="form-floating">
-        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <div class="form-floating">  <!-- select para dezplegar lista de grupos -->
+        <select class="form-select select-reporte" id="select-grupos" aria-label="Floating label select example">
             <option selected>Grupo</option>
             <?Php
             while ($row = mysqli_fetch_assoc($consulta)) {
@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_grupo. "'>" . $nom_grupo. "</option>";
             } ?>
         </select>
-        <label for="floatingSelect">Selecciona su grupo</label>
+        <label>Selecciona su grupo</label>
     </div>
 <?php
 } else {

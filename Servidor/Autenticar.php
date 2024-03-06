@@ -17,7 +17,7 @@ if (!empty($_SESSION['active'])) { //Si es diferente de vacia
             $_SESSION['usuario'] = $_POST['usuario']; //Se guarda lo que recibimos de la pagina iniciar en una variable de session 
             $user = $_POST['usuario']; //Se guarda lo que recibimos del campo (id,correo,nombre) de la pagina iniciar
             $pass = $_POST['contraseña']; //Se guarda lo que recibimos del campo (contraseña) de la pagina iniciar
-            $query = "SELECT * FROM usuarios WHERE (id_usuario = '$user' OR correo = '$user' OR nombre = '$user') AND contraseña = '$pass'";
+            $query = "SELECT * FROM usuarios WHERE (id_usuario = '$user' OR correo = '$user' OR nombre = '$user') AND contraseña = '$pass' AND id_estatus = 1";
             $consulta = mysqli_query($conexion, $query); //Mandamos a realizar la consulta
             $resultado = mysqli_fetch_array($consulta); //Guardamos la consulta en una variable resultado para poder acceder a los elementos obtenidos del query mediante ella
 

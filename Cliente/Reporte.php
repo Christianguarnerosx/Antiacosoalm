@@ -57,25 +57,43 @@
                     <main id="plantillaalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
                             <form class="row" action="" method="POST">
-                                    <h1>Crea un reporte aliado</h1>
-                                    <div class="row espacio-top-c">
-                                        <div class="col select-padre">
-                                            <?php include("componentes_php/componente_select_grados.php"); ?>
-                                        </div>
-                                        <div class="col select-hijo">
-                                            <?php include("componentes_php/componente_select_grupos.php"); ?>
-                                        </div>
+                                <h1>Crea un reporte aliado</h1>
+                                <div class="row espacio-top-c">
+                                    <!-- Se importan componentes_php predeterminados (cada componente tiene un id especifico en sudeclaracion/creacion)-->
+                                    <div class="col c-abuelo">
+                                        <?php include("componentes_php/componente_select_tipo_reporte.php"); ?>
                                     </div>
-                                    <div class="row textarea-nieto centrar espacio-top-c">
-                                        <?php include("componentes_php/componente_textarea_reporte.php"); ?>
+                                    <div class="col c-abuelo">
+                                        <?php include("componentes_php/componente_select_tipo_usuarios.php"); ?>
                                     </div>
-                                    
-                                    <div class="row textarea-nieto centrar espacio-top-c">
-                                        <?php include("componentes_php/componente_btn_reporte.php"); ?>
+                                    <div class="col c-padre display-no">
+                                        <?php include("componentes_php/componente_select_grados.php"); ?>
                                     </div>
+                                    <div class="col c-hijo display-no">
+                                        <?php include("componentes_php/componente_select_grupos.php"); ?>
+                                    </div>
+                                </div>
+
+                                <!-- Reporte tipo de texto -->
+                                <!-- Componente Textarea -->
+                                <div class="row espacio-top-c display-no" id="contenedor-reporte-texto">
+                                    <?php include("componentes_php/componente_textarea_reporte.php"); ?>
+                                </div>
+
+                                <!-- Reporte tipo de audio -->
+                                <!-- Componentes btn's,select -->
+                                <div class="row espacio-top-c display-no" id="contenedor-reporte-audio">
+                                    <?php include("componentes_php/componente_grabar_audio.php"); ?>
+                                </div>
+
+                                <!-- Boton submit-->
+                                <div class="row espacio-top-c c-nieto display-no">
+                                    <?php include("componentes_php/componente_btn_reporte.php"); ?>
+                                </div>
                             </form>
                         </div>
                     </main>
+
                 </section>
             </div>
 
@@ -94,12 +112,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!--js de menu-->
-    <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
     <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
+    <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alertas (si es que se envian a esta interfaz)-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 
     <!--Js de esta interfaz-->
-    <script src="js/logica_select_reportes.js"></script>
+    <script src="js/logica_display_componentes.js"></script> <!-- Sirve para hacer aparecer elementos (utilizando clase abuelo, padre, hijo) -->
+    <script src="js/logica_tipo_reporte.js"></script> <!-- Sirve para poder aparecer y desaparecer/alternar (el textarea de reporte escritto o un boton de grabacion reporte oral) segun el select de tipo de reporte-->
+
 </body>
 
 </html>

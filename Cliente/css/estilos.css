@@ -877,6 +877,11 @@ Asi logras evadir lo de position y z index en los elementos*/
   height: 150px;
 }
 
+/*Todos los select dee componentes se rigen bajo esta clase*/
+.select-reporte{
+  width: 100%;
+}
+
 /*Asigna al boton de submit reporte de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
 .btn-reporte {
   background-color: rgba(91, 224, 160, 0.863);
@@ -889,4 +894,10 @@ Asi logras evadir lo de position y z index en los elementos*/
 .btn-reporte:hover {
   background-color: rgba(50, 218, 137, 0.863);
   transform: scale(1.1);
+}
+
+/*Asigan un estilo al btn para grabar reportes */
+#btn-grabar-reporte{
+width: 100px;
+height: 100px;
 }
