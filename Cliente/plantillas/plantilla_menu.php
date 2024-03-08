@@ -17,7 +17,7 @@
     <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
     <?php
     session_start();
-    include_once("../Servidor/funciones_session/session_fondo.php");
+    include_once("../Servidor/funciones_session/session_fondo.php"); /*Mandamos a traer el fondo de la db y se lo aplicamos a un css que aqui importaremos*/
     ?>
 
 </head>
@@ -37,7 +37,6 @@
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
             <div class="col centrar fondo" id="contenedor-plantillaalm">
 
-
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-plantillaalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuplantillaalm" aria-expanded="false" aria-controls="colmenuplantillaalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
@@ -54,43 +53,9 @@
 
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
-                    <main id="plantillaalm-main" class="row centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
-                            <form class="row" action="" method="POST">
-                                <h1>Crea un reporte aliado</h1>
-                                <div class="row espacio-top-c">
-                                    <!-- Se importan componentes_php predeterminados (cada componente tiene un id especifico en sudeclaracion/creacion)-->
-                                    <div class="col c-abuelo">
-                                        <?php include("componentes_php/componente_select_tipo_reporte.php"); ?>
-                                    </div>
-                                    <div class="col c-abuelo">
-                                        <?php include("componentes_php/componente_select_tipo_usuarios.php"); ?>
-                                    </div>
-                                    <div class="col c-padre display-no">
-                                        <?php include("componentes_php/componente_select_grados.php"); ?>
-                                    </div>
-                                    <div class="col c-hijo display-no">
-                                        <?php include("componentes_php/componente_select_grupos.php"); ?>
-                                    </div>
-                                </div>
-
-                                <!-- Reporte tipo de texto -->
-                                <!-- Componente Textarea -->
-                                <div class="row espacio-top-c display-no" id="contenedor-reporte-texto">
-                                    <?php include("componentes_php/componente_textarea_reporte.php"); ?>
-                                </div>
-
-                                <!-- Reporte tipo de audio -->
-                                <!-- Componentes btn's,select -->
-                                <div class="row espacio-top-c display-no" id="contenedor-reporte-audio">
-                                    <?php include("componentes_php/componente_grabar_audio.php"); ?>
-                                </div>
-
-                                <!-- Boton submit-->
-                                <div class="row espacio-top-c c-nieto display-no">
-                                    <?php include("componentes_php/componente_btn_reporte.php"); ?>
-                                </div>
-                            </form>
+                    <main class="row scroll-y"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                        <div class="col"> <!-- AQUI LLEVA EL CONTENIDO QUE lleva la interfaz-->
+                        
                         </div>
                     </main>
 
@@ -112,14 +77,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!--js de menu-->
-    <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
-    <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alertas (si es que se envian a esta interfaz)-->
+    <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
+    <script src="js/JS_Plantillas/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 
     <!--Js de esta interfaz-->
-    <script src="js/logica_display_componentes.js"></script> <!-- Sirve para hacer aparecer elementos (utilizando clase abuelo, padre, hijo) -->
-    <script src="js/logica_tipo_reporte.js"></script> <!-- Sirve para poder aparecer y desaparecer/alternar (el textarea de reporte escritto o un boton de grabacion reporte oral) segun el select de tipo de reporte-->
-
 </body>
 
 </html>

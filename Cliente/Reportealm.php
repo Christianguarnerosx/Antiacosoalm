@@ -17,7 +17,7 @@
     <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
     <?php
     session_start();
-    include_once("../Servidor/funciones_session/session_fondo.php"); /*Mandamos a traer el fondo de la db y se lo aplicamos a un css que aqui importaremos*/
+    include_once("../Servidor/funciones_session/session_fondo.php");
     ?>
 
 </head>
@@ -37,6 +37,7 @@
             <!--columna utilizada para el contenido principal de la interfaz (no opciones lo de en medio) aqui van los botones que abren las demas columnas (menu/configuraciones)-->
             <div class="col centrar fondo" id="contenedor-plantillaalm">
 
+
                 <!--Botones que activan menus/extras sobre el contenedro principal porque si se ponen en las columnas obvio no aparecerian -->
                 <button type="button" id="btn-menu-plantillaalm" class="btn-transparente" data-bs-toggle="collapse" data-bs-target="#colmenuplantillaalm" aria-expanded="false" aria-controls="colmenuplantillaalm">
                     <img src="imagenes/iconos/menudesactivado.png" class="icono-btn rotar-90" alt="">
@@ -53,9 +54,11 @@
 
                     <!-- Este es el contendor de las card/opciones que muestras acciones de la app en la interfaz principal-->
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
-                    <main id="plantillaalm-main" class="row"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
-                        <div class="col"> <!-- AQUI LLEVA EL CONTENIDO QUE lleva la interfaz-->
-
+                    <main id="main-reportealm" class="row scroll-y centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
+                        <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
+                            <form class="blanco-solido centrar" action="../Servidor/subirreporte.php" method="POST">
+                                <?php include_once("estructuras/estructura_reporte.php");?>
+                            </form>
                         </div>
                     </main>
 
@@ -78,10 +81,9 @@
 
     <!--js de menu-->
     <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
-    <script src="js/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
+    <script src="js/JSPlantillas/logica_menu_plantilla.js"></script> <!--Sirve para que llegue y muestre la alertas (si es que se envian a esta interfaz)-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 
-    <!--Js de esta interfaz-->
 </body>
 
 </html>

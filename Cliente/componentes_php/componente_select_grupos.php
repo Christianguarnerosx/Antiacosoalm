@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_grupo. "'>" . $nom_grupo. "</option>";
             } ?>
         </select>
-        <label>Selecciona su grupo</label>
+        <label>Su grupo</label>
     </div>
 <?php
 } else {

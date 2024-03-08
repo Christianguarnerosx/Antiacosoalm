@@ -8,7 +8,7 @@ if (mysqli_num_rows($consulta) > 0) {
 ?>
     <div class="form-floating">  <!-- select para dezplegar lista de tipos de reportes -->
         <select class="form-select select-reporte" id="select-tipo-reporte" aria-label="Floating label select example">
-            <option selected>Tipo de reporte</option>
+            <option selected>Tipo</option>
             <?Php
             while ($row = mysqli_fetch_array($consulta)) {
                 $id_tipo_report = $row['id_tipo_reporte'];
@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_tipo_report . "'>" . $nom_report . "</option>";
             } ?>
         </select>
-        <label>Selecciona tipo de reporte</label>
+        <label>Tipo de reporte</label>
     </div>
 <?php
 } else {

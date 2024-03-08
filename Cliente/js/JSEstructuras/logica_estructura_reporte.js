@@ -1,4 +1,7 @@
-/* Creamos una variable para guardar un elemento de html */
+/*con este scrip se podra hacer aparecer y desaparecer los elementos/componentes segun vayan siendo seleccionados*/
+
+/*Logica para elegir tipo de reporte*/
+/* Creamos una variable para guardar un elemento de html (el que tenga el id select-tipo-reporte)*/
 const reporte = document.getElementById('select-tipo-reporte'); /*Se hace refrencia a un componente php*/
 
 /* Si el elemento sufre un cambio */
@@ -17,3 +20,5 @@ reporte.addEventListener('change', function () {
         document.getElementById('contenedor-reporte-audio').classList.remove('display-no');
     }
 });
+
+/*Logica para que salga el */

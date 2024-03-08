@@ -38,6 +38,11 @@ haciendo mas reciclabe el codigo*/
 }
 
 /*Utilzado para poder acomodar todos los elementos y se vayan recorriendo para abajo si es que se excede del contenedor*/
+.display-b {
+  display: block;
+}
+
+/*Utilzado para poder acomodar todos los elementos y se vayan recorriendo para abajo si es que se excede del contenedor*/
 .display-no {
   display: none;
 }
@@ -45,6 +50,11 @@ haciendo mas reciclabe el codigo*/
 /*Have que un nav o cualquier otra cosa horizontal se haga vertical*/
 .flex-column {
   flex-direction: column;
+}
+
+/*Have que un nav o cualquier otra cosa horizontal se haga vertical*/
+.flex-row {
+  flex-direction: row;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Tipos de centrado +++++++++++++++++++++*/
@@ -138,7 +148,6 @@ haciendo mas reciclabe el codigo*/
 /*Hace a los botones redondos*/
 .btn-circular {
   border-radius: 50%;
-  overflow: hidden;
   transition: 0.2s ease;
 }
 
@@ -731,25 +740,23 @@ Asi logras evadir lo de position y z index en los elementos*/
   }
 }
 
-/*Contenedor donde va el contenido de enmedio, cards normalmente */
-#plantillaalm-main {
-  position: absolute;
-  bottom: 70px; /*Hace que el contenedor se fije desde abajo*/
-  height: 80%; /*Para que tenga u n tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
-  width: 95%;
-  overflow-y: auto; /*Permite el scroll de arriba a bajo*/
-  overflow-x: hidden; /*esconde/bloquea el scroll de izq a derecha*/
-  margin-left: 35px;
-}
-
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
 @media (max-width: 500px) {
-  #plantillaalm-main {
+  #plantillaalm-main-principal {
     height: 86%; /*Para que tenga un tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
   }
 }
 
 /*----------------------------------------------------------------------------------------- principalalm -------------*/
+/*Contenedor donde va el contenido de enmedio, cards normalmente */
+#main-principalalm {
+  position: absolute;
+  bottom: 70px; /*Hace que el contenedor se fije desde abajo*/
+  height: 80%; /*Para que tenga u n tama;o y posicion de contenedor adecuado y haga el efecto que salgan debajo de la barra de busqueda*/
+  width: 95%;
+  margin-left: 35px;
+}
+
 /*Tarjeta de opciones grande*/
 .card-principalalm {
   position: relative; /*Se asigna posicion para que el elemento icono de la card se pueda poner abajo derecha de manera fija con rigth 0 y left 0*/
@@ -869,7 +876,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   }
 }
 
-/*Estos componenentes se utilizan apartir de el menu principal*/
+/*Estos componenentes se utilizan apartir(despues) de el menu principal y avatares*/
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Componentes php ++++++++++++++++++++++++*/
 /*-------------------------------------------- Reportes ---------------------------------------*/
 /*Asigna al text area de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
@@ -878,8 +885,15 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Todos los select dee componentes se rigen bajo esta clase*/
-.select-reporte{
-  width: 100%;
+.select-reporte {
+  width: 500px;
+}
+
+@media (max-width: 600px) {
+  /*Todos los select dee componentes se rigen bajo esta clase*/
+  .select-reporte {
+    width: 200px;
+  }
 }
 
 /*Asigna al boton de submit reporte de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
@@ -897,7 +911,20 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*Asigan un estilo al btn para grabar reportes */
-#btn-grabar-reporte{
-width: 100px;
-height: 100px;
+#btn-grabar-reporte {
+  width: 100px;
+  height: 100px;
+}
+
+/************************************************************************** Reportes *********************/
+/*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
+#main-reportealm {
+  width: 75vw;
+}
+
+@media (max-width: 500px) {
+  /*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
+  #main-reportealm {
+    width: 87%;
+  }
 }

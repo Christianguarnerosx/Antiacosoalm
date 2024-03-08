@@ -6,7 +6,7 @@ $consulta = mysqli_query($conexion, $query);
 
 if (mysqli_num_rows($consulta) > 0) {
 ?>
-    <div class="form-floating">  <!-- select para dezplegar lista de grados -->
+    <div class="form-floating">  <!-- select para dezplegar lista de grados --> <!-- Clase select-reporte asigna estilos-->
         <select class="form-select select-reporte" id="select-grados" aria-label="Floating label select example">
             <option selected>Grado</option>
             <?Php
@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_grado . "'>" . $nom_grado . "</option>";
             } ?>
         </select>
-        <label>Selecciona su grado</label>
+        <label>Su grado</label>
     </div>
 <?php
 } else {

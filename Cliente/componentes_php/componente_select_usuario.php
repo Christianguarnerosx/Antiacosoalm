@@ -1,7 +1,7 @@
 <?Php
 include("../Servidor/Conexion.php");  /* Para que se importe bien la conexion es necesario que sea SOLO include() porqueeeee si utilizas include_once() marca error*/
 
-$query = "SELECT id_usuario, nombre, apellidop, apellidom from usuarios WHERE tipo = 'Alumno'";
+$query = "SELECT id_usuario, nombre, apellidop, apellidom from usuarios WHERE id_tipo_usuario = '1'";
 $consulta = mysqli_query($conexion, $query);
 
 if (mysqli_num_rows($consulta) > 0) {
@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_usuario . "'>" . $nombre_usuario . "</option>";
             } ?>
         </select>
-        <label>Selecciona su nombre</label>
+        <label>Su nombre</label>
     </div>
 <?php
 } else {

@@ -16,7 +16,7 @@ if (mysqli_num_rows($consulta) > 0) {
                 echo "<option value='" . $id_tipo_usuario . "'>" . $nombre_usuario . "</option>";
             } ?>
         </select>
-        <label>Selecciona su nombre</label>
+        <label>¿Quien?</label>
     </div>
 <?php
 } else {
