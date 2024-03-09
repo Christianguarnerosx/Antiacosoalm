@@ -78,7 +78,7 @@
 
     <!--js de menu-->
     <script src="js/recibe_alertas.js"></script> <!--Sirve para que llegue y muestre la alerta de iniciado sesion con exito//avatarconfirm/fondo confirm-->
-    <script src="js/JS_Plantillas/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
+    <script src="js/JSPlantillas/logica_menu_plantilla.js"></script> <!--Sirve para poder hacer funcionar las col como menus-->
     <script src="js/hover_drops.js"></script> <!--Sirve para que los las flechas de los drops se abran automaticamente al sobreponer el mouse-->
 
     <!--Js de esta interfaz-->

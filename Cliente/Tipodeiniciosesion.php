@@ -18,7 +18,7 @@
     <div class="container-fluid centrar fondo" id="contenedor-tiposesion"> <!--Se utiliza el body para ponerle un fondo de imagen a toda la pantalla-->
         <div class="row txt-blanco"> <!--Se utiliza centrar-vertical para poder darle un margen a lo alto-->
 
-            <a href="" class="col opciontiposesion decoracion-no txt-blanco borde-r-m"> <!-- OJO  Un a con clase COL para manejar las tarjetas como a con links (abajo). Las dos columnas en donde cada una albergara una tarjeta--> <!--Tarjeta 1 aqui se declara el fondo de la tarjeta-->
+            <a href="Iniciodinamico.php" class="col opciontiposesion decoracion-no txt-blanco borde-r-m"> <!-- OJO  Un a con clase COL para manejar las tarjetas como a con links (abajo). Las dos columnas en donde cada una albergara una tarjeta--> <!--Tarjeta 1 aqui se declara el fondo de la tarjeta-->
                 <div class="row filatextotiposesion">
                     <h1 class="titulo-m">Inicio dinámico</h1>
                     <p class="text-m">En este inicio necesitarás de tu cara o tu QR para iniciar sesión</p>

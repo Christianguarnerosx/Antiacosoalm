@@ -24,7 +24,7 @@
         </div>
         <div class="row espacio-top-m">
             <nav class="nav nav-pills flex-column text-m"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="Principalalm.php">Inicio</a>
                 <a class="nav-link" href="#">TutorIA</a>
 
                 <!-- se creo una clase personal 'drop', que asigna a todos los dropdowns el mismo tamaño sin importar lo que diga(sin esta clase, tomaran el tamaño segun el contenido) -->
@@ -36,16 +36,16 @@
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu text-m menualmdrop"> <!--La clase menualmdrop hace que al abrir los dropdowns los menus dezplegados se vallan mas a la izq y se ubiquen a su lado-->
-                        <li><a class="dropdown-item" href="#">Mis Estadisicas</a></li>
+                        <li><a class="dropdown-item" href="Reportealm.php">Reporte aliado</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="Reporte.php">Reporte aliado</a></li>
+                        <li><a class="dropdown-item" href="#">Mis stacks</a></li>
                     </ul>
                 </div>
 
                 <a class="nav-link" href="#">Track</a>
-                <a class="nav-link" href="#">Extras</a>
+                <a class="nav-link" href="Generarqr.php">Generar QR</a>
             </nav>
         </div>
     </div>

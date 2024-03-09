@@ -107,11 +107,6 @@ haciendo mas reciclabe el codigo*/
   margin-top: 25px;
 }
 
-/*Clase que deja un espacio en vertical segun el tamano/resolucion del dispisitivo. Utilizando cal, hace que a las pantallas mas largas en heigth/alto deje mas espacio y al contrario, en las pequeñas menos*/
-.espacio-top-vh {
-  margin-top: calc(4vh - 60px);
-}
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Espacios horizontales +++++++++++++++++++++*/
 /*Deja un espacio en h*/
 .espacio-left-g {

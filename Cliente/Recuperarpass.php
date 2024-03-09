@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col">
                             <!--El form mandara los datos hacia donde dicta action "autenticar sesion" (recuerda que debes de recibirlos en ese file con el metodo que se envia) "Post"-->
-                            <form action="../Servidor/Configcuentamailer.php" method="POST"> <!--Manda a el back 2 parametros 1(correo o id) 2(contraseña)-->
+                            <form action="../Servidor/mandarcorreos.php" method="POST"> <!--Manda a el back 2 parametros 1(correo o id) 2(contraseña)-->
                                 <div class="form-floating input-g espacio-top-c">
                                     <input type="text" class="form-control input-g text-c" id="floatingInput" name="usuario" placeholder="name@example.com">
                                     <label for="floatingInput">ID o Correo electronico</label> <!--Se manda a el back con el name del input-->
