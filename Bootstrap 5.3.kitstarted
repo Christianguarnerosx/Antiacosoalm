@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <title>Hello, world!</title>
+
+        <!--Si se van a  utilizar variables de  SESSION  Hay una "regla" que dice que la variable session debe de iniciar antes de entradas de html-->
+    <!--Si quieres iniciar la session donde se manda atraer en el nombre dara errores como session indefinida/no iniciada       -->
+    <?php
+    session_start();
+    include_once("../Servidor/funciones_session/session_fondo.php");
+    ?>
 </head>
 
 <body>

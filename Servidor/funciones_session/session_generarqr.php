@@ -1,4 +1,4 @@
-<?php
+<?php /*Utilizada para obtener qr en menu/paginaprincipal */
 /*Se importa la biblioteca PHP QR Code*/
 require '../Servidor/lib/phpqrcode/qrlib.php';
 
@@ -15,7 +15,7 @@ $consulta = mysqli_query($conexion, $query);
 if (mysqli_num_rows($consulta) > 0) {
     $row = mysqli_fetch_array($consulta);
     $usuario = $row['id_usuario'];
-    $contraseña = $row['contraseña'];
+    /* $contraseña = $row['contraseña']; se hace asi y no solo se manda a traer la variables session por si necesitan otras cosas para enviar por qr del usuario
 
 
     /*Nombre del archivo donde se guardará el código QR (puedes ajustar esto según tus necesidades)*/

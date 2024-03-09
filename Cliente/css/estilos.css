@@ -588,6 +588,18 @@ Asi logras evadir lo de position y z index en los elementos*/
   margin-left: -30px;
 }
 
+/*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
+.contenedor-iniciodinamico {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.camaraqr{
+  height: auto;
+  width: 800px;
+}
+
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
 /*Aun no fueron necesarios estilos propios pero si se ocupan aqui ponerlos*/
 /*Cierre recuperar pas*/
