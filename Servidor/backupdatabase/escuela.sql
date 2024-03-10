@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Mar 06, 2024 at 08:02 AM
+-- Generation Time: Mar 10, 2024 at 07:15 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -255,14 +255,14 @@ INSERT INTO `tipo_reportes` (`id_tipo_reporte`, `nombre_reporte`) VALUES
 
 CREATE TABLE `tipo_usuarios` (
   `id_tipo_usuario` int(11) NOT NULL,
-  `nombre_usuario` varchar(13) NOT NULL
+  `nombre_tipo_usuario` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tipo_usuarios`
 --
 
-INSERT INTO `tipo_usuarios` (`id_tipo_usuario`, `nombre_usuario`) VALUES
+INSERT INTO `tipo_usuarios` (`id_tipo_usuario`, `nombre_tipo_usuario`) VALUES
 (1, 'Administrador'),
 (2, 'Docente'),
 (3, 'Moderador'),
@@ -293,16 +293,16 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidop`, `apellidom`, `correo`, `telefono`, `contraseña`, `id_estatus`, `id_tipo_usuario`, `avatar`, `fondo`) VALUES
-(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 1, 1, 'imagenes/avatares/avatar-bmoranchero.gif', 'imagenes/fondos/fondo-bmobaraba.gif'),
+(1, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 1, 1, 'imagenes/avatares/avatar-gatoblanco.gif', 'imagenes/fondos/fondo-bmobaraba.gif'),
 (2, 'Vianney', 'Morales', 'Zamora', 'Vianney@gmail.com', '2225847475', '12345678', 1, 2, 'imagenes/avatares/avatar-gato.gif', 'imagenes/fondos/fondo-gusano.gif'),
 (3, 'Ivan', 'Sanchez', 'Juarez', 'Ivan@gmail.com', '2461234588', 'asdfghjklñ', 2, 2, '', ''),
 (4, 'Maria Petra', 'Paredes', 'Xochihua', 'Petra@gmail.com', '2461472535', '12345678', 1, 2, '', ''),
 (6, 'Raymundo', 'Montiel', 'Lira', 'ray@gmail.com', '2467854849', '12345678', 2, 2, '', ''),
 (9, 'Cecilia', 'Guarneros', 'Ramirez', 'Ceciliaguarneros1983@gmail.com', '2481332000', '12345678', 1, 3, '', ''),
-(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 1, 4, '', ''),
+(10, 'Rocio', 'Roldan', 'Rodriguez', 'Rocio@gmail.com', '2461234545', 'asdfghjklñ', 1, 3, '', ''),
 (11, 'Moises', 'Guarneros', 'Ramirez', 'moi@gmail.com', '2481754645', '12345678', 2, 3, '', ''),
 (12, 'Christian', 'Reyes', 'Guarneros', 'cris.guarners.joker777@gmail.com', '2481714022', '12345678', 1, 4, '', ''),
-(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 1, 1, '', ''),
+(13, 'Dayra', 'Coraza', 'Roldan', 'dayraroldan1@gmail.com', '2461858586', '12345678', 1, 4, 'imagenes/avatares/avatar-finn.gif', 'imagenes/fondos/fondo-bmobano.gif'),
 (14, 'Daniel', 'Guarneros', 'Martinez', 'guar98953@gmail.com', '2441875082', 'tetenegra', 1, 4, '', '');
 
 --

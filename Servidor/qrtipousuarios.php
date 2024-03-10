@@ -1,7 +1,7 @@
 <?php
 /*Back que obtiene el id de la url que se manda aqui (desde el js que obtiene el codigo del qr(el js que decifra el qr))*/
-/*$id = $_GET['id_qr'];*/
-$id = 13;
+/* IMPORTANTE Si marcara error activar en xampp gd en el php.ini de apache (solo quitarle el ';' que tiene antes)*/
+$id = $_GET['id'];
 $_SESSION['usuario'] = $id;
 
 include_once("Conexion.php");
