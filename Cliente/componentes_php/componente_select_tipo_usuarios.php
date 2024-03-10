@@ -12,7 +12,7 @@ if (mysqli_num_rows($consulta) > 0) {
             <?Php
             while ($row = mysqli_fetch_assoc($consulta)) {
                 $id_tipo_usuario = $row['id_tipo_usuario'];
-                $nombre_usuario = $row['nombre_usuario'];
+                $nombre_usuario = $row['nombre_tipo_usuario'];
                 echo "<option value='" . $id_tipo_usuario . "'>" . $nombre_usuario . "</option>";
             } ?>
         </select>

@@ -590,20 +590,20 @@ Asi logras evadir lo de position y z index en los elementos*/
 }
 
 /*-------------------------------------------------------------------------------------------INICIO dinamico alum(escanear)--------------------*/
+/*Contendor principal de inicio que asigna el fondo*/
 .contenedor-iniciodinamico {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
-.camaraqr{
+/*Asigna el tamaño de el lector qr(que tan grande es)*/
+.camaraqr {
   height: auto;
   width: 800px;
 }
 
 /*-------------------------------------------------------------------------------------INICIO dinamico alum--------------------*/
-
-
 
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
 /*Aun no fueron necesarios estilos propios pero si se ocupan aqui ponerlos*/
@@ -890,21 +890,43 @@ Asi logras evadir lo de position y z index en los elementos*/
 
 /*Estos componenentes se utilizan apartir(despues) de el menu principal y avatares*/
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Componentes php ++++++++++++++++++++++++*/
+
 /*-------------------------------------------- Reportes ---------------------------------------*/
+/*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
+#main-reportealm {
+  width: 75vw;
+}
+
+@media (max-width: 500px) {
+  /*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
+  #main-reportealm {
+    width: 87%;
+  }
+}
+
 /*Asigna al text area de todas las interfaces que lo manden a traer el mismo tamaño (modificando este modificas todos)*/
 .form-floating .textarea-reporte {
   height: 150px;
+  width: 800px;
+}
+
+@media (max-width: 500px) {
+  /*Asigna al text area de todas las interfaces que lo manden a traer el mismo tamaño (Telefono) (modificando este modificas todos)*/
+  .form-floating .textarea-reporte {
+    height: 150px;
+    width: 300px;
+  }
 }
 
 /*Todos los select dee componentes se rigen bajo esta clase*/
 .select-reporte {
-  width: 500px;
+  width: 400px;
 }
 
 @media (max-width: 600px) {
   /*Todos los select dee componentes se rigen bajo esta clase*/
   .select-reporte {
-    width: 200px;
+    width: 150px;
   }
 }
 
@@ -926,17 +948,4 @@ Asi logras evadir lo de position y z index en los elementos*/
 #btn-grabar-reporte {
   width: 100px;
   height: 100px;
-}
-
-/************************************************************************** Reportes *********************/
-/*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
-#main-reportealm {
-  width: 75vw;
-}
-
-@media (max-width: 500px) {
-  /*Contenedor principal de la estcutura reportes que es exportada a la interfaz reportes*/
-  #main-reportealm {
-    width: 87%;
-  }
 }

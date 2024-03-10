@@ -25,8 +25,7 @@
         <div class="row espacio-top-m">
             <nav class="nav nav-pills flex-column text-m"> <!--Se asigna el tamano de texto dentro del nav (solo afecta a los "a" nav link)-->
                 <a class="nav-link active" aria-current="page" href="Principalalm.php">Inicio</a>
-                <a class="nav-link" href="#">TutorIA</a>
-
+                
                 <!-- se creo una clase personal 'drop', que asigna a todos los dropdowns el mismo tamaño sin importar lo que diga(sin esta clase, tomaran el tamaño segun el contenido) -->
                 <!-- se creo una clase personal 'hoverdrop' que se asigna a todos los dropdowns, se utiliza con js para que se abran al sobrteponer el mouse(sin dar click) -->
                 <!-- boton dezplegable/droptown de... -->
@@ -44,8 +43,9 @@
                     </ul>
                 </div>
 
+                <a class="nav-link" href="#">TutorIA</a>
                 <a class="nav-link" href="#">Track</a>
-                <a class="nav-link" href="Generarqr.php">Generar QR</a>
+                <a class="nav-link active" href="Generarqr.php">Generar QR</a>
             </nav>
         </div>
     </div>

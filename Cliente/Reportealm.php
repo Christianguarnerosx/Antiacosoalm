@@ -56,8 +56,8 @@
                     <!-- A este main se le aplicara un scroll en y cuando el contenido se deborde, solo se oculta el scroll x y se asigna un tama;o-->
                     <main id="main-reportealm" class="row scroll-y centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
-                            <form class="blanco-solido centrar" action="../Servidor/subirreporte.php" method="POST">
-                                <?php include_once("estructuras/estructura_reporte.php");?>
+                            <form class=" centrar" action="../Servidor/subirreporte.php" method="POST">
+                                <?php include_once("estructuras_php/estructura_reporte.php");?>
                             </form>
                         </div>
                     </main>
