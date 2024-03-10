@@ -278,7 +278,7 @@ haciendo mas reciclabe el codigo*/
 
 /*Clase que hace que cualquier img logo se sobreponga arriba a la izq*/
 .logotopleft {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 10px;
   width: 7%; /* El logotipo no superará el ancho del contenedor */
@@ -352,6 +352,7 @@ haciendo mas reciclabe el codigo*/
 
 /*Este hara un cuasdro blanco vertical nomalmente utilizado para hacer los cuadros de los login verticales*/
 .cuadro-h {
+  position: relative;
   /*Ideal CALC para cuando se hace el cuadro blaco para resolucion de movil/telefono*/
   height: calc(75vh + 180px);
   /*Ideal CALC para cuando se hace el cuadro blanco vertical de sesiones/etc para resolucion de movil/telefono*/
@@ -367,7 +368,7 @@ haciendo mas reciclabe el codigo*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Input ++++++++++++++++++++++++*/
 /*Input grande*/
 .input-g {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 /*Asignado par ser responsivo a que tipo de resolucion de pantalla tenga, para que en telefono sea mas alto*/
@@ -575,7 +576,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   width: 100%;
 }
 
-/*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
+/*-----------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
 /*Contendor principal de inicio que asigna el fondo*/
 .contenedor-inicionormal {
   background-repeat: no-repeat;
@@ -588,7 +589,7 @@ Asi logras evadir lo de position y z index en los elementos*/
   margin-left: -30px;
 }
 
-/*---------------------------------------------------------------------------------------------------------------INICIO NORMAL alum--------------------*/
+/*-------------------------------------------------------------------------------------------INICIO dinamico alum(escanear)--------------------*/
 .contenedor-iniciodinamico {
   background-repeat: no-repeat;
   background-size: cover;
@@ -599,6 +600,10 @@ Asi logras evadir lo de position y z index en los elementos*/
   height: auto;
   width: 800px;
 }
+
+/*-------------------------------------------------------------------------------------INICIO dinamico alum--------------------*/
+
+
 
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/
 /*Aun no fueron necesarios estilos propios pero si se ocupan aqui ponerlos*/

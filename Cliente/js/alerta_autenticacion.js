@@ -16,4 +16,16 @@ if (resultado === "fracaso") {
     title: "Oops...",
     text: "No me diste ningun dato, ingresa tus datos",
   });
+} else if (resultado === "noalumno") {
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Solo alumnos pueden utilizarlo",
+  });
+} else if (resultado === "alumno") {
+  Swal.fire({
+    icon: "success",
+    title: "Para iniciar :",
+    text: "Selecciona ",
+  });
 }

@@ -37,29 +37,15 @@
                     <!--Conetenedor de cambiar avatar (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->
                     <div class="collapse opcionconfigusualm scroll-y alinear-center borde-r-c" id="contenedor-cambiaravataralm">
                         <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo avatar</h1>
-                        <div class="row centrar">
-                            <!-- Estas clases asignan tamaño/ animacion sobreponer / espacio de arriba.   El onclick es de java y de jquery al parecer, Manda a una funcion la ruta que se declara--->
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-jakfin.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-jakfin.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-bmoranchero.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-bmoranchero.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-dulceprincesa.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-dulceprincesa.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-pltano.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-pltano.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gunter.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gunter.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gato.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gato.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-finn.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-finn.gif')">
-                            <img class="avatar-elegir hover-avatar espacio-top-c" src="imagenes/avatares/avatar-gatoblanco.gif" alt="" onclick="Imagenseleccionada('imagenes/avatares/avatar-gatoblanco.gif')">
-                        </div>
+                        <!-- Se manda a traer el componentes que traer los avatar, para que funcione debe haber sido importado el js (<script src="js/confirmar_avatar.js"></script>)-->
+                        <?php include_once("componentes_php/componente_elegir_avatar.php"); ?>
                     </div>
 
                     <!--Conetenedor de cambiar fondo (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->
                     <div class="collapse opcionconfigusualm scroll-y alinear-center borde-r-c" id="contenedor-cambiarfondoalm">
-                        <div class="row centrar">
-                            <!-- Estas clases asignan tamaño/ animacion sobreponer / espacio de arriba.   El onclick es de java y de jquery al parecer, Manda a una funcion la ruta que se declara--->
-                            <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo fondo</h1>
-                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-gusano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-gusano.gif')">
-                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-zen.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-zen.gif')">
-                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-bmobaraba.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobaraba.gif')">
-                            <img class="fondo-elegir hover-btn espacio-top-c" src="imagenes/fondos/fondo-bmobano.gif" alt="" onclick="Fondoseleccionado('imagenes/fondos/fondo-bmobano.gif')">
-                        </div>
+                        <!-- Estas clases asignan tamaño/ animacion sobreponer / espacio de arriba.   El onclick es de java y de jquery al parecer, Manda a una funcion la ruta que se declara--->
+                        <h1 class="espacio-top-c text-g txt-blanco"> Elige tu nuevo fondo</h1>
+                        <?php include_once("componentes_php/componente_elegir_fondo.php"); ?>
                     </div>
 
                     <!--Conetenedor de cambiar apodo (inicialmente esta collapsado)--> <!-- Se utiliza el id para hacer la logica de comportamiento de como abrir y cerrar contenedores con js-->

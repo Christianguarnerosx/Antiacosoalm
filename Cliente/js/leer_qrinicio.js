@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const code = jsQR(imageData.data, canvas.width, canvas.height);
 
             if (code) {
-                const id = code.data;
-                idDisplay.textContent = id;
+                const qr_id = code.data;
+                idDisplay.textContent = qr_id;
 
-                alert("Se obtuvo" + id);
+                alert("Se obtuvo" + qr_id);
 
                 mandarusuario(id);
             }
@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function mandarusuario(id) {
-    window.location.href = 'iniciodinamico.php?id=' + id;
+function mandarusuario(id_qr) {
+    window.location.href = 'iniciodinamico.php?id=' + encodeURIComponent(id_qr);
 }
