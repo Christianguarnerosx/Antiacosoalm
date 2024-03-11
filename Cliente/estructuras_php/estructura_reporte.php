@@ -144,17 +144,31 @@
         <!-- Reporte tipo de texto -->
         <!-- Componente Textarea -->
         <div class="row espacio-top-c display-no" id="reporte-texto">
-            <?php include("componentes_php/componente_textarea_reporte.php"); ?>
+            <!-- (aun no se utiliza, borrar este comentario si es necesario) -->
+            <!-- Es el componente para generar reportes de tipo textual -->
+            <div class="form-floating centrar"> <!--Para poder cambiar el tamaño de el textarea es necesario mandar traer la clase del floating y la del text area (las 2)-->
+                <textarea class="form-control textarea-reporte" placeholder="Redacta tu reporte aqui" id="reporte_texto"></textarea>
+                <label>¿Que haz visto?</label>
+            </div>
         </div>
 
         <!-- Reporte tipo de audio -->
         <!-- Componentes btn's,select -->
         <div class="row espacio-top-c display-no" id="reporte-audio">
-            <?php include("componentes_php/componente_grabar_audio.php"); ?>
+            <!-- Es el componente para generar reportes de tipo verbal -->
+            <div class="col">
+                <h1>Dime tu reporte</h1>
+                <p>Tienes 30 segundos para decirme que ocurre</p>
+            </div>
+            <div class="col">
+                <button class="btn-circular" id="btn-grabar-reporte">Grabar</button>
+            </div>
         </div>
+
         <!-- Boton submit-->
         <div class="row espacio-top-c display-no" id="btn-submit">
-            <?php include("componentes_php/componente_btn_reporte.php"); ?>
+            <!-- Boton para todas las interfaces de enviar reportes con el submit al form donde se importe -->
+            <button type="submit" class="btn-m btn-reporte">Mandar</button>
         </div>
     </div>
 </div>

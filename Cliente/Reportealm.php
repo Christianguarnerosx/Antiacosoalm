@@ -57,7 +57,7 @@
                     <main id="main-reportealm" class="row scroll-y centrar"> <!--Para que pueda funcionar el centrar y evitar otro juego de col y row, se convierte el main en row y centramos su contenido-->
                         <div class="col"> <!-- AQUI VA EL CONTENIDO PROPIO-->
                             <form class=" centrar" action="../Servidor/subirreporte.php" method="POST">
-                                <?php include_once("plantillas/estructuras_php/estructura_reporte.php");?>
+                                <?php include_once("estructuras_php/estructura_reporte.php");?>
                             </form>
                         </div>
                     </main>

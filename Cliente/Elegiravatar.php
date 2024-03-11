@@ -55,8 +55,7 @@ session_start();
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="js/confirmar_avatar.js"></script>
-
+    <script src="js/confirmar_avatar.js"></script> <!--js que obtiene la ruta del avatar que fue clickeado y lo manda al back php para insertar en la base de datos-->
 
 </body>
 
