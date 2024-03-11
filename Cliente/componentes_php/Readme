@@ -1,3 +1,1 @@
-Estos componentes solo son utilizados hasta la interfaz principal (normalmente en las estructuras o
-en las páginas/interfaces) y las demas que se deriban de ellas(por ahora) borrar este readme cuando
- se utilicen en  espera, tipo sesion, inicia sesion, avatar
+Estos componentes son utilizados para que si sufren un cambio lo sufran en todos los lugares donde son necesitados
