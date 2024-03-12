@@ -603,6 +603,13 @@ Asi logras evadir lo de position y z index en los elementos*/
   width: 800px;
 }
 
+@media (min-width: 760px) {
+  .escanear-qr {
+    border: 20px solid #d8fff1;
+    font-size: 5rem;
+  }
+}
+
 /*-------------------------------------------------------------------------------------INICIO dinamico alum--------------------*/
 
 /*------------------------------------------------------------------------------------------------------------- RECUPERAR PASS*/

@@ -19,10 +19,10 @@
 
 <body> <!--Se utiliza el contenedor para darle un fondo de imagen-->
     <div class="container-fluid fondo contenedor-iniciodinamico centrar">
-        <section class="blanco-transparente borde-r-c centrar alinear-center">
+        <section class="blanco-transparente borde-r-c centrar alinear-center escanear-qr">
             <div class="col ">
                 <div class="row espacio-top-c">
-                    <h1>Escannea tu QR</h1>
+                    <h1 class="titulo-m">Escannea tu QR</h1>
                 </div>
                 <div class="row espacio-top-m espacio-top-c">
                     <video id="qr-video" class="camaraqr" autoplay></video>
